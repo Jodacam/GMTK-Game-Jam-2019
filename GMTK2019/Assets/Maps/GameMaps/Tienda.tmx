@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="14" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="2">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="14" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="5">
  <tileset firstgid="1" source="../KenneyMono.tsx"/>
  <tileset firstgid="1025" source="../KenneyTransparente.tsx"/>
  <tileset firstgid="2081" source="../Kenney.tsx"/>
@@ -47,6 +47,11 @@
  </layer>
  <objectgroup id="6" name="Mid">
   <object id="1" name="Puerta" type="Puerta" x="96" y="0" width="16" height="16"/>
+ </objectgroup>
+ <objectgroup id="7" name="Tienda">
+  <object id="2" name="Tienda3" type="tienda" x="80.75" y="96.75" width="14.25" height="13.75"/>
+  <object id="3" name="Tienda2" type="tienda" x="113.25" y="97.5" width="13.5" height="13.25"/>
+  <object id="4" name="Tienda1" type="tienda" x="145" y="96.5" width="14.25" height="14.5"/>
  </objectgroup>
  <layer id="3" name="Front" width="14" height="10">
   <data encoding="csv">

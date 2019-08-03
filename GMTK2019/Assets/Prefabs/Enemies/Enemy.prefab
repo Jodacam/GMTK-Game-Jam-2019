@@ -239,7 +239,7 @@ MonoBehaviour:
   innerCoolDown: 0
   stacionary: 0
   state: 0
-  damage: 0
-  range: {x: 0, y: 0}
+  damage: 20
+  range: {x: 1, y: 1}
   maxDistance: 75
   minDistance: 20
