@@ -166,10 +166,10 @@ TextureImporter:
     second: Swing Left Armor 0
   - first:
       213: -6864887700578664209
-    second: MainRobotTileset_54
+    second: Swing Left Armor 1
   - first:
       213: 2977691169480127300
-    second: MainRobotTileset_55
+    second: Swing Left Armor 2
   - first:
       213: 8642579659920365339
     second: Thrust Front 0
@@ -1535,7 +1535,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainRobotTileset_54
+      name: Swing Left Armor 1
       rect:
         serializedVersion: 2
         x: 112
@@ -1556,7 +1556,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainRobotTileset_55
+      name: Swing Left Armor 2
       rect:
         serializedVersion: 2
         x: 128
