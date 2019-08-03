@@ -84,7 +84,6 @@ public class Seaker : EnemyController
     {
         base.RecibeDamage(damage,dir);
         if(!stacionary){
-            Debug.Log("Has pasado");
             aiController.destination = PlayerController.Player.transform.position;
             aiController.Teleport(transform.position+new Vector3(dir.x,dir.y,0)*16,true);
             StartCoroutine(Stop());
