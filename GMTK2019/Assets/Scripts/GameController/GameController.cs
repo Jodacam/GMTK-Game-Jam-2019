@@ -34,6 +34,8 @@ public class GameController : MonoBehaviour
     public Puerta door;
     public Transform spawnPoint;
 
+    public ScrollUi scroll;
+
     void Awake()
     {
         if (Instance == null)
@@ -60,6 +62,8 @@ public class GameController : MonoBehaviour
         foreach(EnemyController e in enemies){
             Destroy(e.gameObject);
         }
+        scroll.generated = false;
+        scroll.Wipe();
         mapList.Clear();
         actualMap = 0;
         mapList.Add(Instantiate(tutorialRoom, transform.position, Quaternion.identity));
@@ -81,17 +85,21 @@ public class GameController : MonoBehaviour
             {
                 int n = Random.Range(0, shops.Count);
                 mapList.Add(Instantiate(shops[n], transform.position, Quaternion.identity));
+                scroll.NextTile(ScrollUi.RoomType.Shop);
             }
             else
             {
                 int randomNumber = Random.Range(0, totalMapList.Count - 1);
                 mapList.Add(Instantiate(totalMapList[randomNumber], transform.position, Quaternion.identity));
+                scroll.NextTile(ScrollUi.RoomType.Normal);
             }
             mapList[i].SetActive(false);
 
         }
         int r = Random.Range(0, shops.Count);
         mapList.Add(Instantiate(bossRooms[r], transform.position, Quaternion.identity));
+        scroll.NextTile(ScrollUi.RoomType.Boss);
+        scroll.generated = true;
         mapList[mapList.Count - 1].SetActive(false);
         PrepareMap();
 
@@ -110,6 +118,10 @@ public class GameController : MonoBehaviour
         mapList[actualMap].SetActive(false);
         actualMap++;
 
+        if(mapList.Count > 1){
+            scroll.Scroll();
+        }
+
         if (actualMap < mapList.Count)
         {
             PrepareMap();
@@ -118,6 +130,7 @@ public class GameController : MonoBehaviour
         {
             GenerateMapList();
         }
+        
 
         SpawnEnemies();
     }

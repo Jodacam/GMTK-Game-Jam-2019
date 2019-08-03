@@ -50,8 +50,8 @@
 1734,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,3758098085,1610614437,1610614437,1610614437,1610614470
 </data>
  </layer>
- <objectgroup id="6" name="Mid" visible="0">
-  <object id="1" name="Puerta" type="Puerta" x="207.75" y="128.25" width="16" height="16"/>
+ <objectgroup id="6" name="Mid">
+  <object id="1" name="Puerta" type="PuertaD" x="207.75" y="128.25" width="16" height="16"/>
  </objectgroup>
  <layer id="3" name="Front" width="14" height="10">
   <data encoding="csv">
