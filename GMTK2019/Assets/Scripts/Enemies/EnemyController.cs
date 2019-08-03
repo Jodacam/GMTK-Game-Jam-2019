@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-
+using NaughtyAttributes;
 public abstract class EnemyController : MonoBehaviour {
     
 
@@ -20,6 +20,7 @@ public abstract class EnemyController : MonoBehaviour {
 
     public float innerCoolDown = 0;
 
+    [ReadOnly]
     protected Vector2 dir = new Vector2(0,0);
     public State state;
     public void Start() {
@@ -27,7 +28,7 @@ public abstract class EnemyController : MonoBehaviour {
     }
     public virtual void RecibeDamage(float damage){
         life-=damage;
-        if(life==0){
+        if(life<=0){
             Die();
         }
     }

@@ -78,7 +78,7 @@ public class Seaker : EnemyController
 
 
     public override void Attack(){
-        var touched = Physics2D.BoxCastAll(transform.position+new Vector3(dir.x,dir.y,0)*16,new Vector3(range.x,range.y,0)*16,360,dir);
+        var touched = Physics2D.OverlapBoxAll(transform.position+new Vector3(dir.x,dir.y,0)*16,new Vector3(range.x,range.y,0)*16,0);
         for(int i = 0; i<touched.Length;i++){
             var player = touched[i].transform.GetComponent<PlayerController>();
             if(player){
