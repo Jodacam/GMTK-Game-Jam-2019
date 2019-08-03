@@ -9,6 +9,8 @@ public abstract class EnemyController : MonoBehaviour {
         Moving,
         Attacking,
 
+        Exploding
+
         
     }
     public float life = 100;
