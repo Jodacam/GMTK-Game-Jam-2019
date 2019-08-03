@@ -22,6 +22,7 @@
    <frame tileid="98" duration="100"/>
   </animation>
  </tile>
+ <tile id="362" type="Puerta"/>
  <tile id="401">
   <objectgroup draworder="index">
    <object id="1" x="0" y="0" width="16" height="16"/>
@@ -53,6 +54,7 @@
    <object id="1" x="0" y="5" width="16" height="11"/>
   </objectgroup>
  </tile>
+ <tile id="470" type="Puerta"/>
  <tile id="643">
   <objectgroup draworder="index">
    <object id="4" x="0" y="0">
