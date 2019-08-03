@@ -20,7 +20,7 @@ public class MusicController : MonoBehaviour
     public List<Sound> music;
     public AudioSource audio;
     
-    void Start()
+    void Awake()
     {
         if(instance){
             Destroy(gameObject);
