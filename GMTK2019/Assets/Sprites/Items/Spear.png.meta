@@ -4,19 +4,19 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -263503013321016785
-    second: Spear Thrust Front A 0
+    second: Spear Thrust Front 0
   - first:
       213: -7267526433649106474
-    second: Spear Thrust Front A 1
+    second: Spear Thrust Front 1
   - first:
       213: 755164510017601323
-    second: Spear Thrust Front A 2
+    second: Spear Thrust Front 2
   - first:
       213: 8381456295101691538
-    second: Spear Thrust Back B 1
+    second: Spear Thrust Back 1
   - first:
       213: -3240397089291294111
-    second: Spear Thrust Back B 2
+    second: Spear Thrust Back 2
   - first:
       213: -2313266835999037447
     second: Spear
@@ -28,7 +28,7 @@ TextureImporter:
     second: Spear Thrust Front B 2
   - first:
       213: -4033558274895013084
-    second: Spear Thrust Back A 0
+    second: Spear Thrust Back 0
   - first:
       213: -3370430209386456321
     second: Spear Thrust Back A 1
@@ -40,19 +40,19 @@ TextureImporter:
     second: Spear_11
   - first:
       213: 3967839756159425228
-    second: Spear Thrust Left A 0
+    second: Spear Thrust Left 0
   - first:
       213: -2831335138396545850
-    second: Spear Thrust Right A 0
+    second: Spear Thrust Right 0
   - first:
       213: -3382396173505417241
     second: Spear Thrust Left B 1
   - first:
       213: 7167422624302858549
-    second: Spear Thrust Left A 1
+    second: Spear Thrust Left 1
   - first:
       213: -7829235498278612241
-    second: Spear Thrust Right A 1
+    second: Spear Thrust Right 1
   - first:
       213: 6785061614251043210
     second: Spear Thrust Right B 1
@@ -61,10 +61,10 @@ TextureImporter:
     second: Spear Thrust Left B 2
   - first:
       213: -6282116580440498530
-    second: Spear Thrust Left A 2
+    second: Spear Thrust Left 2
   - first:
       213: -8680445712371178423
-    second: Spear Thrust Right A 2
+    second: Spear Thrust Right 2
   - first:
       213: 2007009314582999791
     second: Spear Thrust Right B 2
@@ -200,7 +200,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spear Thrust Front A 0
+      name: Spear Thrust Front 0
       rect:
         serializedVersion: 2
         x: 16
@@ -208,7 +208,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -221,15 +221,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Front A 1
+      name: Spear Thrust Front 1
       rect:
         serializedVersion: 2
         x: 32
-        y: 64
+        y: 48
         width: 16
-        height: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -242,15 +242,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Front A 2
+      name: Spear Thrust Front 2
       rect:
         serializedVersion: 2
         x: 48
-        y: 64
+        y: 48
         width: 16
-        height: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -263,15 +263,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Back B 1
+      name: Spear Thrust Back 1
       rect:
         serializedVersion: 2
         x: 96
-        y: 64
+        y: 48
         width: 16
-        height: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -284,15 +284,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Back B 2
+      name: Spear Thrust Back 2
       rect:
         serializedVersion: 2
         x: 112
-        y: 64
+        y: 48
         width: 16
-        height: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -313,7 +313,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -326,49 +326,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Front B 1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7bb861c919216c149a73671fc0dc49ac
-      internalID: 895977697040313207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spear Thrust Front B 2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abf4d0d397fd81c4b9f25e5eb28ef26a
-      internalID: -1532505387325004646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spear Thrust Back A 0
+      name: Spear Thrust Back 0
       rect:
         serializedVersion: 2
         x: 80
@@ -376,7 +334,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -384,48 +342,6 @@ TextureImporter:
       bones: []
       spriteID: 76d91b674d9b0764e9fb73c425cff325
       internalID: -4033558274895013084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spear Thrust Back A 1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 754e90fe937341744bf62a380cd9b7c2
-      internalID: -3370430209386456321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spear Thrust Back A 2
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a82f498813ff2f409e7ac37e6921393
-      internalID: -5783698714805851043
       vertices: []
       indices: 
       edges: []
@@ -439,7 +355,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -452,7 +368,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Left A 0
+      name: Spear Thrust Left 0
       rect:
         serializedVersion: 2
         x: 16
@@ -460,7 +376,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -473,7 +389,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Right A 0
+      name: Spear Thrust Right 0
       rect:
         serializedVersion: 2
         x: 48
@@ -481,7 +397,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -494,36 +410,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Left B 1
+      name: Spear Thrust Left 1
       rect:
         serializedVersion: 2
         x: 0
         y: 16
-        width: 16
+        width: 32
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b00d37a5b413a4242a0cedf0a42f7f07
-      internalID: -3382396173505417241
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spear Thrust Left A 1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -536,15 +431,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Right A 1
+      name: Spear Thrust Right 1
       rect:
         serializedVersion: 2
         x: 48
         y: 16
-        width: 16
+        width: 32
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -557,57 +452,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Right B 1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e9d4aff09a24d9478c83eab7126159b
-      internalID: 6785061614251043210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spear Thrust Left B 2
+      name: Spear Thrust Left 2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
+        width: 32
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2913bd6a8c3eb3b49ac38e1ba3b1180d
-      internalID: -8601052581341897955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spear Thrust Left A 2
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -620,15 +473,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Right A 2
+      name: Spear Thrust Right 2
       rect:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 16
+        width: 32
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -636,27 +489,6 @@ TextureImporter:
       bones: []
       spriteID: a14ffa247bc0f6548a14abec3b2fa87a
       internalID: -8680445712371178423
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spear Thrust Right B 2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e7e761821148dd43b888747e2a9c029
-      internalID: 2007009314582999791
       vertices: []
       indices: 
       edges: []
