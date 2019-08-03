@@ -160,7 +160,9 @@ MonoBehaviour:
   type: 0
   animator: {fileID: 0}
   coolDown: 1
+  onDamageTime: 0
   innerCoolDown: 0
+  stacionary: 0
   state: 0
   damage: 0
   range: {x: 0, y: 0}
@@ -1060,7 +1062,9 @@ MonoBehaviour:
   type: 0
   animator: {fileID: 0}
   coolDown: 1
+  onDamageTime: 0
   innerCoolDown: 0
+  stacionary: 0
   state: 0
   damage: 0
   range: {x: 0, y: 0}
@@ -1328,6 +1332,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4494281493857850084, guid: ccc367b2a07269149bd946086987ad9f,
+        type: 3}
+      propertyPath: minDistance
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccc367b2a07269149bd946086987ad9f, type: 3}
 --- !u!1001 &7016893214720139020
@@ -1444,12 +1453,12 @@ PrefabInstance:
     - target: {fileID: 8863270202185284678, guid: 5877b65453ee1704f86189588ee436a5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.4
+      value: -94.4
       objectReference: {fileID: 0}
     - target: {fileID: 8863270202185284678, guid: 5877b65453ee1704f86189588ee436a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 61.5
       objectReference: {fileID: 0}
     - target: {fileID: 8863270202185284678, guid: 5877b65453ee1704f86189588ee436a5,
         type: 3}
@@ -1501,5 +1510,20 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1040484476}
+    - target: {fileID: 8863270202185284681, guid: 5877b65453ee1704f86189588ee436a5,
+        type: 3}
+      propertyPath: range.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863270202185284681, guid: 5877b65453ee1704f86189588ee436a5,
+        type: 3}
+      propertyPath: range.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863270202185284681, guid: 5877b65453ee1704f86189588ee436a5,
+        type: 3}
+      propertyPath: life
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5877b65453ee1704f86189588ee436a5, type: 3}
