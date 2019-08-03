@@ -19,7 +19,7 @@ public class Sword : Weapon
         for(int i = 0; i<touched.Length;i++){
             var enemy = touched[i].transform.GetComponent<EnemyController>();
             if(enemy){
-                enemy.RecibeDamage(controller.GetDamage());
+                enemy.RecibeDamage(controller.GetDamage(),controller.dir);
             }
         }
     }
