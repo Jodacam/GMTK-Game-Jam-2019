@@ -51,6 +51,7 @@ public abstract class EnemyController : MonoBehaviour {
 
     public virtual void Die()
     {
+        GameController.Instance.EnemyDead();
         Destroy(gameObject);
     }
 

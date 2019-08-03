@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
-        animator.SetTrigger(Const.DIE);
+        //animator.SetTrigger(Const.DIE);
     }
 
     public void PlayClip(string name)
