@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour
     private Random r;
 
     public PlayerController playerPrefab;
+
+    public AstarPath aStarController;
     void Start()
     {
         for (int i = 0; i <maxMaps ; i++)
@@ -36,6 +38,7 @@ public class GameController : MonoBehaviour
         }
         mapList.Add(bossRoom);
         mapList[0].SetActive(true);
+        aStarController.Scan();
     }
 
     // Update is called once per frame

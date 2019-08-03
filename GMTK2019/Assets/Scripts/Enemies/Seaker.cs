@@ -18,8 +18,9 @@ public class Seaker : EnemyController
 
     [Tooltip("Distancia a la que se queda la IA para atacar.")]
     public float minDistance;
-    private void Start()
+    public void Start()
     {
+        base.Start();
         aiController = GetComponent<IAstarAI>();
         if (aiController != null) aiController.onSearchPath += Update;
     }
@@ -33,6 +34,9 @@ public class Seaker : EnemyController
         {
             case EnemyController.State.Moving:
                 dir = aiController.velocity.normalized;
+                animator.SetFloat(Const.X_DIR,dir.x);
+                animator.SetFloat(Const.Y_DIR,dir.y);
+                animator.SetFloat(Const.SPEED,dir.sqrMagnitude);
                 if (distance <= maxDistance)
                 {
                     if (aiController != null)
@@ -44,6 +48,7 @@ public class Seaker : EnemyController
                     state = EnemyController.State.Attacking;
                     aiController.canMove = false;
                     aiController.canSearch = false;
+                    animator.SetFloat(Const.SPEED,0);
                 }
                 
                 break;
@@ -59,10 +64,15 @@ public class Seaker : EnemyController
                 if(innerCoolDown <=0){
                     innerCoolDown = coolDown;
                     Attack();
+                    animator.SetTrigger("attack");
+                }else {
+                    innerCoolDown-=Time.deltaTime;
                 }
 
                 break;
         }
+        animator.SetFloat(Const.X_DIR,dir.x);
+        animator.SetFloat(Const.Y_DIR,dir.y);
         
     }
 
