@@ -42,10 +42,4 @@ public class Puerta : MonoBehaviour
     public void TriggerShake(){
         GameController.Instance.ScreenShake(shakeDuration,shakeStrength);
     }
-
-    void Update() {
-        if(Input.GetKey(KeyCode.Space)){
-            SetEnemies(0);
-        }
-    }
 }
