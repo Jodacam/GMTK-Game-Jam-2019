@@ -18,7 +18,7 @@ public class Seaker : EnemyController
 
     [Tooltip("Distancia a la que se queda la IA para atacar.")]
     public float minDistance;
-    public void Start()
+    public new void Start()
     {
         base.Start();
         aiController = GetComponent<IAstarAI>();
