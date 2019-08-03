@@ -1,0 +1,45 @@
+fileFormatVersion: 2
+guid: c26bf41ddaff4da458263553ef93c74b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
+  missingFiles: []
+  errors:
+  - Errors detected in tileset '../Tutoriales.tsx'. Check the tileset inspector for
+    more details. Your map may be broken until these are fixed.
+  - Could not find tile 3138. Make sure the tilesets were successfully imported.
+  - Could not find tile 3139. Make sure the tilesets were successfully imported.
+  - Could not find tile 3140. Make sure the tilesets were successfully imported.
+  - Could not find tile 3147. Make sure the tilesets were successfully imported.
+  - Could not find tile 3148. Make sure the tilesets were successfully imported.
+  - Could not find tile 3149. Make sure the tilesets were successfully imported.
+  - Could not find tile 3150. Make sure the tilesets were successfully imported.
+  - Could not find tile 3151. Make sure the tilesets were successfully imported.
+  - Could not find tile 3152. Make sure the tilesets were successfully imported.
+  - Could not find tile 3145. Make sure the tilesets were successfully imported.
+  - Could not find tile 3146. Make sure the tilesets were successfully imported.
+  - Could not find tile 3143. Make sure the tilesets were successfully imported.
+  - Could not find tile 3137. Make sure the tilesets were successfully imported.
+  - Could not find tile 3141. Make sure the tilesets were successfully imported.
+  - Could not find tile 3142. Make sure the tilesets were successfully imported.
+  - Could not find tile 3153. Make sure the tilesets were successfully imported.
+  - Could not find tile 3154. Make sure the tilesets were successfully imported.
+  - Could not find tile 3155. Make sure the tilesets were successfully imported.
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 16
+  pixelsPerUnit: 1
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 3
+  tilesAsObjects: 0
+  sortingMode: 0
+  isIsometric: 0
+  customImporterClassName: 
+  internalTilesets: []

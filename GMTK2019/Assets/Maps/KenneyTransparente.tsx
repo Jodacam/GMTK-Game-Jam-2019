@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.2" tiledversion="1.2.4" name="KennetTransparente" tilewidth="16" tileheight="16" spacing="1" tilecount="1056" columns="33">
  <image source="../Sprites/Kenney Assets/Tilesheet/colored_transparent.png" width="560" height="543"/>
+ <tile id="72">
+  <objectgroup draworder="index">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="79">
+  <objectgroup draworder="index">
+   <object id="1" x="4" y="5" width="8" height="11"/>
+  </objectgroup>
+ </tile>
+ <tile id="80">
+  <objectgroup draworder="index">
+   <object id="1" x="4" y="0" width="8" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="81">
+  <objectgroup draworder="index">
+   <object id="1" x="5" y="5" width="11" height="11"/>
+  </objectgroup>
+ </tile>
+ <tile id="82">
+  <objectgroup draworder="index">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="83">
+  <objectgroup draworder="index">
+   <object id="1" x="5" y="0" width="11" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="112">
+  <objectgroup draworder="index">
+   <object id="1" x="4" y="5" width="8" height="11"/>
+  </objectgroup>
+ </tile>
+ <tile id="113">
+  <objectgroup draworder="index">
+   <object id="1" x="4" y="0" width="8" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="114">
+  <objectgroup draworder="index">
+   <object id="1" x="6" y="6" width="10" height="10"/>
+  </objectgroup>
+ </tile>
+ <tile id="115">
+  <objectgroup draworder="index">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="116">
+  <objectgroup draworder="index">
+   <object id="1" x="5" y="0" width="11" height="16"/>
+  </objectgroup>
+ </tile>
  <tile id="230">
   <objectgroup draworder="index">
    <object id="1" x="0" y="0" width="16" height="16"/>
@@ -36,6 +91,31 @@
  <tile id="403">
   <objectgroup draworder="index">
    <object id="4" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="404">
+  <objectgroup draworder="index">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="405">
+  <objectgroup draworder="index">
+   <object id="1" x="0" y="0" width="16" height="8"/>
+  </objectgroup>
+ </tile>
+ <tile id="406">
+  <objectgroup draworder="index">
+   <object id="2" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="407">
+  <objectgroup draworder="index">
+   <object id="1" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="435">
+  <objectgroup draworder="index">
+   <object id="1" x="0" y="0" width="16" height="16"/>
   </objectgroup>
  </tile>
  <tile id="443">
