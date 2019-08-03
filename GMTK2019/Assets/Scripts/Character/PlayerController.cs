@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -38,17 +39,29 @@ public class PlayerController : MonoBehaviour
     public bool isAttacking;
 
     public AudioSource audio;
+
+    WaitForSeconds waitForRestart;
+
+    TextMeshProUGUI text;
+    public bool dead = false;
+
     void Start()
     {
         audio = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
+        waitForRestart = new WaitForSeconds(2f);
+        text = GameObject.FindGameObjectWithTag("LAVARIABLE").GetComponent<TextMeshProUGUI>();
+        text.text = LAVARIABLE.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        HandleAttack();
-        HandleMovement();
+        if (!dead)
+        {
+            HandleAttack();
+            HandleMovement();
+        }
     }
 
     /// <summary>
@@ -141,8 +154,9 @@ public class PlayerController : MonoBehaviour
     //Aqui se puede calcular el daño que recibimos.
     public void RecibeDamage(float damage, DamageType type)
     {
+        text.text = LAVARIABLE.ToString();
         LAVARIABLE -= damage;
-        if (LAVARIABLE <= 0)
+        if (LAVARIABLE <= 0 && !dead)
         {
             Die();
         }
@@ -151,6 +165,17 @@ public class PlayerController : MonoBehaviour
     private void Die()
     {
         //animator.SetTrigger(Const.DIE);
+        dead = true;
+        StartCoroutine(Restart());
+    }
+
+    IEnumerator Restart()
+    {
+        yield return waitForRestart;
+        LAVARIABLE = 100;
+        text.text = LAVARIABLE.ToString();
+        dead = false;
+        GameController.Instance.Restart();
     }
 
     public void PlayClip(string name)

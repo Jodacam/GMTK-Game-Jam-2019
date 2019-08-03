@@ -17,7 +17,6 @@ public class Boom : Seaker {
         yield return new WaitForSeconds(0.3f);
         GetComponent<SpriteRenderer>().enabled = false;
         var touched = Physics2D.OverlapBoxAll(transform.position+new Vector3(dir.x,dir.y,0)*16,new Vector3(range.x,range.y,0)*16,0);
-        GameController.Instance.ScreenShake(0.2f,20);
         for(int i = 0; i<touched.Length;i++){
             var player = touched[i].transform.GetComponent<PlayerController>();
             if(player){

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -47,8 +48,15 @@ public class GameController : MonoBehaviour
         door.SetEnemies(0);
     }
 
-    void Restart()
+    public void Restart()
     {
+        foreach(GameObject g in mapList){
+            Destroy(g);
+        }
+        List<EnemyController> enemies = FindObjectsOfType<EnemyController>().ToList();
+        foreach(EnemyController e in enemies){
+            Destroy(e.gameObject);
+        }
         mapList.Clear();
         actualMap = 0;
         mapList.Add(Instantiate(tutorialRoom, transform.position, Quaternion.identity));
@@ -59,6 +67,9 @@ public class GameController : MonoBehaviour
 
     public void GenerateMapList()
     {
+        foreach(GameObject g in mapList){
+            Destroy(g);
+        }
         mapList.Clear();
         actualMap = 0;
         for (int i = 0; i < maxMaps - 1; i++)
