@@ -37,8 +37,6 @@ public abstract class EnemyController : MonoBehaviour {
     }
     public virtual void RecibeDamage(float damage,Vector2 dir){
         life-=damage;
-        if(!stacionary)
-            transform.Translate(dir*16);
         
         if(onDamageTime<=0)
             StartCoroutine(Damaged());
@@ -51,6 +49,7 @@ public abstract class EnemyController : MonoBehaviour {
 
     public virtual void Die()
     {
+        GameController.Instance.EnemyDead();
         Destroy(gameObject);
     }
 

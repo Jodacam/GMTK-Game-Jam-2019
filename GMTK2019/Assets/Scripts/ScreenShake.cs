@@ -31,7 +31,7 @@ public class ScreenShake : MonoBehaviour
             shakeCoroutine = StartCoroutine(Shake(duration, strength));
         }
 
-        strength = 0;
+        
     }
 
     IEnumerator Shake(float duration, float strength)
@@ -44,6 +44,7 @@ public class ScreenShake : MonoBehaviour
             yield return null;
         }
 
+        this.strength = 0;
         transform.localPosition = initialPosition;
     }
 }

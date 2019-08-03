@@ -17,15 +17,16 @@ public class PlayExplosion : MonoBehaviour
         foreach (ParticleSystem p in circles)
         {
             var main = p.main;
-            main.startSpeed = radius*radiusToSpeed;
+            main.startSpeed = ((radius*16*2)+8)*radiusToSpeed;
             p.Play();
         }
+
+        StartCoroutine(ScreenShakeDelay());
+    }
+
+    IEnumerator ScreenShakeDelay(){
+        yield return new WaitForSeconds(0.3f);
         GameController.Instance.ScreenShake(0.3f,10f);
     }
 
-    public void Update(){
-        if(Input.GetKey(KeyCode.Space)){
-            Play((radius*16f*2f)+8f);
-        }
-    }
 }

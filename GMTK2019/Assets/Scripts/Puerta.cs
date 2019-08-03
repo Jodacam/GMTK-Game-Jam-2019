@@ -10,6 +10,9 @@ public class Puerta : MonoBehaviour
 
     public float shakeDuration;
     public float shakeStrength;
+    public AudioSource source;
+    public Sound closeSound;
+    public Sound openSound;
 
     public void EnemyKilled(){
         this.numEnemies--;
@@ -17,14 +20,21 @@ public class Puerta : MonoBehaviour
     }
 
     public void SetEnemies(int numEnemies){
+        if(numEnemies != 0){
+            source.clip = closeSound.clip;
+            source.Play();
+        }
         this.numEnemies = numEnemies;
         anim = GetComponent<Animator>();
         TryOpen();
+
     }
 
     public void TryOpen(){
         if(numEnemies == 0){
             anim.SetTrigger("OpenDoor");
+            source.clip = openSound.clip;
+            source.Play();
         }
     }
 
@@ -35,7 +45,7 @@ public class Puerta : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("Player") && open){
-            //Change Scene
+            GameController.Instance.NextMap();
         }
     }
 

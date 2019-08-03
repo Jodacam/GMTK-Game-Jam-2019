@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class MusicController : MonoBehaviour
@@ -15,6 +16,7 @@ public class MusicController : MonoBehaviour
         return instance;
     }}
  
+    [ReorderableList]
     public List<Sound> music;
     public AudioSource audio;
     
@@ -25,15 +27,21 @@ public class MusicController : MonoBehaviour
         }else{
             instance=this;
             audio = GetComponent<AudioSource>();
+            DontDestroyOnLoad(gameObject);
         }
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     public void SetMusic(string name){
-        
+        var clip = music.Find((e) => e.name.Equals(name));
+        if (clip != null)
+        {
+            audio.Stop();
+
+            audio.clip=clip.clip;
+
+            audio.Play();
+        }
     }
 }
