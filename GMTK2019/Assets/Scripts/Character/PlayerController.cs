@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     public float LAVARIABLE = 100;
 
     public Weapon actualWeapon;
+    public Armor actualArmor;
+    public PowerUp actualPowerUp;
     public bool isAttacking;
 
     public AudioSource audio;
