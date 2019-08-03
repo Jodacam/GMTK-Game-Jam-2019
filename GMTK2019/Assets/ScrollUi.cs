@@ -53,7 +53,7 @@ public class ScrollUi : MonoBehaviour
             r.anchoredPosition = Vector2.zero;
             objects.Add(r);
 
-            flecha.SetActive(false);
+            flecha.SetActive(true);
         }
         }
     }
