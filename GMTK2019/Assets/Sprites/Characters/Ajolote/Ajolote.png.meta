@@ -1,73 +1,55 @@
 fileFormatVersion: 2
-guid: 334a75ea452d6e9408661458af3b012e
+guid: 519532eea1bda134082254fe9f4d86e6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -263503013321016785
-    second: Spear Thrust Front 0
+      213: -5607304827812038496
+    second: Ajolote_0
   - first:
-      213: -7267526433649106474
-    second: Spear Thrust Front 1
+      213: 5601607473702439196
+    second: Ajolote_1
   - first:
-      213: 755164510017601323
-    second: Spear Thrust Front 2
+      213: 1433186401402022889
+    second: Ajolote_2
   - first:
-      213: 8381456295101691538
-    second: Spear Thrust Back 1
+      213: 5155934326398199868
+    second: Ajolote_3
   - first:
-      213: -3240397089291294111
-    second: Spear Thrust Back 2
+      213: -1439233121128149990
+    second: Ajolote_4
   - first:
-      213: -2313266835999037447
-    second: Spear
+      213: -9037918111293916894
+    second: Ajolote_5
   - first:
-      213: 895977697040313207
-    second: Spear Thrust Front B 1
+      213: -7706410608980149810
+    second: Ajolote_6
   - first:
-      213: -1532505387325004646
-    second: Spear Thrust Front B 2
+      213: -4044258531843204439
+    second: Ajolote_7
   - first:
-      213: -4033558274895013084
-    second: Spear Thrust Back 0
+      213: 649492461284125302
+    second: Ajolote_8
   - first:
-      213: -3370430209386456321
-    second: Spear Thrust Back A 1
+      213: -6367320923764104557
+    second: Ajolote_9
   - first:
-      213: -5783698714805851043
-    second: Spear Thrust Back A 2
+      213: -6662743892537603114
+    second: Ajolote_10
   - first:
-      213: -5278986678097760932
-    second: Spear_11
+      213: -6822471358270433568
+    second: Ajolote_11
   - first:
-      213: 3967839756159425228
-    second: Spear Thrust Left 0
+      213: 7987675030505195174
+    second: Ajolote_12
   - first:
-      213: -2831335138396545850
-    second: Spear Thrust Right 0
+      213: 7768854584674712813
+    second: Ajolote_13
   - first:
-      213: -3382396173505417241
-    second: Spear Thrust Left B 1
+      213: 3455495639797712319
+    second: Ajolote_14
   - first:
-      213: 7167422624302858549
-    second: Spear Thrust Left 1
-  - first:
-      213: -7829235498278612241
-    second: Spear Thrust Right 1
-  - first:
-      213: 6785061614251043210
-    second: Spear Thrust Right B 1
-  - first:
-      213: -8601052581341897955
-    second: Spear Thrust Left B 2
-  - first:
-      213: -6282116580440498530
-    second: Spear Thrust Left 2
-  - first:
-      213: -8680445712371178423
-    second: Spear Thrust Right 2
-  - first:
-      213: 2007009314582999791
-    second: Spear Thrust Right B 2
+      213: 4361921844832457252
+    second: Ajolote_15
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -107,8 +89,8 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
-  spriteMeshType: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -153,7 +135,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -165,7 +147,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -184,311 +166,341 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 8192
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spear Thrust Front 0
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f0486677ab2ead4cbc45c0d0aedb479
-      internalID: -263503013321016785
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spear Thrust Front 1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f42bc9b5e09221a4399b3a133bc87b27
-      internalID: -7267526433649106474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spear Thrust Front 2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6dd5a3239f039e54e86d319130843343
-      internalID: 755164510017601323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spear Thrust Back 1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 48
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc52191b3badf6f459defd39b46c44b4
-      internalID: 8381456295101691538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spear Thrust Back 2
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 48
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 159948d46b916e049bcb6dc7debebc57
-      internalID: -3240397089291294111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spear
+      name: Ajolote_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 52
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8cd78148116c8c419eb3ae548d6ab44
-      internalID: -2313266835999037447
+      spriteID: 73a637fdf5bae3a4d85e9df2b8c0e0b6
+      internalID: -5607304827812038496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Back 0
+      name: Ajolote_1
       rect:
         serializedVersion: 2
-        x: 80
-        y: 48
+        x: 17
+        y: 52
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76d91b674d9b0764e9fb73c425cff325
-      internalID: -4033558274895013084
+      spriteID: 79bb55125679a48408d8570c37add891
+      internalID: 5601607473702439196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear_11
+      name: Ajolote_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 52
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b177e186cc92e43bb1e7f2659d740b
+      internalID: 1433186401402022889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ajolote_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 52
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e1b6fee67900c428f62ab11616e496
+      internalID: 5155934326398199868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ajolote_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 35
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16c0359b65595164fbf3659f3ebf2913
-      internalID: -5278986678097760932
+      spriteID: d50f8efdcccf89d44bd211e6a5c310c0
+      internalID: -1439233121128149990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Left 0
+      name: Ajolote_5
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
+        x: 17
+        y: 35
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e83fcd8084ef1449a9e6951bffa3a5b
-      internalID: 3967839756159425228
+      spriteID: 860c7a3f8154df94e9136d28ae9bf4bc
+      internalID: -9037918111293916894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Right 0
+      name: Ajolote_6
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
+        x: 34
+        y: 35
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a38ec31fdc00504ab605c9f8ffb5cd9
-      internalID: -2831335138396545850
+      spriteID: d2422dddc9a022b4097bb9177bb70404
+      internalID: -7706410608980149810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Left 1
+      name: Ajolote_7
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 35
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b113368714d5949bd75aff3ef9e1f5
+      internalID: -4044258531843204439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ajolote_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 32
+        y: 18
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ecf8de45f497084292bda96256494a5
-      internalID: 7167422624302858549
+      spriteID: f0c63d7a7eb56b147bbd2a2827ecd1e1
+      internalID: 649492461284125302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Right 1
+      name: Ajolote_9
       rect:
         serializedVersion: 2
-        x: 48
-        y: 16
-        width: 32
+        x: 17
+        y: 18
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c2eabfd36f8a964c9b861904b47d1a4
-      internalID: -7829235498278612241
+      spriteID: 68043b8f737bbb74bb96bcdbdee3c81f
+      internalID: -6367320923764104557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Left 2
+      name: Ajolote_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a974c41f4061b4dbbbbc4e0f0be479
+      internalID: -6662743892537603114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ajolote_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 18
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520773ad34eb60548940a434bc30b600
+      internalID: -6822471358270433568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ajolote_12
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 32
+        y: 1
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64604b6f1128d004f809b7ef8dcc0f12
-      internalID: -6282116580440498530
+      spriteID: fb36a491dc41ef14fb58f2c628288d38
+      internalID: 7987675030505195174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spear Thrust Right 2
+      name: Ajolote_13
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 32
+        x: 17
+        y: 1
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a14ffa247bc0f6548a14abec3b2fa87a
-      internalID: -8680445712371178423
+      spriteID: bce97df62fb94ce44aebbfe67e3703b8
+      internalID: 7768854584674712813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ajolote_14
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7476333b59f0699429b6bf9787020845
+      internalID: 3455495639797712319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ajolote_15
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1840365db1ea61d48b8a0da767f93e80
+      internalID: 4361921844832457252
       vertices: []
       indices: 
       edges: []
