@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    const string X_DIR = "xDir";
-    const string Y_DIR = "yDir";
-
-    const string SPEED = "velocity";
+    private static PlayerController instance;
+    public static PlayerController Player {get{
+        if(instance == null)
+            instance = FindObjectOfType<PlayerController>();
+        return instance;
+    }}
     Animator animator;
 
-    public Vector2 minSpeed = new Vector2(1,1);
+    public Vector2 minSpeed = new Vector2(1, 1);
 
     public float coolDown = 1;
 
@@ -36,42 +38,89 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
     }
 
+/// <summary>
+/// Aqui se calcula el daño que hacemos dependiendo de la variable.
+/// </summary>
+/// <returns></returns>
+    public float GetDamage()
+    {
+        return LAVARIABLE;
+    }
+
     private void HandleAttack()
     {
-        if(innerCoolDown <= 0){
+        if (innerCoolDown <= 0)
+        {
             bool pressed = Input.GetButtonDown("Jump");
-            if(pressed){
+            if (pressed)
+            {
                 innerCoolDown = coolDown;
                 animator.SetTrigger("attack");
                 actualWeapon.Attack(this);
             }
-        }else{
-            innerCoolDown-=Time.deltaTime;
+        }
+        else
+        {
+            innerCoolDown -= Time.deltaTime;
         }
     }
 
-    void HandleMovement(){
-        
+    void HandleMovement()
+    {
+
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
 
-        if(x != 0){
+        if (x != 0)
+        {
             y = 0;
             dir.x = x;
             dir.y = 0;
-        }else if(y !=0 ){
+        }
+        else if (y != 0)
+        {
             x = 0;
             dir.y = y;
             dir.x = 0;
         }
 
-        var normalized = new Vector2(x,y).normalized;
-        speed = Vector2.Scale(normalized,minSpeed);
-        transform.Translate(speed*Time.deltaTime);
+        var normalized = new Vector2(x, y).normalized;
+        speed = Vector2.Scale(normalized, minSpeed);
+        transform.Translate(speed * Time.deltaTime);
 
-        animator.SetFloat(X_DIR,dir.x);
-        animator.SetFloat(Y_DIR,dir.y);
-        animator.SetFloat(SPEED,speed.sqrMagnitude);
+        animator.SetFloat(Const.X_DIR, dir.x);
+        animator.SetFloat(Const.Y_DIR, dir.y);
+        animator.SetFloat(Const.SPEED, speed.sqrMagnitude);
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        string tag = other.transform.tag;
+        if (tag.Equals(Const.DAMAGE_DEALER))
+        {
+            var e = other.transform.GetComponent<DamageDealer>();
+            if (e)
+            {
+                DamageType type =e.damageType;
+                RecibeDamage(e.GetDamage(),type);
+            }
+        }
+    }
+
+//Aqui se puede calcular el daño que recibimos.
+    public void RecibeDamage(float damage, DamageType type)
+    {
+        LAVARIABLE -= damage;
+        if (LAVARIABLE <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        animator.SetTrigger(Const.DIE);
     }
 }
