@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     public float LAVARIABLE = 100;
 
     public Weapon actualWeapon;
+    public Armor actualArmor;
+    public PowerUp actualPowerUp;
     public bool isAttacking;
 
     public AudioSource audio;
@@ -44,6 +46,8 @@ public class PlayerController : MonoBehaviour
 
     TextMeshProUGUI text;
     public bool dead = false;
+
+    public bool armor = false;
 
     void Start()
     {
@@ -61,6 +65,10 @@ public class PlayerController : MonoBehaviour
         {
             HandleAttack();
             HandleMovement();
+        }
+
+        if(Input.GetKeyDown(KeyCode.P)){
+            GrabArmor();
         }
     }
 
@@ -176,6 +184,16 @@ public class PlayerController : MonoBehaviour
         text.text = LAVARIABLE.ToString();
         dead = false;
         GameController.Instance.Restart();
+    }
+
+    public void GrabArmor(){
+        if(!armor){
+            animator.SetLayerWeight(1,1);
+            armor = true;
+        }else{
+            animator.SetLayerWeight(1,0);
+            armor = false;
+        }
     }
 
     public void PlayClip(string name)

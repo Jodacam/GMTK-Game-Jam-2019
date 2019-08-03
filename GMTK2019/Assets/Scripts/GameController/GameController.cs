@@ -9,6 +9,9 @@ public class GameController : MonoBehaviour
 
     List<GameObject> mapList = new List<GameObject>();
 
+    public List<PowerUp> powerUpList;
+    public List<Weapon> weaponList;
+    public List<Armor> armorList;
     public List<GameObject> bossRooms;
 
     public int actualMap;
@@ -124,6 +127,32 @@ public class GameController : MonoBehaviour
         camShake.StartShake(duration, strength);
     }
 
+    private Weapon getWeapon(){
+        Weapon n = null;
+        while(n&&n!=PlayerController.Player.actualWeapon){
+            int r = Random.Range(0,weaponList.Count-1);
+            n = weaponList[r];
+        }
+        return n;
+    }
+
+    private PowerUp getPowerUp(){
+        PowerUp n = null;
+        while(n&&n!=PlayerController.Player.actualPowerUp){
+            int r = Random.Range(0,powerUpList.Count-1);
+            n = powerUpList[r];
+        }
+        return n;
+    }
+
+       private Armor getArmor(){
+        Armor n = null;
+        while(n&&n!=PlayerController.Player.actualArmor){
+            int r = Random.Range(0,armorList.Count-1);
+            n = armorList[r];
+        }
+        return n;
+    }
     public void SpawnEnemies()
     {
         door = FindObjectOfType<Puerta>();
@@ -132,6 +161,10 @@ public class GameController : MonoBehaviour
             if (actualMap % mapsPerShop == 0 && actualMap != 0)
             {
                 door.SetEnemies(0);
+                var shop = FindObjectsOfType<ShopItem>();
+                shop[0].Init(getWeapon(),10);
+                shop[1].Init(getArmor(),10);
+                shop[2].Init(getPowerUp(),10);
             }
             else
             {
