@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33cc2e2cd03806542b7a38fca3010cf6, type: 3}
-  m_Name: Sword
+  m_Name: Spear
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4643593207277272250, guid: 9d4bfa1333c12f14f9c649d49b2ddf09, type: 3}
-  sprite: {fileID: 0}
-  range: {x: 3, y: 1}
+  prefab: {fileID: 2998486811834049064, guid: 7bce68abce0db024188ce588f5ce87ef, type: 3}
+  sprite: {fileID: -2313266835999037447, guid: 334a75ea452d6e9408661458af3b012e, type: 3}
+  range: {x: 1, y: 2}
