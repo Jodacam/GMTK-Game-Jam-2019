@@ -264,8 +264,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minSpeed: {x: 24, y: 24}
+  coolDown: 1
+  dir: {x: 0, y: 0}
   speed: {x: 0, y: 0}
   LAVARIABLE: 100
+  actualWeapon: {fileID: 11400000, guid: c1df2aedb617e1b408ab9ffe8bc7f9bb, type: 2}
+  isAttacking: 0
 --- !u!212 &1040484475
 SpriteRenderer:
   m_ObjectHideFlags: 0
