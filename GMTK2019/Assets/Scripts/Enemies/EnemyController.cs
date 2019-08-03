@@ -14,7 +14,7 @@ public abstract class EnemyController : MonoBehaviour {
     public float life = 100;
 
     public DamageType type;
-    Animator animator;
+    public Animator animator;
 
     public float coolDown = 1;
 
@@ -22,7 +22,7 @@ public abstract class EnemyController : MonoBehaviour {
 
     protected Vector2 dir = new Vector2(0,0);
     public State state;
-    private void Start() {
+    public void Start() {
         animator = GetComponent<Animator>();
     }
     public virtual void RecibeDamage(float damage){

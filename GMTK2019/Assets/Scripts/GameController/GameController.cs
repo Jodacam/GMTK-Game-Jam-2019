@@ -19,7 +19,20 @@ public class GameController : MonoBehaviour
 
     private Random r;
 
+    private ScreenShake camShake;
+
     public PlayerController playerPrefab;
+
+    public AstarPath aStarController;
+    public static GameController Instance;
+
+    void Awake(){
+        if(Instance == null){
+            Instance = this;
+        }
+        camShake = FindObjectOfType<ScreenShake>();
+    }
+
     void Start()
     {
         for (int i = 0; i <maxMaps ; i++)
@@ -36,6 +49,7 @@ public class GameController : MonoBehaviour
         }
         mapList.Add(bossRoom);
         mapList[0].SetActive(true);
+        aStarController.Scan();
     }
 
     // Update is called once per frame
@@ -49,5 +63,9 @@ public class GameController : MonoBehaviour
         actualMap++;
         if(actualMap < mapList.Count)
             mapList[actualMap].SetActive(true);
+    }
+
+    public void ScreenShake(float duration, float strength){
+        camShake.StartShake(duration,strength);
     }
 }

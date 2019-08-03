@@ -1,24 +1,34 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     private static PlayerController instance;
-    public static PlayerController Player {get{
-        if(instance == null)
-            instance = FindObjectOfType<PlayerController>();
-        return instance;
-    }}
+    public static PlayerController Player
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindObjectOfType<PlayerController>();
+            return instance;
+        }
+    }
     Animator animator;
 
+    [ReorderableList]
+    public List<Sound> clips;
     public Vector2 minSpeed = new Vector2(1, 1);
 
     public float coolDown = 1;
 
-
     private float innerCoolDown = 0;
+
+    public float footStep = 0.1f;
+
+    private float innerFoot;
     public Vector2 dir;
 
     public Vector2 speed;
@@ -26,8 +36,11 @@ public class PlayerController : MonoBehaviour
 
     public Weapon actualWeapon;
     public bool isAttacking;
+
+    public AudioSource audio;
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
     }
 
@@ -38,10 +51,10 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
     }
 
-/// <summary>
-/// Aqui se calcula el daño que hacemos dependiendo de la variable.
-/// </summary>
-/// <returns></returns>
+    /// <summary>
+    /// Aqui se calcula el daño que hacemos dependiendo de la variable.
+    /// </summary>
+    /// <returns></returns>
     public float GetDamage()
     {
         return LAVARIABLE;
@@ -87,11 +100,27 @@ public class PlayerController : MonoBehaviour
 
         var normalized = new Vector2(x, y).normalized;
         speed = Vector2.Scale(normalized, minSpeed);
+
+        if (speed.magnitude >= 0.1)
+        {
+            if (innerFoot <= 0)
+            {
+                PlayClip("footStep");
+                innerFoot = footStep;
+            }
+            else
+            {
+                innerFoot -= Time.deltaTime;
+            }
+        }
         transform.Translate(speed * Time.deltaTime);
 
         animator.SetFloat(Const.X_DIR, dir.x);
         animator.SetFloat(Const.Y_DIR, dir.y);
         animator.SetFloat(Const.SPEED, speed.sqrMagnitude);
+
+
+
     }
 
 
@@ -103,13 +132,13 @@ public class PlayerController : MonoBehaviour
             var e = other.transform.GetComponent<DamageDealer>();
             if (e)
             {
-                DamageType type =e.damageType;
-                RecibeDamage(e.GetDamage(),type);
+                DamageType type = e.damageType;
+                RecibeDamage(e.GetDamage(), type);
             }
         }
     }
 
-//Aqui se puede calcular el daño que recibimos.
+    //Aqui se puede calcular el daño que recibimos.
     public void RecibeDamage(float damage, DamageType type)
     {
         LAVARIABLE -= damage;
@@ -123,4 +152,14 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetTrigger(Const.DIE);
     }
+
+    public void PlayClip(string name)
+    {
+        var clip = clips.Find((e) => e.name.Equals(name));
+        if (clip != null)
+        {
+            audio.PlayOneShot(clip.clip);
+        }
+    }
+
 }
