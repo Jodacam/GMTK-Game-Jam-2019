@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
 
     public PlayerController playerPrefab;
 
+    public AstarPath aStarController;
     public static GameController Instance;
 
     void Awake(){
@@ -48,6 +49,7 @@ public class GameController : MonoBehaviour
         }
         mapList.Add(bossRoom);
         mapList[0].SetActive(true);
+        aStarController.Scan();
     }
 
     // Update is called once per frame

@@ -1,12 +1,28 @@
 using System;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour {
+public abstract class EnemyController : MonoBehaviour {
     
-    public float life = 100;
-    Animator animator;
 
-    private void Start() {
+    public enum State
+    {
+        Moving,
+        Attacking,
+
+        
+    }
+    public float life = 100;
+
+    public DamageType type;
+    public Animator animator;
+
+    public float coolDown = 1;
+
+    public float innerCoolDown = 0;
+
+    protected Vector2 dir = new Vector2(0,0);
+    public State state;
+    public void Start() {
         animator = GetComponent<Animator>();
     }
     public virtual void RecibeDamage(float damage){
@@ -20,4 +36,6 @@ public class EnemyController : MonoBehaviour {
     {
         Destroy(gameObject);
     }
+
+    public abstract void Attack();
 }
