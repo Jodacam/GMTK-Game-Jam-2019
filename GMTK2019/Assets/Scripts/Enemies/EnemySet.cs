@@ -2,17 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySet : MonoBehaviour
+[CreateAssetMenu(fileName = "EnemySet", menuName = "GMTK2019/EnemySet", order = 0)]
+public class EnemySet : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public List<EnemyController> enemies;
+    
 }

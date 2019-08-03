@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 8863270202185284681}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,7 +235,9 @@ MonoBehaviour:
   type: 0
   animator: {fileID: 0}
   coolDown: 1
+  onDamageTime: 0
   innerCoolDown: 0
+  stacionary: 0
   state: 0
   damage: 0
   range: {x: 0, y: 0}
