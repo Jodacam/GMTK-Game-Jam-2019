@@ -56,3 +56,6 @@ MonoBehaviour:
   - m_TypeName: Puerta
     m_Prefab: {fileID: 8146479130729405805, guid: ccf9fddbb629abc4dbb22f44d5babffc,
       type: 3}
+  - m_TypeName: SpawnPoint
+    m_Prefab: {fileID: 5395013975975174517, guid: 90b439e435028344fadd2fa4a75ac3c2,
+      type: 3}

@@ -20,8 +20,13 @@ public class PlayExplosion : MonoBehaviour
             main.startSpeed = ((radius*16*2)+8)*radiusToSpeed;
             p.Play();
         }
-        GameController.Instance.ScreenShake(0.3f,10f);
+
+        StartCoroutine(ScreenShakeDelay());
     }
 
+    IEnumerator ScreenShakeDelay(){
+        yield return new WaitForSeconds(0.3f);
+        GameController.Instance.ScreenShake(0.3f,10f);
+    }
 
 }
