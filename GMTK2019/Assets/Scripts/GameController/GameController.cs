@@ -129,7 +129,7 @@ public class GameController : MonoBehaviour
 
     private Weapon getWeapon(){
         Weapon n = null;
-        while(n&&n!=PlayerController.Player.actualWeapon){
+        while(n == null || n==PlayerController.Player.actualWeapon){
             int r = Random.Range(0,weaponList.Count-1);
             n = weaponList[r];
         }
@@ -138,7 +138,7 @@ public class GameController : MonoBehaviour
 
     private PowerUp getPowerUp(){
         PowerUp n = null;
-        while(n&&n!=PlayerController.Player.actualPowerUp){
+        while(n == null||n==PlayerController.Player.actualPowerUp){
             int r = Random.Range(0,powerUpList.Count-1);
             n = powerUpList[r];
         }
@@ -147,7 +147,7 @@ public class GameController : MonoBehaviour
 
        private Armor getArmor(){
         Armor n = null;
-        while(n&&n!=PlayerController.Player.actualArmor){
+        while(n == null || n==PlayerController.Player.actualArmor){
             int r = Random.Range(0,armorList.Count-1);
             n = armorList[r];
         }

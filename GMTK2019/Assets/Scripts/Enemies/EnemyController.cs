@@ -11,7 +11,9 @@ public abstract class EnemyController : MonoBehaviour {
         Moving,
         Attacking,
 
-        Exploding
+        Exploding,
+
+        Stacionary
 
         
     }

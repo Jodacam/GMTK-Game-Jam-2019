@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - LAVARIABLE
+  - DamageDealer
   layers:
   - Default
   - TransparentFX
