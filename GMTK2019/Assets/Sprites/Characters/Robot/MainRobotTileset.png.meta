@@ -170,6 +170,81 @@ TextureImporter:
   - first:
       213: 2977691169480127300
     second: MainRobotTileset_55
+  - first:
+      213: 8642579659920365339
+    second: Thrust Front 0
+  - first:
+      213: 8585364784035027064
+    second: Thrust Front 1
+  - first:
+      213: -3566308989091555216
+    second: Thrust Front 2
+  - first:
+      213: -3498191537542576777
+    second: Thrust Back 0
+  - first:
+      213: -7551068044314218912
+    second: Thrust Back 1
+  - first:
+      213: -5019063522929957205
+    second: Thrust Back 2
+  - first:
+      213: 5329149934608354956
+    second: Thrust Right 0
+  - first:
+      213: 9030455891745892619
+    second: Thrust Right 1
+  - first:
+      213: -4067097996697394830
+    second: Thrust Right 2
+  - first:
+      213: 6603621413569117518
+    second: Thrust Left 0
+  - first:
+      213: -729704384402492927
+    second: Thrust Left 1
+  - first:
+      213: 2203033674300472328
+    second: Thrust Left 2
+  - first:
+      213: 2923442265914587113
+    second: Thrust Front Armor 0
+  - first:
+      213: 7025401734065243706
+    second: Thrust Front Armor 1
+  - first:
+      213: 1994546089845991832
+    second: Thrust Front Armor 2
+  - first:
+      213: 3243718391821769322
+    second: Thrust Back Armor 0
+  - first:
+      213: -3063843650747819658
+    second: Thrust Back Armor 1
+  - first:
+      213: 634062309876767189
+    second: Thrust Back Armor 2
+  - first:
+      213: -474802689715123689
+    second: Thrust Right Armor 0
+  - first:
+      213: -3183155593279576667
+    second: Thrust Right Armor 1
+  - first:
+      213: 5524590202257522839
+    second: Thrust Right Armor 2
+  - first:
+      213: 1706459097173031514
+    second: MainRobotTileset_0
+  - first:
+      213: -3964948710984503612
+    second: Thrust Left Armor 0
+  - first:
+      213: 2922734955948197194
+    second: Thrust Left Armor 1
+  - first:
+      213: -1000699244056828394
+    second: Thrust Left Armor 2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -453,7 +528,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 112
+        y: 111
         width: 16
         height: 16
       alignment: 0
@@ -474,7 +549,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 112
+        y: 111
         width: 16
         height: 16
       alignment: 0
@@ -495,7 +570,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 112
+        y: 111
         width: 16
         height: 16
       alignment: 0
@@ -516,7 +591,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 112
+        y: 111
         width: 16
         height: 16
       alignment: 0
@@ -537,7 +612,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 112
+        y: 111
         width: 16
         height: 16
       alignment: 0
@@ -558,7 +633,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 112
-        y: 112
+        y: 111
         width: 16
         height: 16
       alignment: 0
@@ -579,7 +654,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 112
+        y: 111
         width: 16
         height: 16
       alignment: 0
@@ -600,7 +675,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
+        y: 94
         width: 16
         height: 16
       alignment: 0
@@ -621,7 +696,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 96
+        y: 94
         width: 16
         height: 16
       alignment: 0
@@ -642,7 +717,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 96
+        y: 94
         width: 16
         height: 16
       alignment: 0
@@ -663,7 +738,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 96
+        y: 94
         width: 16
         height: 16
       alignment: 0
@@ -684,7 +759,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 96
+        y: 94
         width: 16
         height: 16
       alignment: 0
@@ -705,7 +780,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 112
-        y: 96
+        y: 94
         width: 16
         height: 16
       alignment: 0
@@ -726,7 +801,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 96
+        y: 94
         width: 16
         height: 16
       alignment: 0
@@ -747,7 +822,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
+        y: 77
         width: 16
         height: 16
       alignment: 0
@@ -768,7 +843,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 80
+        y: 77
         width: 16
         height: 16
       alignment: 0
@@ -789,7 +864,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 80
+        y: 77
         width: 16
         height: 16
       alignment: 0
@@ -810,7 +885,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 80
+        y: 77
         width: 16
         height: 16
       alignment: 0
@@ -831,7 +906,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 80
+        y: 77
         width: 16
         height: 16
       alignment: 0
@@ -852,7 +927,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 112
-        y: 80
+        y: 77
         width: 16
         height: 16
       alignment: 0
@@ -873,7 +948,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 80
+        y: 77
         width: 16
         height: 16
       alignment: 0
@@ -894,7 +969,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 51
         width: 16
         height: 16
       alignment: 0
@@ -915,7 +990,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 48
+        y: 51
         width: 16
         height: 16
       alignment: 0
@@ -936,7 +1011,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 48
+        y: 51
         width: 16
         height: 16
       alignment: 0
@@ -957,7 +1032,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 48
+        y: 51
         width: 16
         height: 16
       alignment: 0
@@ -978,7 +1053,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 48
+        y: 51
         width: 16
         height: 16
       alignment: 0
@@ -999,7 +1074,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 112
-        y: 48
+        y: 51
         width: 16
         height: 16
       alignment: 0
@@ -1020,7 +1095,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 48
+        y: 51
         width: 16
         height: 16
       alignment: 0
@@ -1041,7 +1116,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 34
         width: 16
         height: 16
       alignment: 0
@@ -1062,7 +1137,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 32
+        y: 34
         width: 16
         height: 16
       alignment: 0
@@ -1083,7 +1158,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 32
+        y: 34
         width: 16
         height: 16
       alignment: 0
@@ -1104,7 +1179,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
+        y: 34
         width: 16
         height: 16
       alignment: 0
@@ -1125,7 +1200,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 32
+        y: 34
         width: 16
         height: 16
       alignment: 0
@@ -1146,7 +1221,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 112
-        y: 32
+        y: 34
         width: 16
         height: 16
       alignment: 0
@@ -1167,7 +1242,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 32
+        y: 34
         width: 16
         height: 16
       alignment: 0
@@ -1188,7 +1263,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
+        y: 17
         width: 16
         height: 16
       alignment: 0
@@ -1209,7 +1284,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 16
+        y: 17
         width: 16
         height: 16
       alignment: 0
@@ -1230,7 +1305,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 16
+        y: 17
         width: 16
         height: 16
       alignment: 0
@@ -1251,7 +1326,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 16
+        y: 17
         width: 16
         height: 16
       alignment: 0
@@ -1272,7 +1347,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 16
+        y: 17
         width: 16
         height: 16
       alignment: 0
@@ -1293,7 +1368,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 112
-        y: 16
+        y: 17
         width: 16
         height: 16
       alignment: 0
@@ -1314,7 +1389,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 16
+        y: 17
         width: 16
         height: 16
       alignment: 0
@@ -1473,6 +1548,531 @@ TextureImporter:
       bones: []
       spriteID: 75b104efd410919479ad0f708e587335
       internalID: 2977691169480127300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Front 0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c786e5ea643b2344c98bbdcfa56f4eec
+      internalID: 8642579659920365339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Front 1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4265e7e826273b47b975a97fe7a3629
+      internalID: 8585364784035027064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Front 2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b417e087c689a2249b06a94c6650d26d
+      internalID: -3566308989091555216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Back 0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2109699ebe29bd40903a3bab3491890
+      internalID: -3498191537542576777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Back 1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f79f41c53b8f014a9ecbbe4c1d0dd18
+      internalID: -7551068044314218912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Back 2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89303f54040a01b459515711cc512386
+      internalID: -5019063522929957205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Right 0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00165e27b91742a428c1d4be3906e6af
+      internalID: 5329149934608354956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Right 1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fb5553fa3a9594bb32f2cf4a104ce8
+      internalID: 9030455891745892619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Right 2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 94
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d43828497e4a74ab3a7eb0b83887bc
+      internalID: -4067097996697394830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Left 0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1138c54cbf910409c4deb0ad62ab9a
+      internalID: 6603621413569117518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Left 1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea33df5e9cfafa46aaafca4147c2ca5
+      internalID: -729704384402492927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Left 2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01c1029f73444745a53811f87a147d3
+      internalID: 2203033674300472328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Front Armor 0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 51
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b69d71aec57ad0428b9fe3df6583bc9
+      internalID: 2923442265914587113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Front Armor 1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 51
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a50b7ce23b8664db80bb75e56100b6
+      internalID: 7025401734065243706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Front Armor 2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 51
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f58e04cde61304d907c96fd5c36666
+      internalID: 1994546089845991832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Back Armor 0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 34
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a5f3697da5b6b4ba0596bcc6c38c10
+      internalID: 3243718391821769322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Back Armor 1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 34
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f46548384cfbd4c925300af6646eb4
+      internalID: -3063843650747819658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Back Armor 2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 34
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044bce3f128de3641852714e5c234228
+      internalID: 634062309876767189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Right Armor 0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e97021063cae3241a41d418734d0ce4
+      internalID: -474802689715123689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Right Armor 1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c315bd06c8eb3f649bfdc0fcdc4a0156
+      internalID: -3183155593279576667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Right Armor 2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a63c0cc074ced64b956fc1f498a4d70
+      internalID: 5524590202257522839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainRobotTileset_0
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 0
+        width: 1
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01b5c7248cab8d4688d18470fb11f7b
+      internalID: 1706459097173031514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Left Armor 0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da6363cf78944044a271240fc299ca2
+      internalID: -3964948710984503612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Left Armor 1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8849b6fa037c14d449300d063bdefa2a
+      internalID: 2922734955948197194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thrust Left Armor 2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038fdd79834173e47ae8058eccf7b6ec
+      internalID: -1000699244056828394
       vertices: []
       indices: 
       edges: []

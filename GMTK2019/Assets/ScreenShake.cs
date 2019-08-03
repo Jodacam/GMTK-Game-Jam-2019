@@ -30,6 +30,8 @@ public class ScreenShake : MonoBehaviour
             this.strength = strength;
             shakeCoroutine = StartCoroutine(Shake(duration, strength));
         }
+
+        strength = 0;
     }
 
     IEnumerator Shake(float duration, float strength)
