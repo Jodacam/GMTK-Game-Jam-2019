@@ -1,11 +1,27 @@
 using System;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour {
+public abstract class EnemyController : MonoBehaviour {
     
+
+    public enum State
+    {
+        Moving,
+        Attacking,
+
+        
+    }
     public float life = 100;
+
+    public DamageType type;
     Animator animator;
 
+    public float coolDown = 1;
+
+    public float innerCoolDown = 0;
+
+    protected Vector2 dir = new Vector2(0,0);
+    public State state;
     private void Start() {
         animator = GetComponent<Animator>();
     }
@@ -20,4 +36,6 @@ public class EnemyController : MonoBehaviour {
     {
         Destroy(gameObject);
     }
+
+    public abstract void Attack();
 }
