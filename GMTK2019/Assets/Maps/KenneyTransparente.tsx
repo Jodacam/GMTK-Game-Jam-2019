@@ -56,13 +56,30 @@
  <tile id="643">
   <objectgroup draworder="index">
    <object id="4" x="0" y="0">
-    <polygon points="0,0 16,0 16.0486,7.74306 8.20833,16 0,16"/>
+    <polygon points="0,0 16,0 16,10.0313 10.1875,15.9688 0,16"/>
    </object>
   </objectgroup>
  </tile>
  <tile id="644">
   <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="8"/>
+   <object id="2" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="645">
+  <objectgroup draworder="index">
+   <object id="2" x="0" y="0" width="16" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="676">
+  <objectgroup draworder="index">
+   <object id="1" x="0" y="0" width="6" height="16"/>
+  </objectgroup>
+ </tile>
+ <tile id="709">
+  <objectgroup draworder="index">
+   <object id="1" x="0" y="0">
+    <polygon points="0,0 5.65217,0 15.9565,10.2174 16,16 0,16"/>
+   </object>
   </objectgroup>
  </tile>
 </tileset>
