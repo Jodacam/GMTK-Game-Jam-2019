@@ -29,7 +29,7 @@ public class Seaker : EnemyController
 
     private void Update()
     {
-        aiController.maxSpeed = Mathf.Lerp(16,36,(PlayerController.Player.currentLAVARIABLE-40)/500);
+        aiController.maxSpeed = Mathf.Lerp(15,25,(PlayerController.Player.currentLAVARIABLE-40)/300);
         base.Update();
         float distance = Vector3.Distance(PlayerController.Player.transform.position, transform.position);
         switch (state)
@@ -65,7 +65,7 @@ public class Seaker : EnemyController
                 dir = (PlayerController.Player.transform.position - transform.position).normalized;
                 if (innerCoolDown <= 0)
                 {
-                    innerCoolDown = coolDown;
+                    innerCoolDown = Mathf.Lerp(2,0.5f,PlayerController.Player.getLimit());
                     Attack();
                     animator.SetTrigger("attack");
                 }

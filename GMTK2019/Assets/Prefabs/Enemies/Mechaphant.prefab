@@ -216,8 +216,8 @@ MonoBehaviour:
     name: idle
   - clip: {fileID: 8300000, guid: 94f5bd4bf7262e6499262e5bc6cc42b4, type: 3}
     name: death
-  - clip: {fileID: 8300000, guid: 95dde03a2dd482846bbff1249f664adc, type: 3}
-    name: death
+  - clip: {fileID: 8300000, guid: d106670156f4a4c43bbb9a0931e8a4bf, type: 3}
+    name: shockwave
   audio: {fileID: 0}
   stacionary: 0
   state: 0
