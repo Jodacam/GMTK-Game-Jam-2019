@@ -19,9 +19,10 @@ public class ShopItem : MonoBehaviour
     private void Update() {
         if(onShop){
             if(Input.GetButtonDown("Jump")){
-               PlayerController.Player.LAVARIABLE -=cost;
+               PlayerController.Player.LoseCoins(cost);
                if(weapon){
-                   PlayerController.Player.actualWeapon = weapon;
+                   
+                   PlayerController.Player.ActualWeapon(weapon);
                }else if(armor){
                    PlayerController.Player.GrabArmor();
                    PlayerController.Player.actualArmor = armor;
