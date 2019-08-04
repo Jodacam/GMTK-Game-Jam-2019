@@ -10,6 +10,7 @@ public class OcTurret : EnemyController
 
     public override void Attack()
     {
+        PlayClip("Shoot");
          var obj = Instantiate(projectile,transform.position+new Vector3(dir.x,dir.y,0)*16,Quaternion.identity);
          obj.Init(dir);
     }
