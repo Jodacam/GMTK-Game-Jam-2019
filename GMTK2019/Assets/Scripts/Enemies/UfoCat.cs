@@ -31,6 +31,7 @@ public class UfoCat : EnemyController
     // Update is called once per frame
     void Update()
     {
+        base.Update();
         float distance = Vector3.Distance(PlayerController.Player.transform.position, transform.position);
         switch (state)
         {
