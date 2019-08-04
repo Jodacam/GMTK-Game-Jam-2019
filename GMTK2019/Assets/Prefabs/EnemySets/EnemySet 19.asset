@@ -20,3 +20,5 @@ MonoBehaviour:
   - {fileID: 4494281493857850084, guid: 61422326157c91d40be615ae8b080a0d, type: 3}
   - {fileID: 8863270202185284681, guid: 96d98536be2e46c4c83b8532df7103aa, type: 3}
   - {fileID: 8863270202185284681, guid: 96d98536be2e46c4c83b8532df7103aa, type: 3}
+  roomToStart: 9
+  roomToStop: 999999
