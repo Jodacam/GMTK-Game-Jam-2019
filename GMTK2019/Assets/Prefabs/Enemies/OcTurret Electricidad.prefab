@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5282825164383223873}
   - component: {fileID: 5282825164383223872}
   m_Layer: 0
-  m_Name: OcTurret
+  m_Name: OcTurret Electricidad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7989601673649031061, guid: 57a5b61e1e913cd46b730e42b80a17f2,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.92156863, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -141,10 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1cac83933f9ea8419a2d58b02a451ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 120
+  life: 170
   type: 0
   animator: {fileID: 0}
-  coolDown: 5
+  coolDown: 3
   onDamageTime: 0
   innerCoolDown: 0
   stacionary: 1

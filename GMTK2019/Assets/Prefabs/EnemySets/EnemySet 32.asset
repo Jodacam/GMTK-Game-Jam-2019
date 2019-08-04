@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd79f8aca23254846aef6fdbce949203, type: 3}
-  m_Name: EnemySet 6
+  m_Name: EnemySet 32
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 4494281493857850084, guid: ccc367b2a07269149bd946086987ad9f, type: 3}
   - {fileID: 4494281493857850084, guid: ccc367b2a07269149bd946086987ad9f, type: 3}
-  - {fileID: 4494281493857850084, guid: ccc367b2a07269149bd946086987ad9f, type: 3}
-  - {fileID: 5282825164383223872, guid: 4f3b51cadbf90384c888a52f4891f705, type: 3}
-  - {fileID: 8863270202185284681, guid: 5877b65453ee1704f86189588ee436a5, type: 3}
-  - {fileID: 2729694696467354188, guid: 6a405d75cfcdaaf4e9f942287a5ae9ca, type: 3}
-  - {fileID: 5282825164383223872, guid: 4f3b51cadbf90384c888a52f4891f705, type: 3}
+  - {fileID: 8863270202185284681, guid: b68b58517f592d74abc9c13b1b521294, type: 3}
+  - {fileID: 8863270202185284681, guid: bf5cb1ddb24a3894e8b733607ab46b67, type: 3}
+  - {fileID: 5282825164383223872, guid: 4f4bae9a199528746897be09736d29aa, type: 3}
+  - {fileID: 5282825164383223872, guid: 48774f56458edc1408efb2c0a60d683d, type: 3}
