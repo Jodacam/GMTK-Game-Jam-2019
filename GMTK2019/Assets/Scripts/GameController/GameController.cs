@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-<<<<<<< HEAD
-=======
-
->>>>>>> ca1297447914fa3dbdea95ec530d6ff63c20e423
 using UnityEngine.Rendering.PostProcessing;
 
 public class GameController : MonoBehaviour
@@ -47,7 +43,7 @@ public class GameController : MonoBehaviour
     private float transitionTimeStamp;
     private PostProcessProfile postProcessingProfile;
 
-    float totalMaps = 0; 
+    float totalMaps = 0;
 
     void Awake()
     {
@@ -70,19 +66,23 @@ public class GameController : MonoBehaviour
 
     public void Restart()
     {
-        foreach(GameObject g in mapList){
+        foreach (GameObject g in mapList)
+        {
             Destroy(g);
         }
         List<EnemyController> enemies = FindObjectsOfType<EnemyController>().ToList();
-        foreach(EnemyController e in enemies){
+        foreach (EnemyController e in enemies)
+        {
             Destroy(e.gameObject);
         }
         List<Projectile> proyectiles = FindObjectsOfType<Projectile>().ToList();
-        foreach(Projectile e in proyectiles){
+        foreach (Projectile e in proyectiles)
+        {
             Destroy(e.gameObject);
         }
         List<Coin> dropeables = FindObjectsOfType<Coin>().ToList();
-        foreach(Coin e in dropeables){
+        foreach (Coin e in dropeables)
+        {
             Destroy(e.gameObject);
         }
         scroll.generated = false;
@@ -99,7 +99,8 @@ public class GameController : MonoBehaviour
 
     public void GenerateMapList()
     {
-        foreach(GameObject g in mapList){
+        foreach (GameObject g in mapList)
+        {
             Destroy(g);
         }
         mapList.Clear();
@@ -141,28 +142,8 @@ public class GameController : MonoBehaviour
 
     public System.Collections.IEnumerator NextMap()
     {
-<<<<<<< HEAD
-        if(transitioning==false)
+        if (transitioning == false)
         {
-            transitioning = true;
-            transitionTimeStamp = Time.time;
-            FindObjectOfType<Camera>().GetComponent<PostProcessLayer>().enabled = true;
-            postProcessingProfile.GetSetting<DepthOfField>().focusDistance.value = 50;
-            postProcessingProfile.GetSetting<ChromaticAberration>().intensity.value = 0;
-=======
-        List<Projectile> proyectiles = FindObjectsOfType<Projectile>().ToList();
-        foreach(Projectile e in proyectiles){
-            Destroy(e.gameObject);
->>>>>>> ca1297447914fa3dbdea95ec530d6ff63c20e423
-        }
-        while (Time.time - transitionTimeStamp <= 0.5f)
-        {
-            postProcessingProfile.GetSetting<DepthOfField>().focusDistance.value = Mathf.Lerp(50, 0.1f, (Time.time - transitionTimeStamp) / 0.5f);
-            postProcessingProfile.GetSetting<ChromaticAberration>().intensity.value = Mathf.Lerp(0, 1, (Time.time - transitionTimeStamp) / 0.5f);
-            yield return null;
-        }
-            transitioning = false;
-            StartCoroutine(PlayerController.Player.StopMove());
             List<Projectile> proyectiles = FindObjectsOfType<Projectile>().ToList();
             foreach (Projectile e in proyectiles)
             {
@@ -173,27 +154,30 @@ public class GameController : MonoBehaviour
             {
                 Destroy(e.gameObject);
             }
-            mapList[actualMap].SetActive(false);
-            actualMap++;
-            totalMaps++;
+            transitioning = true;
+            transitionTimeStamp = Time.time;
+            FindObjectOfType<Camera>().GetComponent<PostProcessLayer>().enabled = true;
+            postProcessingProfile.GetSetting<DepthOfField>().focusDistance.value = 50;
+            postProcessingProfile.GetSetting<ChromaticAberration>().intensity.value = 0;
+        }
+        while (Time.time - transitionTimeStamp <= 0.5f)
+        {
+            postProcessingProfile.GetSetting<DepthOfField>().focusDistance.value = Mathf.Lerp(50, 0.1f, (Time.time - transitionTimeStamp) / 0.5f);
+            postProcessingProfile.GetSetting<ChromaticAberration>().intensity.value = Mathf.Lerp(0, 1, (Time.time - transitionTimeStamp) / 0.5f);
+            yield return null;
+        }
+        transitioning = false;
+        StartCoroutine(PlayerController.Player.StopMove());
 
-            if (mapList.Count > 1)
-            {
-                scroll.Scroll();
-            }
+        mapList[actualMap].SetActive(false);
+        actualMap++;
+        totalMaps++;
 
-<<<<<<< HEAD
-            if (actualMap < mapList.Count)
-            {
-                PrepareMap();
-            }
-            else
-            {
+        if (mapList.Count > 1)
+        {
+            scroll.Scroll();
+        }
 
-                GenerateMapList();
-            }
-
-=======
         if (actualMap < mapList.Count)
         {
             PrepareMap();
@@ -202,12 +186,11 @@ public class GameController : MonoBehaviour
         {
             GenerateMapList();
         }
-        
->>>>>>> ca1297447914fa3dbdea95ec530d6ff63c20e423
 
-            SpawnEnemies();
-            yield return null;
-        
+
+        SpawnEnemies();
+        yield return null;
+
     }
 
     public void ScreenShake(float duration, float strength)
@@ -215,28 +198,34 @@ public class GameController : MonoBehaviour
         camShake.StartShake(duration, strength);
     }
 
-    private Weapon getWeapon(){
+    private Weapon getWeapon()
+    {
         Weapon n = null;
-        while(n == null || n==PlayerController.Player.actualWeapon){
-            int r = Random.Range(0,weaponList.Count-1);
+        while (n == null || n == PlayerController.Player.actualWeapon)
+        {
+            int r = Random.Range(0, weaponList.Count - 1);
             n = weaponList[r];
         }
         return n;
     }
 
-    private PowerUp getPowerUp(){
+    private PowerUp getPowerUp()
+    {
         PowerUp n = null;
-        while(n == null||n==PlayerController.Player.actualPowerUp){
-            int r = Random.Range(0,powerUpList.Count-1);
+        while (n == null || n == PlayerController.Player.actualPowerUp)
+        {
+            int r = Random.Range(0, powerUpList.Count - 1);
             n = powerUpList[r];
         }
         return n;
     }
 
-    private Armor getArmor(){
+    private Armor getArmor()
+    {
         Armor n = null;
-        while(n == null || n==PlayerController.Player.actualArmor){
-            int r = Random.Range(0,armorList.Count-1);
+        while (n == null || n == PlayerController.Player.actualArmor)
+        {
+            int r = Random.Range(0, armorList.Count - 1);
             n = armorList[r];
         }
         return n;
@@ -244,7 +233,7 @@ public class GameController : MonoBehaviour
     public void SpawnEnemies()
     {
         door = FindObjectOfType<Puerta>();
-        if (actualMap < mapList.Count-1)
+        if (actualMap < mapList.Count - 1)
         {
             if (actualMap % mapsPerShop == 0 && actualMap != 0)
             {
@@ -255,18 +244,19 @@ public class GameController : MonoBehaviour
                 var a = getArmor();
                 var w1 = getWeapon();
                 float disc = 1;
-                if(PlayerController.Player.bendiciones["shopCoins"]){
-                    disc =Mathf.Lerp(0.95f,0.25f,PlayerController.Player.getLimit());
+                if (PlayerController.Player.bendiciones["shopCoins"])
+                {
+                    disc = Mathf.Lerp(0.95f, 0.25f, PlayerController.Player.getLimit());
                 }
-                shop[0].Init(w,Mathf.RoundToInt(Mathf.LerpUnclamped(w.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)*disc));
-                shop[1].Init(a,Mathf.RoundToInt(Mathf.LerpUnclamped(a.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)*disc));
-                shop[2].Init(w1,Mathf.RoundToInt(Mathf.LerpUnclamped(w1.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)*disc));
+                shop[0].Init(w, Mathf.RoundToInt(Mathf.LerpUnclamped(w.cost, 240, (PlayerController.Player.currentLAVARIABLE - 40) / 300) * disc));
+                shop[1].Init(a, Mathf.RoundToInt(Mathf.LerpUnclamped(a.cost, 240, (PlayerController.Player.currentLAVARIABLE - 40) / 300) * disc));
+                shop[2].Init(w1, Mathf.RoundToInt(Mathf.LerpUnclamped(w1.cost, 240, (PlayerController.Player.currentLAVARIABLE - 40) / 300) * disc));
             }
             else
             {
                 MusicController.Instance.SetMusic("Game");
                 List<SpawnEnemy> spawns = FindObjectsOfType<SpawnEnemy>().ToList();
-                List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart <= totalMaps && x.roomToStop >= totalMaps select x).ToList();
+                List<EnemySet> setAllowed = (from x in setOfEnemies where x.roomToStart <= totalMaps && x.roomToStop >= totalMaps select x).ToList();
                 spawns.Shuffle();
                 int random = Random.Range(0, setAllowed.Count);
 
@@ -275,7 +265,7 @@ public class GameController : MonoBehaviour
                 foreach (EnemyController enemy in setAllowed[random].enemies)
                 {
                     var e = Instantiate(enemy, spawns[enemyNum].transform.position, Quaternion.Euler(0, 0, 0));
-                    e.life = e.life+Mathf.Log10((actualMap+1)*10)*15;
+                    e.life = e.life + Mathf.Log10((actualMap + 1) * 10) * 15;
                     enemyNum++;
                 }
 
@@ -286,7 +276,7 @@ public class GameController : MonoBehaviour
         {
             MusicController.Instance.SetMusic("Boss");
             List<SpawnEnemy> spawns = FindObjectsOfType<SpawnEnemy>().ToList();
-            List<EnemySet>setAllowed = (from x in setOfBosses where x.roomToStart <= totalMaps && x.roomToStop >= totalMaps select x).ToList();
+            List<EnemySet> setAllowed = (from x in setOfBosses where x.roomToStart <= totalMaps && x.roomToStop >= totalMaps select x).ToList();
             spawns.Shuffle();
             int random = Random.Range(0, setAllowed.Count);
 
