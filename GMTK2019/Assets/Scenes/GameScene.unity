@@ -3272,8 +3272,17 @@ MonoBehaviour:
   - {fileID: 3852361113583753524, guid: 6c1d527b111183b4fa46dae1adaa385d, type: 3}
   coin: {fileID: 3523322207151651339, guid: ec60373415e47ef42a31f7a7b726fa6e, type: 3}
   powerUpList: []
-  weaponList: []
-  armorList: []
+  weaponList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  armorList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   bossRooms:
   - {fileID: 4907390051029339579, guid: d455be22fa6ac0841b638a719b0bc15e, type: 3}
   - {fileID: -7128601633098942801, guid: 83fa65c26cb27d14aa4468337bea44d7, type: 3}
@@ -3296,6 +3305,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6b745084ae9ca9b4a849864aa500d1b4, type: 2}
   - {fileID: 11400000, guid: 11b262a5c7bd4d949af1486004a55913, type: 2}
   - {fileID: 11400000, guid: 9300849507a74314fa5fa54a5b8abe9b, type: 2}
+  setOfBosses: []
   door: {fileID: 0}
   spawnPoint: {fileID: 0}
   scroll: {fileID: 1394964007}
