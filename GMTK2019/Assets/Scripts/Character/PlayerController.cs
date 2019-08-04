@@ -306,7 +306,7 @@ public class PlayerController : MonoBehaviour
         if (!invencible)
         {
             if (DamageType.None == type)
-                currentLAVARIABLE -= m_damage;
+                currentLAVARIABLE -=Mathf.RoundToInt(m_damage);
             else
             {
                 DamageType vulnerable = DamageType.None;
@@ -353,10 +353,10 @@ public class PlayerController : MonoBehaviour
                         }
                     }
                 }
-                currentLAVARIABLE -= m_damage;
+                currentLAVARIABLE -= Mathf.RoundToInt(m_damage);
             }
             invencible = true;
-            currentLAVARIABLE = Mathf.Clamp(currentLAVARIABLE, 0, float.MaxValue);
+            currentLAVARIABLE = Mathf.Clamp(Mathf.RoundToInt(currentLAVARIABLE), 0, float.MaxValue);
             StartCoroutine(getInmune());
             text.text = Mathf.Floor(currentLAVARIABLE).ToString();
         }
@@ -412,7 +412,7 @@ public class PlayerController : MonoBehaviour
 
     public void GetCoins(Coin coins)
     {
-        currentLAVARIABLE += coins.coins;
+        currentLAVARIABLE += Mathf.RoundToInt(coins.coins);
         text.text = currentLAVARIABLE.ToString();
         PlayClip("coin");
         getParticles[coins.type].Play();
@@ -420,7 +420,7 @@ public class PlayerController : MonoBehaviour
 
     public void LoseCoins(float coins)
     {
-        currentLAVARIABLE -= coins;
+        currentLAVARIABLE -= Mathf.RoundToInt(coins);
         text.text = currentLAVARIABLE.ToString();
         PlayClip("losecoins");
         loseCoins.Play();

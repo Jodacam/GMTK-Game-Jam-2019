@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20749268, g: 0.21147677, b: 0.14576986, a: 1}
+  m_IndirectSpecularColor: {r: 0.20749143, g: 0.21147497, b: 0.14576834, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4537,8 +4537,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5835f581bb4ca446bbb05fc20d20176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  postporcesoOriginal: {fileID: 0}
-  postProcesoNuevo: {fileID: 0}
   totalMapList:
   - {fileID: -590111615315481336, guid: 2b1d477465b12a342b0168601b44ef93, type: 3}
   - {fileID: -8837132675749600350, guid: dc708757a6be271469c0a879dc7b78fd, type: 3}
@@ -5917,7 +5915,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 14.2
+  m_fontSize: 14.15
   m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7810,6 +7808,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
+    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
+        type: 3}
+      propertyPath: maldicionesObject.Array.data[0]
+      value: 
+      objectReference: {fileID: 1477860309}
+    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
+        type: 3}
+      propertyPath: maldicionesObject.Array.data[1]
+      value: 
+      objectReference: {fileID: 1397643317}
+    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
+        type: 3}
+      propertyPath: maldicionesObject.Array.data[2]
+      value: 
+      objectReference: {fileID: 1292500246}
+    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
+        type: 3}
+      propertyPath: maldicionesObject.Array.data[3]
+      value: 
+      objectReference: {fileID: 1526879068}
+    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
+        type: 3}
+      propertyPath: maldicionesObject.Array.data[4]
+      value: 
+      objectReference: {fileID: 410537252}
+    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
+        type: 3}
+      propertyPath: maldicionesObject.Array.data[5]
+      value: 
+      objectReference: {fileID: 1398688408}
+    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
+        type: 3}
+      propertyPath: bendicionesObject.Array.data[0]
+      value: 
+      objectReference: {fileID: 2113832861}
     - target: {fileID: 7016893214619244400, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
         type: 3}
       propertyPath: m_LocalPosition.x
