@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="14" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="12">
+ <tileset firstgid="1" source="../KenneyMono.tsx"/>
+ <tileset firstgid="1025" source="../KenneyTransparente.tsx"/>
+ <tileset firstgid="2081" source="../Kenney.tsx"/>
+ <layer id="1" name="Back" width="14" height="10">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <layer id="5" name="BackDetail" width="14" height="10">
+  <data encoding="csv">
+0,0,0,0,1138,0,0,0,0,0,0,0,0,0,
+0,0,0,0,1138,0,0,0,1027,1028,0,0,0,0,
+0,1029,0,1028,1138,0,0,0,0,0,0,1028,1027,0,
+0,0,0,1610613840,3221226580,1026,0,0,0,0,0,0,0,0,
+0,1028,0,0,3221226576,0,0,0,1139,1610613874,1610613874,1610613874,1610613874,1610613874,
+0,1026,0,0,0,0,0,1610613840,3221226611,0,1029,0,0,0,
+0,0,0,0,0,0,0,0,0,0,1029,0,0,0,
+0,0,0,1106,1610613874,2684355699,0,1026,0,0,0,0,1139,1610613874,
+0,0,1029,1138,1139,3221226611,0,0,0,0,0,1139,3221226611,0,
+0,0,0,1138,1138,0,0,0,0,0,0,1138,0,0
+</data>
+ </layer>
+ <layer id="2" name="Mid" width="14" height="10">
+  <data encoding="csv">
+2147485318,1669,2147485317,0,2147485317,2147485317,1669,2147485317,2147485317,2147485317,2147485317,2147485317,1669,1670,
+1701,1468,0,0,0,0,0,0,0,0,0,0,0,3221227173,
+1701,0,0,0,0,0,0,0,0,0,0,0,0,3221227173,
+1701,0,0,0,0,0,0,0,0,0,0,1468,0,3221227173,
+1701,0,0,0,0,0,0,0,0,0,0,0,0,3221227173,
+1701,0,0,0,0,0,0,0,0,0,0,0,0,3221227173,
+1701,0,0,0,0,0,0,0,0,0,0,0,0,3221227173,
+1701,0,0,0,0,0,0,0,0,0,0,0,0,3221227173,
+1701,0,0,0,0,0,0,0,0,0,0,0,0,3221227173,
+1734,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614470
+</data>
+ </layer>
+ <objectgroup id="6" name="Mid">
+  <object id="1" name="Puerta" type="Puerta" x="48.3334" y="0.333333" width="16" height="16"/>
+  <object id="2" name="SpawnPoint" type="SpawnPoint" x="153" y="129" width="16" height="16"/>
+  <object id="3" name="SpawnEnemy" type="SpawnEnemy" x="48" y="30" width="16" height="16"/>
+  <object id="4" name="SpawnEnemy" type="SpawnEnemy" x="194.333" y="36.6667" width="16" height="16"/>
+  <object id="5" name="SpawnEnemy" type="SpawnEnemy" x="20" y="42" width="16" height="16"/>
+  <object id="6" name="SpawnEnemy" type="SpawnEnemy" x="129" y="28" width="16" height="16"/>
+  <object id="7" name="SpawnEnemy" type="SpawnEnemy" x="16" y="78.3333" width="16" height="16"/>
+  <object id="8" name="SpawnEnemy" type="SpawnEnemy" x="155" y="59" width="16" height="16" rotation="-90"/>
+  <object id="9" name="SpawnEnemy" type="SpawnEnemy" x="98" y="29" width="16" height="16"/>
+  <object id="10" name="SpawnEnemy" type="SpawnEnemy" x="103.333" y="57" width="16" height="16"/>
+  <object id="11" name="SpawnEnemy" type="SpawnEnemy" x="15.3333" y="131.333" width="16" height="16"/>
+ </objectgroup>
+ <layer id="3" name="Front" width="14" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

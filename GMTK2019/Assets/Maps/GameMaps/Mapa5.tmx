@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="14" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="2">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="14" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="12">
  <tileset firstgid="1" source="../KenneyMono.tsx"/>
  <tileset firstgid="1025" source="../KenneyTransparente.tsx"/>
  <tileset firstgid="2081" source="../Kenney.tsx"/>
@@ -24,10 +24,10 @@
 0,1028,1028,0,0,0,1027,1026,0,0,1138,0,1029,0,
 0,0,0,0,0,1104,0,1028,1027,0,1138,1028,0,0,
 0,0,0,0,0,1138,0,0,0,0,1138,0,1027,0,
-0,0,1026,1610613840,1610613874,1107,1610613874,1610613874,1610613874,1610613874,1610613877,2684355699,0,0,
-0,0,0,0,0,1138,0,0,1029,0,0,1138,0,0,
-0,1029,0,0,0,3221226576,0,1026,0,0,1026,1138,1028,0,
-0,0,1026,1028,0,0,0,0,0,1027,0,3221226576,0,0,
+0,0,1026,1610613840,1610613874,1107,3758097488,0,0,536872016,1610613877,2684355699,0,0,
+0,0,0,0,0,1138,0,0,1029,0,0,1073742928,0,0,
+0,1029,0,0,0,3221226576,0,1026,0,0,1026,0,1028,0,
+0,0,1026,1028,0,0,0,0,0,1027,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
@@ -47,6 +47,16 @@
  </layer>
  <objectgroup id="6" name="Mid">
   <object id="1" name="Puerta" type="Puerta" x="15.6667" y="0" width="16" height="16"/>
+  <object id="2" name="SpawnPoint" type="SpawnPoint" x="143" y="127.667" width="16" height="16"/>
+  <object id="3" name="SpawnEnemy" type="SpawnEnemy" x="199.333" y="24" width="16" height="16"/>
+  <object id="4" name="SpawnEnemy" type="SpawnEnemy" x="90.3333" y="33.3333" width="16" height="16"/>
+  <object id="5" name="SpawnEnemy" type="SpawnEnemy" x="22.3333" y="25" width="16" height="16"/>
+  <object id="6" name="SpawnEnemy" type="SpawnEnemy" x="196" y="68.3333" width="16" height="16"/>
+  <object id="7" name="SpawnEnemy" type="SpawnEnemy" x="26.6667" y="62" width="16" height="16"/>
+  <object id="8" name="SpawnEnemy" type="SpawnEnemy" x="57.3333" y="64.6667" width="16" height="16"/>
+  <object id="9" name="SpawnEnemy" type="SpawnEnemy" x="56.3333" y="36" width="16" height="16"/>
+  <object id="10" name="SpawnEnemy" type="SpawnEnemy" x="134" y="36" width="16" height="16"/>
+  <object id="11" name="SpawnEnemy" type="SpawnEnemy" x="180" y="43" width="16" height="16"/>
  </objectgroup>
  <layer id="3" name="Front" width="14" height="10">
   <data encoding="csv">
