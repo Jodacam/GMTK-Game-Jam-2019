@@ -10,9 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4799106209370286968}
   - component: {fileID: 4799106209370286951}
-  - component: {fileID: 4799106209370286950}
   - component: {fileID: 6356802687429463733}
-  - component: {fileID: 8249612974794195420}
   m_Layer: 0
   m_Name: CoinMini
   m_TagString: Untagged
@@ -84,32 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4799106209370286950
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4799106209370286949}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.079220295, y: 0.42720985}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.49031004, y: 0.4709301}
-    oldSize: {x: 16, y: 16}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 12.209075, y: 11.981625}
-  m_EdgeRadius: 0
 --- !u!95 &6356802687429463733
 Animator:
   serializedVersion: 3
@@ -129,17 +101,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8249612974794195420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4799106209370286949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95bea8077c14f524c9b8ff8c828089f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  coins: 30
