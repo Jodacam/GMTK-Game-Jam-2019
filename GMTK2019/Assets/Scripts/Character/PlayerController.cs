@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
 
     private bool invencible = false;
 
+    private bool canMove = true;
+
     public float footStep = 0.1f;
 
     private float innerFoot;
@@ -228,44 +230,46 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-
-        if (x != 0)
+        if (canMove)
         {
-            y = 0;
-            dir.x = x;
-            dir.y = 0;
-        }
-        else if (y != 0)
-        {
-            x = 0;
-            dir.y = y;
-            dir.x = 0;
-        }
-
-        var normalized = new Vector2(x, y).normalized;
-        speed = Vector2.Scale(normalized, minSpeed);
-        if (maldiciones["speed"])
-            speed *= 1 / Mathf.Lerp(1, 1.33f, (currentLAVARIABLE - 40) / 300);
-        if (speed.magnitude >= 0.01)
-        {
-            if (innerFoot <= 0)
+            if (x != 0)
             {
-                PlayClip("footStep");
-                innerFoot = footStep;
+                y = 0;
+                dir.x = x;
+                dir.y = 0;
             }
-            else
+            else if (y != 0)
             {
-                innerFoot -= Time.deltaTime;
+                x = 0;
+                dir.y = y;
+                dir.x = 0;
             }
+
+            var normalized = new Vector2(x, y).normalized;
+            speed = Vector2.Scale(normalized, minSpeed);
+            if (maldiciones["speed"])
+                speed *= 1 / Mathf.Lerp(1, 1.33f, (currentLAVARIABLE - 40) / 300);
+            if (speed.magnitude >= 0.01)
+            {
+                if (innerFoot <= 0)
+                {
+                    PlayClip("footStep");
+                    innerFoot = footStep;
+                }
+                else
+                {
+                    innerFoot -= Time.deltaTime;
+                }
+            }
+            //if(!Physics2D.Raycast(raycastInit.position,dir,17,LayerMask.GetMask("Enemies","Walls") ){
+
+            transform.Translate(speed * Time.deltaTime);
+            //}
+
+            animator.SetFloat(Const.X_DIR, dir.x);
+            animator.SetFloat(Const.Y_DIR, dir.y);
+            animator.SetFloat(Const.SPEED, speed.sqrMagnitude);
         }
-        //if(!Physics2D.Raycast(raycastInit.position,dir,17,LayerMask.GetMask("Enemies","Walls") ){
-
-        transform.Translate(speed * Time.deltaTime);
-        //}
-
-        animator.SetFloat(Const.X_DIR, dir.x);
-        animator.SetFloat(Const.Y_DIR, dir.y);
-        animator.SetFloat(Const.SPEED, speed.sqrMagnitude);
 
     }
 
@@ -437,6 +441,14 @@ public class PlayerController : MonoBehaviour
         }
         invencible = false;
         renderer.color = e;
+    }
+
+    public IEnumerator StopMove()
+    {
+        canMove = false;
+        yield return new WaitForSeconds(0.5f);
+        canMove = true;
+
     }
 
 
