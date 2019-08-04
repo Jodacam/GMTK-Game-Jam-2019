@@ -13,6 +13,7 @@ public class Puerta : MonoBehaviour
     public AudioSource source;
     public Sound closeSound;
     public Sound openSound;
+    public Sound nextLevel;
 
     public void EnemyKilled(){
         this.numEnemies--;
@@ -46,6 +47,8 @@ public class Puerta : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("Player") && open){
             GameController.Instance.NextMap();
+            source.clip = nextLevel.clip;
+            source.Play();
         }
     }
 
