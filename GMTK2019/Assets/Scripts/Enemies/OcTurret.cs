@@ -21,7 +21,7 @@ public class OcTurret : EnemyController
         animator.SetFloat(Const.X_DIR, dir.x);
         animator.SetFloat(Const.Y_DIR, dir.y);
         if(innerCoolDown <=0){
-            innerCoolDown+=coolDown;
+            innerCoolDown+=Mathf.Lerp(4,1,(PlayerController.Player.currentLAVARIABLE-40)/1000);
             Attack();
         }else{
             innerCoolDown-=Time.deltaTime;
