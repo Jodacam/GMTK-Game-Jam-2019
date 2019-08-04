@@ -6,6 +6,7 @@ public abstract class Weapon : ScriptableObject {
     public GameObject prefab;
     public  Sprite sprite;
 
+    public int cost;
     public int id; 
 
 }
