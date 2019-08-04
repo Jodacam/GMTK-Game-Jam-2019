@@ -73,6 +73,22 @@ public class PlayerController : MonoBehaviour
 
     public Transform raycastInit;
 
+    public GameObject[] maldicionesObject;
+    public GameObject[] bendicionesObject;
+
+    Dictionary<string, bool> maldiciones = new Dictionary<string, bool>(){
+        {"speed",false},
+        {"cooldown",false},
+        {"thunder",false},
+        {"fire",false},
+        {"ice",false},
+        {"costMoney",false}
+    };
+
+    Dictionary<string, bool> bendiciones = new Dictionary<string, bool>(){
+        {"coins",false},
+        {"plusDamage",false}
+    };
     void Start()
     {
         currentLAVARIABLE = LAVARIABLE;
@@ -87,6 +103,57 @@ public class PlayerController : MonoBehaviour
         getParticles.Add(Coin.Type.PocionMana, getPocionMana);
         getParticles.Add(Coin.Type.PocionSalud, getPocionSalud);
         getParticles.Add(Coin.Type.Pollo, getChicken);
+        getBuffs();
+    }
+
+
+    private void getBuffs()
+    {
+
+
+        foreach (var item in maldicionesObject)
+        {
+            item.SetActive(false);
+        }
+
+
+        foreach (var item in bendicionesObject)
+        {
+            item.SetActive(false);
+        }
+        maldiciones = new Dictionary<string, bool>(){
+        {"speed",false},
+        {"cooldown",false},
+        {"thunder",false},
+        {"fire",false},
+        {"ice",false},
+        {"costMoney",false}
+    };
+        bendiciones = new Dictionary<string, bool>(){
+        {"coins",false},
+        {"plusDamage",false}
+    };
+
+        var s = new string[6];
+        maldiciones.Keys.CopyTo(s, 0);
+
+        int next = UnityEngine.Random.Range(0, 6);
+        maldiciones[s[next]] = true;
+
+        int next2 = UnityEngine.Random.Range(0, 6);
+        if (next2 == next)
+            next2 = (next2 + 1) % 6;
+        maldiciones[s[next2]] = true;
+
+        maldicionesObject[next].SetActive(true);
+        maldicionesObject[next2].SetActive(true);
+
+        s = new string[2];
+        bendiciones.Keys.CopyTo(s, 0);
+
+        next = UnityEngine.Random.Range(0, 2);
+        bendiciones[s[next]] = true;
+        bendicionesObject[next].SetActive(true);
     }
 
     // Update is called once per frame
@@ -120,8 +187,11 @@ public class PlayerController : MonoBehaviour
             bool pressed = Input.GetButtonDown("Jump");
             if (pressed)
             {
-                innerCoolDown = coolDown;
+                innerCoolDown = maldiciones["cooldown"] ? coolDown + Mathf.Lerp(0, 2, currentLAVARIABLE - 40 / 350) : coolDown;
                 animator.SetTrigger("attack");
+
+                if (maldiciones["costMoney"])
+                    currentLAVARIABLE = Mathf.Min(1, currentLAVARIABLE - ((currentLAVARIABLE * 5) / 100));
                 actualWeapon.Attack(this);
             }
         }
@@ -153,8 +223,9 @@ public class PlayerController : MonoBehaviour
 
         var normalized = new Vector2(x, y).normalized;
         speed = Vector2.Scale(normalized, minSpeed);
-
-        if (speed.magnitude >= 0.1)
+        if (maldiciones["speed"])
+            speed *= 1 / Mathf.Lerp(1, 5, (currentLAVARIABLE - 40) / 500);
+        if (speed.magnitude >= 0.01)
         {
             if (innerFoot <= 0)
             {
@@ -168,7 +239,7 @@ public class PlayerController : MonoBehaviour
         }
         //if(!Physics2D.Raycast(raycastInit.position,dir,17,LayerMask.GetMask("Enemies","Walls") ){
 
-            transform.Translate(speed * Time.deltaTime);
+        transform.Translate(speed * Time.deltaTime);
         //}
 
         animator.SetFloat(Const.X_DIR, dir.x);
@@ -201,7 +272,29 @@ public class PlayerController : MonoBehaviour
                 currentLAVARIABLE -= damage;
             else
             {
+                DamageType vulnerable = DamageType.None;
                 //Calcular resistencias.
+                if (maldiciones["fire"])
+                    vulnerable = DamageType.Fire;
+                else
+                if (maldiciones["thunder"])
+                    vulnerable = DamageType.Thunder;
+                else
+                if (maldiciones["ice"])
+                    vulnerable = DamageType.Ice;
+                if(vulnerable==type){
+                    damage*=2;
+                }
+
+                if(armor){
+                    if(actualArmor.vulnerableTo == type){
+                        damage*=2;
+                    }else{
+                        if(actualArmor.resistanceTo == type){
+                            damage/=2;
+                        }
+                    }
+                }
                 currentLAVARIABLE -= damage;
             }
             invencible = true;
@@ -233,7 +326,10 @@ public class PlayerController : MonoBehaviour
         currentLAVARIABLE = LAVARIABLE;
         text.text = currentLAVARIABLE.ToString();
         dead = false;
+        getBuffs();
         GameController.Instance.Restart();
+
+
     }
 
     public void GrabArmor()
