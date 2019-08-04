@@ -148,6 +148,8 @@ MonoBehaviour:
   audio: {fileID: -4990474143738878743}
   damageType: 3
   damageAmount: 90
+  destroyEffect: {fileID: 2760323810031620624, guid: b16c11f1a36b6ec43824640f17dfbb3e,
+    type: 3}
   multiplier: 24
 --- !u!82 &-4990474143738878743
 AudioSource:

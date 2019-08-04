@@ -120,7 +120,7 @@ Animator:
   m_GameObject: {fileID: 4240011681865804536}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c392bfed70d75d844b94933b9481f4cb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 13b4e37db82648e459517e8ff091e786, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -141,6 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 177bee7ecc0588f46870bef00d8bd5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clips: []
+  audio: {fileID: 0}
   damageType: 3
   damageAmount: 60
+  destroyEffect: {fileID: 2760323810031620624, guid: 019131d3b11e63140aeaca9eeeedfd7b,
+    type: 3}
   multiplier: 36

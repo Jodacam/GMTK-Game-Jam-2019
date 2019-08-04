@@ -20,6 +20,8 @@ public class Gun : Weapon
             z = 270;
         }
 
+        controller.PlayClip("Shoot");
+
         var obj = Instantiate(prefab,controller.transform);
         obj.GetComponent<Animator>().SetFloat(Const.X_DIR,dir.x);
         obj.GetComponent<Animator>().SetFloat(Const.Y_DIR,dir.y);
