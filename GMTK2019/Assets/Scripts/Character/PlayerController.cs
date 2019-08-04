@@ -265,6 +265,10 @@ public class PlayerController : MonoBehaviour
         text.text = currentLAVARIABLE.ToString();
         PlayClip("losecoins");
         loseCoins.Play();
+        currentLAVARIABLE = Mathf.Clamp(currentLAVARIABLE,0,float.MaxValue);
+        if(currentLAVARIABLE == 0){
+            Die();
+        }
     }
 
     IEnumerator getInmune()

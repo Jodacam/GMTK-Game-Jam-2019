@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ShopItem : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class ShopItem : MonoBehaviour
     public PowerUp powerUp;
 
     public SpriteRenderer renderer;
+
+    public TextMeshPro price;
 
     public bool onShop = false;
     private void Update() {
@@ -50,20 +53,20 @@ public class ShopItem : MonoBehaviour
     public void Init(Weapon weapon,int cost)
     {
         
-
+        this.price.text = cost.ToString();
         this.weapon = weapon;
         renderer.sprite = weapon.sprite;
     }
 
     public void Init(Armor weapon,int cost)
     {
-        
+        this.price.text = cost.ToString();
         this.armor = weapon;
         renderer.sprite = weapon.sprite;
     }
         public void Init(PowerUp weapon,int cost)
     {
-        
+        this.price.text = cost.ToString();
         this.powerUp = weapon;
         renderer.sprite = weapon.sprite;
     }
