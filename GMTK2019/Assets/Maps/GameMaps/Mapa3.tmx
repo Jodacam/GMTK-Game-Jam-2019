@@ -40,18 +40,18 @@
 1701,0,0,0,0,0,0,0,536872051,2147484787,0,0,0,3221227173,
 1701,0,0,0,0,0,0,0,1138,1105,0,0,0,3221227173,
 1701,0,0,0,0,0,0,0,1105,1108,1610613874,1610613874,2684355666,3221227173,
-1701,0,0,0,0,0,0,0,1138,1138,0,0,1138,3221227173,
-1701,0,0,0,0,0,1468,0,1073742963,3758097523,0,0,1138,3221227173,
+1701,0,0,0,0,1468,0,0,1610613875,3221226611,0,0,1138,3221227173,
+1701,0,0,0,0,0,0,0,0,0,0,0,1138,3221227173,
 1734,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614437,1610614470
 </data>
  </layer>
  <objectgroup id="6" name="Mid">
   <object id="1" name="Puerta" type="Puerta" x="192" y="-0.333333" width="16" height="16"/>
-  <object id="2" name="SpawnPoint" type="SpawnPoint" x="31" y="125.667" width="16" height="16"/>
+  <object id="2" name="SpawnPoint" type="SpawnPoint" x="20" y="128.667" width="16" height="16"/>
   <object id="3" name="SpawnEnemy" type="SpawnEnemy" x="194" y="31.3333" width="16" height="16"/>
-  <object id="5" name="SpawnEnemy" type="SpawnEnemy" x="109" y="101.333" width="16" height="16"/>
+  <object id="5" name="SpawnEnemy" type="SpawnEnemy" x="102" y="67.6663" width="16" height="16"/>
   <object id="6" name="SpawnEnemy" type="SpawnEnemy" x="160.667" y="63" width="16" height="16"/>
-  <object id="7" name="SpawnEnemy" type="SpawnEnemy" x="115.333" y="135.333" width="16" height="16"/>
+  <object id="7" name="SpawnEnemy" type="SpawnEnemy" x="163" y="133" width="16" height="16"/>
   <object id="8" name="SpawnEnemy" type="SpawnEnemy" x="120.667" y="30.6667" width="16" height="16"/>
   <object id="9" name="SpawnEnemy" type="SpawnEnemy" x="71" y="30.6667" width="16" height="16"/>
   <object id="10" name="SpawnEnemy" type="SpawnEnemy" x="34.6667" y="38.6667" width="16" height="16"/>
