@@ -20,6 +20,7 @@ public class MusicController : MonoBehaviour
     public List<Sound> music;
     public AudioSource audio;
     
+    string actual = "";
     void Awake()
     {
         if(instance){
@@ -35,8 +36,9 @@ public class MusicController : MonoBehaviour
 
     public void SetMusic(string name){
         var clip = music.Find((e) => e.name.Equals(name));
-        if (clip != null)
+        if (clip != null && !actual.Equals(name))
         {
+            actual = name;
             audio.Stop();
 
             audio.clip=clip.clip;

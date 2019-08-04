@@ -51,6 +51,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        MusicController.Instance.SetMusic("Game");
         mapList.Add(Instantiate(tutorialRoom, transform.position, Quaternion.identity));
         PrepareMap();
         door = FindObjectOfType<Puerta>();
@@ -83,6 +84,7 @@ public class GameController : MonoBehaviour
         PrepareMap();
         door = FindObjectOfType<Puerta>();
         door.SetEnemies(0);
+        MusicController.Instance.SetMusic("Game");
     }
 
     public void GenerateMapList()
@@ -196,6 +198,7 @@ public class GameController : MonoBehaviour
             if (actualMap % mapsPerShop == 0 && actualMap != 0)
             {
                 door.SetEnemies(0);
+                MusicController.Instance.SetMusic("Shop");
                 var shop = FindObjectsOfType<ShopItem>();
                 shop[0].Init(getWeapon(),10);
                 shop[1].Init(getArmor(),10);
@@ -203,6 +206,7 @@ public class GameController : MonoBehaviour
             }
             else
             {
+                MusicController.Instance.SetMusic("Game");
                 List<SpawnEnemy> spawns = FindObjectsOfType<SpawnEnemy>().ToList();
                 List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart <= totalMaps && x.roomToStop >= totalMaps select x).ToList();
                 spawns.Shuffle();
@@ -221,6 +225,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            MusicController.Instance.SetMusic("Boss");
             List<SpawnEnemy> spawns = FindObjectsOfType<SpawnEnemy>().ToList();
             List<EnemySet>setAllowed = (from x in setOfBosses where x.roomToStart <= totalMaps && x.roomToStop >= totalMaps select x).ToList();
             spawns.Shuffle();
