@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -111,6 +110,7 @@ public class GameController : MonoBehaviour
             mapList[i].SetActive(false);
 
         }
+        PlayerController.Player.addCurse();
         int r = Random.Range(0, shops.Count);
         mapList.Add(Instantiate(bossRooms[r], transform.position, Quaternion.identity));
         scroll.NextTile(ScrollUi.RoomType.Boss);
@@ -152,6 +152,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
+
             GenerateMapList();
         }
         
