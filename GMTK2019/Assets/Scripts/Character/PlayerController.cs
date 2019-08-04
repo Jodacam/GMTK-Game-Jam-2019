@@ -79,7 +79,9 @@ public class PlayerController : MonoBehaviour
     public GameObject[] maldicionesObject;
     public GameObject[] bendicionesObject;
 
-    public Dictionary<string, bool> maldiciones = new Dictionary<string, bool>(){
+    public ParticleSystem spawnEffect;
+
+    Dictionary<string, bool> maldiciones = new Dictionary<string, bool>(){
         {"speed",false},
         {"cooldown",false},
         {"thunder",false},
@@ -88,7 +90,7 @@ public class PlayerController : MonoBehaviour
         {"costMoney",false}
     };
 
-    public Dictionary<string, bool> bendiciones = new Dictionary<string, bool>(){
+    Dictionary<string, bool> bendiciones = new Dictionary<string, bool>(){
         {"coins",false},
         {"plusDamage",false}
     };
@@ -451,5 +453,8 @@ public class PlayerController : MonoBehaviour
 
     }
 
-
+    public void SpawnPlayer(){
+        PlayClip("Spawn");
+        spawnEffect.Play();
+    }
 }

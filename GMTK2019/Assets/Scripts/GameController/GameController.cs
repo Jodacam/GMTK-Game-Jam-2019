@@ -1,9 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Unity.
+using UnityEngine.Rendering.PostProcessing;
 
 public class GameController : MonoBehaviour
 {
+
+    public PostProcessProfile postporcesoOriginal;
+    public PostProcessProfile postProcesoNuevo;
     public List<GameObject> totalMapList;
 
     List<GameObject> mapList = new List<GameObject>();
@@ -126,6 +131,7 @@ public class GameController : MonoBehaviour
         aStarController.Scan();
         spawnPoint = FindObjectOfType<SpawnPoint>().transform;
         PlayerController.Player.transform.position = spawnPoint.position;
+        PlayerController.Player.SpawnPlayer();
     }
 
     public void NextMap()
