@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
 
     List<GameObject> mapList = new List<GameObject>();
 
+    public GameObject coin;
     public List<PowerUp> powerUpList;
     public List<Weapon> weaponList;
     public List<Armor> armorList;
@@ -163,7 +164,7 @@ public class GameController : MonoBehaviour
         return n;
     }
 
-       private Armor getArmor(){
+    private Armor getArmor(){
         Armor n = null;
         while(n == null || n==PlayerController.Player.actualArmor){
             int r = Random.Range(0,armorList.Count-1);
@@ -187,8 +188,8 @@ public class GameController : MonoBehaviour
             else
             {
                 List<SpawnEnemy> spawns = FindObjectsOfType<SpawnEnemy>().ToList();
+                List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart <= totalMaps && x.roomToStop >= totalMaps select x).ToList();
                 spawns.Shuffle();
-                List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart >= totalMaps && x.roomToStop <= totalMaps select x).ToList();
                 int random = Random.Range(0, setAllowed.Count);
 
                 int enemyNum = 0;
@@ -205,8 +206,8 @@ public class GameController : MonoBehaviour
         else
         {
             List<SpawnEnemy> spawns = FindObjectsOfType<SpawnEnemy>().ToList();
+            List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart <= totalMaps && x.roomToStop >= totalMaps select x).ToList();
             spawns.Shuffle();
-            List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart >= totalMaps && x.roomToStop <= totalMaps select x).ToList();
             int random = Random.Range(0, setAllowed.Count);
 
             int enemyNum = 0;

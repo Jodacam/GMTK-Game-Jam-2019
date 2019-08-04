@@ -53,6 +53,7 @@ public abstract class EnemyController : MonoBehaviour {
     {
         GameController.Instance.EnemyDead();
         Destroy(gameObject);
+        Instantiate(GameController.Instance.coin,transform.position,Quaternion.identity);
     }
 
     public abstract void Attack();
@@ -60,12 +61,13 @@ public abstract class EnemyController : MonoBehaviour {
     public  IEnumerator Damaged(){
         yield return null;
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+        Color c = renderer.color;
         while(onDamageTime>=0){
             renderer.color = Color.Lerp(Color.white,Color.red,Mathf.PingPong(Time.time,1f));
             yield return null;
             onDamageTime-=Time.deltaTime;
 
         }
-        renderer.color =Color.white;
+        renderer.color =c;//Color.white;
     }
 }

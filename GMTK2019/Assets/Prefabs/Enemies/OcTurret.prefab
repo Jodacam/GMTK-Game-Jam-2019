@@ -141,12 +141,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1cac83933f9ea8419a2d58b02a451ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 100
-  type: 0
+  life: 120
+  type: 3
   animator: {fileID: 0}
   coolDown: 5
   onDamageTime: 0
   innerCoolDown: 0
   stacionary: 1
   state: 0
-  projectile: {fileID: 0}
+  projectile: {fileID: 8724100565046061397, guid: 6ed04e86da62edc46bb66ca9b536c870,
+    type: 3}
