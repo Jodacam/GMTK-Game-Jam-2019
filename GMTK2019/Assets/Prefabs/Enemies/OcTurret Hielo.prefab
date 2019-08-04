@@ -157,7 +157,7 @@ MonoBehaviour:
   - clip: {fileID: 8300000, guid: 14f7e86f2edb4fc46b9fafb15374845b, type: 3}
     name: Shoot
   - clip: {fileID: 8300000, guid: baee45c519238654ca2007fc9046be3d, type: 3}
-    name: Shoot
+    name: ReceiveDamage
   audio: {fileID: 0}
   stacionary: 1
   state: 0
