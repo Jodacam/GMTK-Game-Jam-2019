@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
 
     List<GameObject> mapList = new List<GameObject>();
 
+    public GameObject coin;
     public List<PowerUp> powerUpList;
     public List<Weapon> weaponList;
     public List<Armor> armorList;
@@ -158,7 +159,7 @@ public class GameController : MonoBehaviour
         return n;
     }
 
-       private Armor getArmor(){
+    private Armor getArmor(){
         Armor n = null;
         while(n == null || n==PlayerController.Player.actualArmor){
             int r = Random.Range(0,armorList.Count-1);
