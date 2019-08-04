@@ -1,43 +1,28 @@
 fileFormatVersion: 2
-guid: 75d781ffb1f106f47978b32f6d4eea64
+guid: ab2c1358363f6a148beace5a1eb0f86f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7540792096080349031
-    second: DoggoTank Attack 0
+      213: -8088409449626835386
+    second: pollomana_spin_plus_0
   - first:
-      213: 1392325928831615490
-    second: DoggoTank Attack 1
+      213: -7462799927200269486
+    second: pollomana_spin_plus_1
   - first:
-      213: -5246778237900060252
-    second: DoggoTank Attack 2
+      213: 1248971862784306993
+    second: pollomana_spin_plus_2
   - first:
-      213: 6438596340427361302
-    second: DoggoTank Attack Back 0
+      213: 186245755895289642
+    second: pollomana_spin_plus_3
   - first:
-      213: -3853932184525302433
-    second: DoggoTank Attack Back 1
+      213: 7731023105320748271
+    second: pollomana_spin_plus_4
   - first:
-      213: 67704018728477262
-    second: DoggoTank Attack Back 2
+      213: -1905982150626403966
+    second: pollomana_spin_plus_5
   - first:
-      213: -3854199491356811981
-    second: DoggoTank Attack Right 0
-  - first:
-      213: 6510690824960770224
-    second: DoggoTank Attack Right 1
-  - first:
-      213: -7798459978068684866
-    second: DoggoTank Attack Right 2
-  - first:
-      213: 954290632518066884
-    second: DoggoTank Attack Left 0
-  - first:
-      213: -5517832714414370263
-    second: DoggoTank Attack Left 1
-  - first:
-      213: 7191055640599472569
-    second: DoggoTank Attack Left 2
+      213: 7592893243339192752
+    second: pollomana_spin_plus_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -77,11 +62,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
-  spriteMeshType: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,7 +108,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -135,7 +120,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -154,28 +139,16 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 8192
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DoggoTank Attack 0
+      name: pollomana_spin_plus_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 52
-        width: 16
+        y: 0
+        width: 21
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -184,19 +157,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb3d45aebd5d4ef4e949c815de7581e3
-      internalID: -7540792096080349031
+      spriteID: adbfa3380ec938f4882f307b99966778
+      internalID: -8088409449626835386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoggoTank Attack 1
+      name: pollomana_spin_plus_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 52
-        width: 16
+        x: 22
+        y: 0
+        width: 21
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -205,19 +178,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b0dc66c225e447488073f43be50ca9a
-      internalID: 1392325928831615490
+      spriteID: ef2db4ac4eed60540a7c9514235cdbe1
+      internalID: -7462799927200269486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoggoTank Attack 2
+      name: pollomana_spin_plus_2
       rect:
         serializedVersion: 2
-        x: 34
-        y: 52
-        width: 16
+        x: 44
+        y: 0
+        width: 21
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -226,19 +199,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13ed096831b607f41993d06dec02677e
-      internalID: -5246778237900060252
+      spriteID: dc9b138275e29214bb1598b4ce659b2f
+      internalID: 1248971862784306993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoggoTank Attack Back 0
+      name: pollomana_spin_plus_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 35
-        width: 16
+        x: 66
+        y: 0
+        width: 21
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -247,19 +220,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a109df1cd090f147bf59ee0e2f84a69
-      internalID: 6438596340427361302
+      spriteID: 7ccfbd31f5f65ba4dacdce1e9efcc810
+      internalID: 186245755895289642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoggoTank Attack Back 1
+      name: pollomana_spin_plus_4
       rect:
         serializedVersion: 2
-        x: 17
-        y: 35
-        width: 16
+        x: 88
+        y: 0
+        width: 21
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -268,19 +241,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d007bb4332325ee4386a3a5043bd34f7
-      internalID: -3853932184525302433
+      spriteID: ac2046e7b9844ab4f88536e26a4207ec
+      internalID: 7731023105320748271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoggoTank Attack Back 2
+      name: pollomana_spin_plus_5
       rect:
         serializedVersion: 2
-        x: 34
-        y: 35
-        width: 16
+        x: 110
+        y: 0
+        width: 21
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -289,19 +262,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e562409ed5ec4f469892748a2d7b7b4
-      internalID: 67704018728477262
+      spriteID: 85ef2b252f8b55a48ac767aeb92cfeef
+      internalID: -1905982150626403966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoggoTank Attack Right 0
+      name: pollomana_spin_plus_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 18
-        width: 16
+        x: 132
+        y: 0
+        width: 21
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -310,113 +283,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e8a9ad844fc217479390416fd3d5bf6
-      internalID: -3854199491356811981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoggoTank Attack Right 1
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 18
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3e39795e48bb4b40bdc13dd847295f8
-      internalID: 6510690824960770224
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoggoTank Attack Right 2
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 18
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e7d78474b6125dd4c86f29c9405be16c
-      internalID: -7798459978068684866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoggoTank Attack Left 0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d34596f4c8475ad44815325274508722
-      internalID: 954290632518066884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoggoTank Attack Left 1
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 1
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5102c22fd9c25c439bda332983c1201
-      internalID: -5517832714414370263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoggoTank Attack Left 2
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 1
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2145870d40aca44e9e03805acf6c662
-      internalID: 7191055640599472569
+      spriteID: 417f764514f649447920ce3d0fa77656
+      internalID: 7592893243339192752
       vertices: []
       indices: 
       edges: []

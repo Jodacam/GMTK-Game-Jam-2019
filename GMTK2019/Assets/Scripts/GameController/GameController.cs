@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
 
     List<GameObject> mapList = new List<GameObject>();
 
-    public GameObject coin;
+    public List<GameObject> dropeables;
     public List<PowerUp> powerUpList;
     public List<Weapon> weaponList;
     public List<Armor> armorList;
