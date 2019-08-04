@@ -2486,7 +2486,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 14.55
+  m_fontSize: 14.5
   m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4566,11 +4566,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f599e11b1fca89844a4551760d8c6166, type: 2}
   - {fileID: 11400000, guid: 205575a8a8fe2244f82076a3079a9b5a, type: 2}
   - {fileID: 11400000, guid: d0932f37bd1f5b04c9c2175601ff4337, type: 2}
+  - {fileID: 11400000, guid: 770d7963fa7fcc04a86ee89dacc93f4a, type: 2}
+  - {fileID: 11400000, guid: 9a3ba45ab555c0348a78f925a1ab83f9, type: 2}
+  - {fileID: 11400000, guid: c0de69ef002bcc24d9d57d8ef21c45ff, type: 2}
+  - {fileID: 11400000, guid: 263247c281efeea4ea98733328e26f74, type: 2}
   setOfBosses:
   - {fileID: 11400000, guid: 328fc3bc7d76da04a8e127fce08e7bda, type: 2}
   - {fileID: 11400000, guid: b01b0dfd3d6c0aa43a791b9a8e23f41d, type: 2}
   - {fileID: 11400000, guid: e3fe3c3cf6b8f2142a8db4a7c2860817, type: 2}
   - {fileID: 11400000, guid: c02c2861ab8bc6f41a92c9894ce11c94, type: 2}
+  - {fileID: 11400000, guid: 3f3af057e65d6f74e9cbbc21bd25a5eb, type: 2}
   door: {fileID: 0}
   spawnPoint: {fileID: 0}
   scroll: {fileID: 1394964007}
