@@ -148,6 +148,12 @@ MonoBehaviour:
   coolDown: 5
   onDamageTime: 0
   innerCoolDown: 0
+  clips:
+  - clip: {fileID: 8300000, guid: 5bf3e30b8a7d7e6499ef5e169805581b, type: 3}
+    name: idle
+  - clip: {fileID: 8300000, guid: 15d3a732669d31743a6d70eafb03c23f, type: 3}
+    name: death
+  audio: {fileID: 0}
   stacionary: 1
   state: 0
   projectile: {fileID: 8724100565046061397, guid: 6ed04e86da62edc46bb66ca9b536c870,

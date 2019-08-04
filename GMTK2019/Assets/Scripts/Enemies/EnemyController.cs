@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using NaughtyAttributes;
 using System.Collections;
+using System.Collections.Generic;
 
 public abstract class EnemyController : MonoBehaviour {
     
@@ -27,16 +28,40 @@ public abstract class EnemyController : MonoBehaviour {
     public float onDamageTime;
 
     public float innerCoolDown = 0;
-    
-    
+
+    public float timeToDie = 0.2f;
+
+    [ReorderableList]
+    public List<Sound> clips;
+    public AudioSource audio;
+
+    private float time = 0;
+    private float timeToPlay;
+
     public bool stacionary;
 
     [ReadOnly]
     protected Vector2 dir = new Vector2(0,0);
     public State state;
+
     public void Start() {
+        timeToPlay = UnityEngine.Random.Range(3.0f, 6.0f);
         animator = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
+
     }
+
+    public void Update(){
+        time += Time.deltaTime;
+
+        if (time >= timeToPlay)
+        {
+            time = 0.0f;
+            timeToPlay = UnityEngine.Random.Range(5.0f, 7.0f);
+            PlayClip("idle");
+        }
+    }
+
     public virtual void RecibeDamage(float damage,Vector2 dir){
         life-=damage;
         
@@ -52,8 +77,9 @@ public abstract class EnemyController : MonoBehaviour {
     public virtual void Die()
     {
         GameController.Instance.EnemyDead();
-        Destroy(gameObject);
+        PlayClip("death");       
         int r = UnityEngine.Random.Range(0,GameController.Instance.dropeables.Count);
+        Destroy(gameObject,timeToDie);
         Instantiate(GameController.Instance.dropeables[r],transform.position,Quaternion.identity);
     }
 
@@ -70,5 +96,14 @@ public abstract class EnemyController : MonoBehaviour {
 
         }
         renderer.color =c;//Color.white;
+    }
+
+    public void PlayClip(string name)
+    {
+        var clip = clips.Find((e) => e.name.Equals(name));
+        if (clip != null)
+        {
+            audio.PlayOneShot(clip.clip);
+        }
     }
 }
