@@ -139,7 +139,7 @@ public class MechaElefants : EnemyController
                 else
                 {
                     innerCooldown += Time.deltaTime;
-                    dir = new Vector2(0,-1);
+                    dir = (PlayerController.Player.transform.position - transform.position).normalized;
                     ShockWaveAttack();
                 }
                 break;

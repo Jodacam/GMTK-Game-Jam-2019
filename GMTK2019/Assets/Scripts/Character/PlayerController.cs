@@ -96,10 +96,6 @@ public class PlayerController : MonoBehaviour
             HandleMovement();
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            GrabArmor();
-        }
     }
 
     /// <summary>
@@ -108,7 +104,7 @@ public class PlayerController : MonoBehaviour
     /// <returns></returns>
     public float GetDamage()
     {
-        return LAVARIABLE;
+        return LAVARIABLE/2;
     }
 
     private void HandleAttack()
@@ -194,11 +190,18 @@ public class PlayerController : MonoBehaviour
     {
         if (!invencible)
         {
-            if (DamageType.None == type)
+            if (DamageType.None == type){
                 currentLAVARIABLE -= damage;
+            }
             else
             {
-                //Calcular resistencias.
+                if(armor){
+                    if(actualArmor.resistanceTo == type){
+                        damage=Mathf.RoundToInt(damage/2);
+                    }else if(actualArmor.vulnerableTo== type){
+                        damage *=2;
+                    }
+                }
                 currentLAVARIABLE -= damage;
             }
             invencible = true;
@@ -240,11 +243,7 @@ public class PlayerController : MonoBehaviour
             animator.SetLayerWeight(1, 1);
             armor = true;
         }
-        else
-        {
-            animator.SetLayerWeight(1, 0);
-            armor = false;
-        }
+
     }
 
     public void PlayClip(string name)
