@@ -77,6 +77,8 @@ public class PlayerController : MonoBehaviour
     public GameObject[] maldicionesObject;
     public GameObject[] bendicionesObject;
 
+    public ParticleSystem spawnEffect;
+
     Dictionary<string, bool> maldiciones = new Dictionary<string, bool>(){
         {"speed",false},
         {"cooldown",false},
@@ -398,5 +400,8 @@ public class PlayerController : MonoBehaviour
         renderer.color = e;
     }
 
-
+    public void SpawnPlayer(){
+        PlayClip("Spawn");
+        spawnEffect.Play();
+    }
 }
