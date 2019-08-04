@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4643593207277272250, guid: 9d4bfa1333c12f14f9c649d49b2ddf09, type: 3}
   sprite: {fileID: -601167320069568822, guid: 1deac005aa8b95e4e93d9b92cc4f43ce, type: 3}
+  cost: 120
   id: 0
   range: {x: 3, y: 1}
