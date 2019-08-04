@@ -4095,7 +4095,12 @@ MonoBehaviour:
   - {fileID: 5334392799142237793, guid: 1c73fc0552ed9964a81982d8e9841ce3, type: 3}
   - {fileID: -128837866201315719, guid: 6ddf55fd8adbc6f49843808f9b8f222f, type: 3}
   - {fileID: 5267245927194479212, guid: a8f2d54e13eb1774ead43f7d68dc7bec, type: 3}
-  dropeables: []
+  dropeables:
+  - {fileID: 3523322207151651339, guid: ec60373415e47ef42a31f7a7b726fa6e, type: 3}
+  - {fileID: 3813987682371642937, guid: 4a9bae639fafcbb49868339106a9ba53, type: 3}
+  - {fileID: 3125526553678861472, guid: ec19eedc5ac85374fa388cbe1c14f655, type: 3}
+  - {fileID: 4892500913532093436, guid: d1e464c7d5801a3499ac94137eb6c105, type: 3}
+  - {fileID: 1999392398856298070, guid: 7605147ea1832464288aaea8419e06b1, type: 3}
   powerUpList: []
   weaponList:
   - {fileID: 11400000, guid: cb648ec7910fa8f4a964df1afa4e4cd9, type: 2}
