@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
     public float currentLAVARIABLE;
 
     public Weapon actualWeapon;
+    public Weapon defaultWeapon;
     public Armor actualArmor;
     public PowerUp actualPowerUp;
     public bool isAttacking;
@@ -307,7 +308,7 @@ public class PlayerController : MonoBehaviour
             invencible = true;
             currentLAVARIABLE = Mathf.Clamp(currentLAVARIABLE, 0, float.MaxValue);
             StartCoroutine(getInmune());
-            text.text = currentLAVARIABLE.ToString();
+            text.text = Mathf.Floor(currentLAVARIABLE).ToString();
         }
         getHit.Play();
         PlayClip("hit");
@@ -321,6 +322,7 @@ public class PlayerController : MonoBehaviour
     private void Die()
     {
         //animator.SetTrigger(Const.DIE);
+        GetComponent<SpriteRenderer>().enabled = false;
         PlayClip("death");
         dead = true;
         explosion.Play(16);
@@ -330,6 +332,10 @@ public class PlayerController : MonoBehaviour
     IEnumerator Restart()
     {
         yield return waitForRestart;
+        this.GetComponent<SpriteRenderer>().enabled = true;
+        actualWeapon = defaultWeapon;
+        animator.SetLayerWeight(1, 0);
+        armor = false;
         currentLAVARIABLE = LAVARIABLE;
         text.text = currentLAVARIABLE.ToString();
         dead = false;
@@ -391,4 +397,6 @@ public class PlayerController : MonoBehaviour
         invencible = false;
         renderer.color = e;
     }
+
+
 }

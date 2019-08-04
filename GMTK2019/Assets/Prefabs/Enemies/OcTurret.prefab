@@ -156,6 +156,8 @@ MonoBehaviour:
     name: death
   - clip: {fileID: 8300000, guid: 562bd352f89f2a34c868456eac0b91dd, type: 3}
     name: Shoot
+  - clip: {fileID: 8300000, guid: baee45c519238654ca2007fc9046be3d, type: 3}
+    name: Shoot
   audio: {fileID: 0}
   stacionary: 1
   state: 0
