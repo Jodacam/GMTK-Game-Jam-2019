@@ -71,3 +71,6 @@ MonoBehaviour:
   - m_TypeName: PuertaR
     m_Prefab: {fileID: 8146479130729405805, guid: 7af76603e71985d4fa81728bca7a990e,
       type: 3}
+  - m_TypeName: SpawnEnemy
+    m_Prefab: {fileID: 4829840501206148446, guid: 8413e02492bc3b04a96f95efc2ea61c2,
+      type: 3}

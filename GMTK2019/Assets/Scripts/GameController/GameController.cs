@@ -186,6 +186,8 @@ public class GameController : MonoBehaviour
             }
             else
             {
+                List<SpawnEnemy> spawns = FindObjectsOfType<SpawnEnemy>().ToList();
+                spawns.Shuffle();
                 List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart >= totalMaps && x.roomToStop <= totalMaps select x).ToList();
                 int random = Random.Range(0, setAllowed.Count);
 
@@ -193,7 +195,7 @@ public class GameController : MonoBehaviour
 
                 foreach (EnemyController enemy in setAllowed[random].enemies)
                 {
-                    Instantiate(enemy, Vector3.zero, Quaternion.Euler(0, 0, 0));
+                    Instantiate(enemy, spawns[enemyNum].transform.position, Quaternion.Euler(0, 0, 0));
                     enemyNum++;
                 }
 
@@ -202,6 +204,8 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            List<SpawnEnemy> spawns = FindObjectsOfType<SpawnEnemy>().ToList();
+            spawns.Shuffle();
             List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart >= totalMaps && x.roomToStop <= totalMaps select x).ToList();
             int random = Random.Range(0, setAllowed.Count);
 
@@ -209,7 +213,8 @@ public class GameController : MonoBehaviour
 
             foreach (EnemyController enemy in setOfBosses[random].enemies)
             {
-                Instantiate(enemy, Vector3.zero, Quaternion.Euler(0, 0, 0));
+
+                Instantiate(enemy, spawns[enemyNum].transform.position, Quaternion.Euler(0, 0, 0));
                 enemyNum++;
             }
 
