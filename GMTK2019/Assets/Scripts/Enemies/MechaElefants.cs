@@ -56,6 +56,8 @@ public class MechaElefants : EnemyController
         if (innerCoolDown >= timeShock)
         {
             GameController.Instance.ScreenShake(0.1f, 2);
+            PlayClip("shockwave");
+
             innerCoolDown = 0;
             Transform t = null;
 
