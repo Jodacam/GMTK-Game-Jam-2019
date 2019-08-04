@@ -7,13 +7,14 @@ public class Projectile : DamageDealer
     private Vector2 speed;
 
     public float multiplier;
-    private void Update()
+    public void Update()
     {
         transform.Translate(speed.normalized * multiplier * Time.deltaTime,Space.World);
     }
 
-    public void Init(Vector2 initialSpeed)
+    public virtual void  Init(Vector2 initialSpeed)
     {
+        Destroy(gameObject,15);
         speed = initialSpeed;
         var dir = new Vector2(Mathf.RoundToInt(speed.x), Mathf.RoundToInt(speed.y));
         float z = 0;
