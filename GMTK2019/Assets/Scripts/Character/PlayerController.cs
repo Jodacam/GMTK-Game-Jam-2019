@@ -35,7 +35,8 @@ public class PlayerController : MonoBehaviour
     public Vector2 dir;
 
     public Vector2 speed;
-    public float LAVARIABLE = 100;
+    public float LAVARIABLE = 40;
+    public float currentLAVARIABLE;
 
     public Weapon actualWeapon;
     public Armor actualArmor;
@@ -62,11 +63,14 @@ public class PlayerController : MonoBehaviour
 
     public ParticleSystem loseCoins;
 
+    public PlayExplosion explosion;
+
     void Start()
     {
+        currentLAVARIABLE = LAVARIABLE;
         audio = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
-        waitForRestart = new WaitForSeconds(2f);
+        waitForRestart = new WaitForSeconds(2.5f);
         text = GameObject.FindGameObjectWithTag("LAVARIABLE").GetComponent<TextMeshProUGUI>();
         text.text = LAVARIABLE.ToString();
         getParticles = new Dictionary<Coin.Type, ParticleSystem>();
@@ -185,19 +189,20 @@ public class PlayerController : MonoBehaviour
         if (!invencible)
         {
             if (DamageType.None == type)
-                LAVARIABLE -= damage;
+                currentLAVARIABLE -= damage;
             else
             {
                 //Calcular resistencias.
-                LAVARIABLE -= damage;
+                currentLAVARIABLE -= damage;
             }
             invencible = true;
+            currentLAVARIABLE = Mathf.Clamp(currentLAVARIABLE,0,float.MaxValue);
             StartCoroutine(getInmune());
-            text.text = LAVARIABLE.ToString();
+            text.text = currentLAVARIABLE.ToString();
         }
         getHit.Play();
         PlayClip("hit");
-        if (LAVARIABLE <= 0 && !dead)
+        if (currentLAVARIABLE <= 0 && !dead)
         {
             Die();
         }
@@ -209,14 +214,15 @@ public class PlayerController : MonoBehaviour
         //animator.SetTrigger(Const.DIE);
         PlayClip("death");
         dead = true;
+        explosion.Play(16);
         StartCoroutine(Restart());
     }
 
     IEnumerator Restart()
     {
         yield return waitForRestart;
-        LAVARIABLE = 100;
-        text.text = LAVARIABLE.ToString();
+        currentLAVARIABLE = LAVARIABLE;
+        text.text = currentLAVARIABLE.ToString();
         dead = false;
         GameController.Instance.Restart();
     }

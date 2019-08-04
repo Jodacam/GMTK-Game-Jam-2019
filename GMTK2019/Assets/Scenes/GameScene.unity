@@ -4090,7 +4090,12 @@ MonoBehaviour:
   - {fileID: -7283731793570306122, guid: e8f2b19ff9c1394458d7071a8a7c32a5, type: 3}
   - {fileID: 553776461363429664, guid: caa514925a96a1342843febeb53ebea9, type: 3}
   - {fileID: -5210430898200763230, guid: ab4555dd8de7a6f4b9bcc8d25a4eb8c3, type: 3}
-  coin: {fileID: 3523322207151651339, guid: ec60373415e47ef42a31f7a7b726fa6e, type: 3}
+  dropeables:
+  - {fileID: 3523322207151651339, guid: ec60373415e47ef42a31f7a7b726fa6e, type: 3}
+  - {fileID: 3813987682371642937, guid: 4a9bae639fafcbb49868339106a9ba53, type: 3}
+  - {fileID: 3125526553678861472, guid: ec19eedc5ac85374fa388cbe1c14f655, type: 3}
+  - {fileID: 4892500913532093436, guid: d1e464c7d5801a3499ac94137eb6c105, type: 3}
+  - {fileID: 1999392398856298070, guid: 7605147ea1832464288aaea8419e06b1, type: 3}
   powerUpList: []
   weaponList:
   - {fileID: 11400000, guid: cb648ec7910fa8f4a964df1afa4e4cd9, type: 2}
@@ -6730,6 +6735,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
+    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
+        type: 3}
+      propertyPath: LAVARIABLE
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7016893214619244400, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6784,11 +6794,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
-        type: 3}
-      propertyPath: LAVARIABLE
-      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a9a87f6a4afd84ba59b283ea9ed94d, type: 3}

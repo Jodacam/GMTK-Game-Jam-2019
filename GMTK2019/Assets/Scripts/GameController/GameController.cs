@@ -66,6 +66,10 @@ public class GameController : MonoBehaviour
         foreach(EnemyController e in enemies){
             Destroy(e.gameObject);
         }
+        List<Projectile> proyectiles = FindObjectsOfType<Projectile>().ToList();
+        foreach(Projectile e in proyectiles){
+            Destroy(e.gameObject);
+        }
         scroll.generated = false;
         scroll.Wipe();
         mapList.Clear();
