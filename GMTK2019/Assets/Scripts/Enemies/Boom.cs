@@ -27,6 +27,7 @@ public class Boom : Seaker {
         Die();
     }
 
+
     public override void Die(){
         StopAllCoroutines();
         base.Die();

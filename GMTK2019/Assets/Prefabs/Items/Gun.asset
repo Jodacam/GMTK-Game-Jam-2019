@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1307233912335490064, guid: 7002b58fff9b42e49bef69634fa7ce1c, type: 3}
   sprite: {fileID: 6879118450950661895, guid: 04320b4c42301094da1f2e202bc1562c, type: 3}
+  cost: 140
   id: 2
   projectile: {fileID: 4900835776316765485, guid: 505363d6ad20bc644b0287ffa28378ca,
     type: 3}

@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
 
     private bool invencible = false;
 
+    private bool canMove = true;
+
     public float footStep = 0.1f;
 
     private float innerFoot;
@@ -92,6 +94,21 @@ public class PlayerController : MonoBehaviour
         {"coins",false},
         {"plusDamage",false}
     };
+
+    public void addCurse()
+    {
+        var s = new string[6];
+        maldiciones.Keys.CopyTo(s, 0);
+        int next = -1;
+        do
+        {
+            next = UnityEngine.Random.Range(0, 6);
+        } while (maldiciones[s[next]]);
+
+        maldiciones[s[next]] = true;
+        maldicionesObject[next].SetActive(true);
+        PlayClip("curse");
+    }
     void Start()
     {
         currentLAVARIABLE = LAVARIABLE;
@@ -180,7 +197,7 @@ public class PlayerController : MonoBehaviour
     public float GetDamage()
     {
         float e = GameController.Instance.actualMap;
-        return Mathf.LerpUnclamped(35,75,Mathf.Log((currentLAVARIABLE)/40));
+        return Mathf.Max(40,Mathf.LerpUnclamped(40, 75, Mathf.Log((currentLAVARIABLE) / 40)));
     }
 
     private void HandleAttack()
@@ -190,12 +207,14 @@ public class PlayerController : MonoBehaviour
             bool pressed = Input.GetButtonDown("Jump");
             if (pressed)
             {
-                innerCoolDown = maldiciones["cooldown"] ? Mathf.Lerp(0.5f, 2,getLimit()) : coolDown;
+                innerCoolDown = maldiciones["cooldown"] ? Mathf.Lerp(0.5f, 2, getLimit()) : coolDown;
                 animator.SetTrigger("attack");
 
-                if (maldiciones["costMoney"]){
+                if (maldiciones["costMoney"])
+                {
                     currentLAVARIABLE *= 0.95f;
-                    currentLAVARIABLE = Mathf.Max(1,Mathf.RoundToInt(currentLAVARIABLE));
+                    currentLAVARIABLE = Mathf.Max(1, Mathf.RoundToInt(currentLAVARIABLE));
+                    text.text=currentLAVARIABLE.ToString();
                 }
 
                 actualWeapon.Attack(this);
@@ -213,44 +232,46 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-
-        if (x != 0)
+        if (canMove)
         {
-            y = 0;
-            dir.x = x;
-            dir.y = 0;
-        }
-        else if (y != 0)
-        {
-            x = 0;
-            dir.y = y;
-            dir.x = 0;
-        }
-
-        var normalized = new Vector2(x, y).normalized;
-        speed = Vector2.Scale(normalized, minSpeed);
-        if (maldiciones["speed"])
-            speed *= 1 / Mathf.Lerp(1, 1.33f, (currentLAVARIABLE - 40) / 300);
-        if (speed.magnitude >= 0.01)
-        {
-            if (innerFoot <= 0)
+            if (x != 0)
             {
-                PlayClip("footStep");
-                innerFoot = footStep;
+                y = 0;
+                dir.x = x;
+                dir.y = 0;
             }
-            else
+            else if (y != 0)
             {
-                innerFoot -= Time.deltaTime;
+                x = 0;
+                dir.y = y;
+                dir.x = 0;
             }
+
+            var normalized = new Vector2(x, y).normalized;
+            speed = Vector2.Scale(normalized, minSpeed);
+            if (maldiciones["speed"])
+                speed *= 1 / Mathf.Lerp(1, 1.33f, (currentLAVARIABLE - 40) / 300);
+            if (speed.magnitude >= 0.01)
+            {
+                if (innerFoot <= 0)
+                {
+                    PlayClip("footStep");
+                    innerFoot = footStep;
+                }
+                else
+                {
+                    innerFoot -= Time.deltaTime;
+                }
+            }
+            //if(!Physics2D.Raycast(raycastInit.position,dir,17,LayerMask.GetMask("Enemies","Walls") ){
+
+            transform.Translate(speed * Time.deltaTime);
+            //}
+
+            animator.SetFloat(Const.X_DIR, dir.x);
+            animator.SetFloat(Const.Y_DIR, dir.y);
+            animator.SetFloat(Const.SPEED, speed.sqrMagnitude);
         }
-        //if(!Physics2D.Raycast(raycastInit.position,dir,17,LayerMask.GetMask("Enemies","Walls") ){
-
-        transform.Translate(speed * Time.deltaTime);
-        //}
-
-        animator.SetFloat(Const.X_DIR, dir.x);
-        animator.SetFloat(Const.Y_DIR, dir.y);
-        animator.SetFloat(Const.SPEED, speed.sqrMagnitude);
 
     }
 
@@ -269,43 +290,66 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public float getLimit(){
+    public float getLimit()
+    {
         return (currentLAVARIABLE - 40) / 300;
     }
 
     //Aqui se puede calcular el daño que recibimos.
     public void RecibeDamage(float damage, DamageType type)
     {
+        float m_damage = Mathf.LerpUnclamped(damage,damage+40,getLimit());
         if (!invencible)
         {
             if (DamageType.None == type)
-                currentLAVARIABLE -= damage;
+                currentLAVARIABLE -= m_damage;
             else
             {
                 DamageType vulnerable = DamageType.None;
                 //Calcular resistencias.
                 if (maldiciones["fire"])
+                {
                     vulnerable = DamageType.Fire;
-                else
-                if (maldiciones["thunder"])
-                    vulnerable = DamageType.Thunder;
-                else
-                if (maldiciones["ice"])
-                    vulnerable = DamageType.Ice;
-                if(vulnerable==type){
-                    damage =Mathf.Lerp(1.05f,2,getLimit());
+                    if (vulnerable == type)
+                    {
+                        m_damage *= Mathf.Lerp(1.05f, 2, getLimit());
+                    }
                 }
 
-                if(armor){
-                    if(actualArmor.vulnerableTo == type){
-                        damage*=2;
-                    }else{
-                        if(actualArmor.resistanceTo == type){
-                            damage/=2;
+                if (maldiciones["thunder"])
+                {
+                    vulnerable = DamageType.Thunder;
+                    if (vulnerable == type)
+                    {
+                        m_damage *= Mathf.Lerp(1.05f, 2, getLimit());
+                    }
+                }
+
+                if (maldiciones["ice"])
+                {
+                    vulnerable = DamageType.Ice;
+                    if (vulnerable == type)
+                    {
+                        m_damage *= Mathf.Lerp(1.05f, 2, getLimit());
+                    }
+                }
+
+
+                if (armor)
+                {
+                    if (actualArmor.vulnerableTo == type)
+                    {
+                        m_damage *= 2;
+                    }
+                    else
+                    {
+                        if (actualArmor.resistanceTo == type)
+                        {
+                            m_damage /= 2;
                         }
                     }
                 }
-                currentLAVARIABLE -= damage;
+                currentLAVARIABLE -= m_damage;
             }
             invencible = true;
             currentLAVARIABLE = Mathf.Clamp(currentLAVARIABLE, 0, float.MaxValue);
@@ -376,8 +420,9 @@ public class PlayerController : MonoBehaviour
         text.text = currentLAVARIABLE.ToString();
         PlayClip("losecoins");
         loseCoins.Play();
-        currentLAVARIABLE = Mathf.Clamp(currentLAVARIABLE,0,float.MaxValue);
-        if(currentLAVARIABLE == 0){
+        currentLAVARIABLE = Mathf.Clamp(currentLAVARIABLE, 0, float.MaxValue);
+        if (currentLAVARIABLE == 0)
+        {
             Die();
         }
     }
@@ -398,6 +443,14 @@ public class PlayerController : MonoBehaviour
         }
         invencible = false;
         renderer.color = e;
+    }
+
+    public IEnumerator StopMove()
+    {
+        canMove = false;
+        yield return new WaitForSeconds(0.5f);
+        canMove = true;
+
     }
 
     public void SpawnPlayer(){
