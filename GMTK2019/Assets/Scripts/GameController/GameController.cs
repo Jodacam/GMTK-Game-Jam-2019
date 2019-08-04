@@ -1,14 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using Unity.
 using UnityEngine.Rendering.PostProcessing;
 
 public class GameController : MonoBehaviour
 {
-
-    public PostProcessProfile postporcesoOriginal;
-    public PostProcessProfile postProcesoNuevo;
     public List<GameObject> totalMapList;
 
     List<GameObject> mapList = new List<GameObject>();
@@ -115,7 +112,6 @@ public class GameController : MonoBehaviour
             mapList[i].SetActive(false);
 
         }
-        PlayerController.Player.addCurse();
         int r = Random.Range(0, shops.Count);
         mapList.Add(Instantiate(bossRooms[r], transform.position, Quaternion.identity));
         scroll.NextTile(ScrollUi.RoomType.Boss);
@@ -136,7 +132,6 @@ public class GameController : MonoBehaviour
 
     public void NextMap()
     {
-        StartCoroutine(PlayerController.Player.StopMove());
         List<Projectile> proyectiles = FindObjectsOfType<Projectile>().ToList();
         foreach(Projectile e in proyectiles){
             Destroy(e.gameObject);
@@ -159,7 +154,6 @@ public class GameController : MonoBehaviour
         }
         else
         {
-
             GenerateMapList();
         }
         
