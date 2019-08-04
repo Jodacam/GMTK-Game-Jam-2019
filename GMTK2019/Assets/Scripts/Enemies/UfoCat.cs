@@ -35,9 +35,11 @@ public class UfoCat : EnemyController
         switch (state)
         {
             case EnemyController.State.Moving:
+            dir = aiController.velocity.normalized;
             dir = (PlayerController.Player.transform.position - transform.position).normalized;
             aiController.destination = transform.position-new Vector3(dir.x,dir.y,0);
-
+            animator.SetFloat(Const.X_DIR, -dir.x);
+            animator.SetFloat(Const.Y_DIR, -dir.y);
 
             if(distance>hiddeDistance){
                 state = EnemyController.State.Stacionary;
@@ -54,6 +56,8 @@ public class UfoCat : EnemyController
             else
             {
                 dir = (PlayerController.Player.transform.position - transform.position).normalized;
+                animator.SetFloat(Const.X_DIR, -dir.x);
+                animator.SetFloat(Const.Y_DIR, -dir.y);
                 if (innerCoolDown <= 0)
                 {
                     innerCoolDown = coolDown;
