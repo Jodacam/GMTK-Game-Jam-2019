@@ -142,5 +142,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 3
-  damageAmount: 60
+  damageAmount: 90
   multiplier: 24

@@ -247,9 +247,11 @@ MonoBehaviour:
   audio: {fileID: 0}
   stacionary: 0
   state: 0
+  deadEffect: {fileID: 8991025689782571336, guid: 38e77bcba9924cd479cf40ddba5c4c6f,
+    type: 3}
   damage: 35
   range: {x: 1, y: 1}
-  maxDistance: 75
+  maxDistance: 150
   minDistance: 20
 --- !u!82 &-4435391329082755878
 AudioSource:

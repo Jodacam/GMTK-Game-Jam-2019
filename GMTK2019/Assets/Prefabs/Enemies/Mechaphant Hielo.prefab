@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 5567267225110191316}
   - component: {fileID: 5567267225110191317}
   m_Layer: 0
-  m_Name: Mechaphant
+  m_Name: Mechaphant Hielo
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_Sprite: {fileID: 3777710725628520955, guid: db2117d0c550aba448f0bd9e5b5b3a96,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.72156864, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1000
-  type: 3
+  type: 2
   animator: {fileID: 0}
   coolDown: 1
   onDamageTime: 0
@@ -218,8 +218,6 @@ MonoBehaviour:
   audio: {fileID: 0}
   stacionary: 0
   state: 0
-  deadEffect: {fileID: 8143611923501978496, guid: f78b398a4a961524a9b8254cb3f0e965,
-    type: 3}
   sockwave: {fileID: 161008844, guid: 45015fafc09d3bf4fa39c7afbe18eefe, type: 3}
   projectile: {fileID: 4240011681865804537, guid: bf4e1cb6d88a4a3468985c5e35593c61,
     type: 3}

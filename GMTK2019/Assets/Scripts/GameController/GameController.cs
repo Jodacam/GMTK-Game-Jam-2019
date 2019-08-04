@@ -70,6 +70,10 @@ public class GameController : MonoBehaviour
         foreach(Projectile e in proyectiles){
             Destroy(e.gameObject);
         }
+        List<Coin> dropeables = FindObjectsOfType<Coin>().ToList();
+        foreach(Coin e in dropeables){
+            Destroy(e.gameObject);
+        }
         scroll.generated = false;
         scroll.Wipe();
         mapList.Clear();
@@ -124,6 +128,14 @@ public class GameController : MonoBehaviour
 
     public void NextMap()
     {
+        List<Projectile> proyectiles = FindObjectsOfType<Projectile>().ToList();
+        foreach(Projectile e in proyectiles){
+            Destroy(e.gameObject);
+        }
+        List<Coin> dropeables = FindObjectsOfType<Coin>().ToList();
+        foreach(Coin e in dropeables){
+            Destroy(e.gameObject);
+        }
         mapList[actualMap].SetActive(false);
         actualMap++;
         totalMaps++;

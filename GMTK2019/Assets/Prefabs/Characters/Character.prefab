@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1222751392615810898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 153334791934778786}
+  m_Layer: 8
+  m_Name: RayCastInit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &153334791934778786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222751392615810898}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7016893214619244400}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7016893214619244411
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,6 +71,7 @@ Transform:
   - {fileID: 7500678444689488376}
   - {fileID: 5446213762036094890}
   - {fileID: 1938072925171590955}
+  - {fileID: 153334791934778786}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -125,6 +156,7 @@ MonoBehaviour:
   dir: {x: 0, y: 0}
   speed: {x: 0, y: 0}
   LAVARIABLE: 50
+  currentLAVARIABLE: 0
   actualWeapon: {fileID: 11400000, guid: c1df2aedb617e1b408ab9ffe8bc7f9bb, type: 2}
   actualArmor: {fileID: 0}
   actualPowerUp: {fileID: 0}
@@ -140,6 +172,7 @@ MonoBehaviour:
   getHit: {fileID: 4315245340913551062}
   loseCoins: {fileID: 596448158941152946}
   explosion: {fileID: 1938072925171590964}
+  raycastInit: {fileID: 153334791934778786}
 --- !u!95 &7016893214619244405
 Animator:
   serializedVersion: 3
@@ -898,15 +931,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a10ad5455e83a7f46b52b2dc9faba7e1, type: 3}
---- !u!4 &3892480791614949673 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6297683315649974076, guid: a10ad5455e83a7f46b52b2dc9faba7e1,
-    type: 3}
-  m_PrefabInstance: {fileID: 7016893216125683221}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &596448158941152946 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 7576744811287969959, guid: a10ad5455e83a7f46b52b2dc9faba7e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7016893216125683221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3892480791614949673 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6297683315649974076, guid: a10ad5455e83a7f46b52b2dc9faba7e1,
     type: 3}
   m_PrefabInstance: {fileID: 7016893216125683221}
   m_PrefabAsset: {fileID: 0}

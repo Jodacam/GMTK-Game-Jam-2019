@@ -145,7 +145,7 @@ MonoBehaviour:
   life: 120
   type: 3
   animator: {fileID: 0}
-  coolDown: 5
+  coolDown: 2.5
   onDamageTime: 0
   innerCoolDown: 0
   timeToDie: 0.2
@@ -157,6 +157,8 @@ MonoBehaviour:
   audio: {fileID: 0}
   stacionary: 1
   state: 0
+  deadEffect: {fileID: 5011586486759323266, guid: 0bc6372682d46ea41bf8adf435496898,
+    type: 3}
   projectile: {fileID: 8724100565046061397, guid: 6ed04e86da62edc46bb66ca9b536c870,
     type: 3}
 --- !u!82 &-4214947960331777914

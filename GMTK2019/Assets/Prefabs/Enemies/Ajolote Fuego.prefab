@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afdb400ccebf9742a7805b750c3972b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 45
+  life: 90
   type: 0
   animator: {fileID: 0}
   coolDown: 100
@@ -185,9 +185,11 @@ MonoBehaviour:
   audio: {fileID: 0}
   stacionary: 0
   state: 0
+  deadEffect: {fileID: 5363413799902661602, guid: e3195ebdf4358e44eb25805bd23392ed,
+    type: 3}
   damage: 100
   range: {x: 4, y: 4}
-  maxDistance: 70
+  maxDistance: 200
   minDistance: 16
   explodeTime: 1.5
 --- !u!61 &4494281493857850094
