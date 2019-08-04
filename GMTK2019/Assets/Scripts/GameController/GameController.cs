@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using Unity.
 using UnityEngine.Rendering.PostProcessing;
 
 public class GameController : MonoBehaviour
@@ -42,6 +41,10 @@ public class GameController : MonoBehaviour
 
     public ScrollUi scroll;
 
+    private bool transitioning = false;
+    private float transitionTimeStamp;
+    private PostProcessProfile postProcessingProfile;
+
     float totalMaps = 0; 
 
     void Awake()
@@ -55,6 +58,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        postProcessingProfile = FindObjectOfType<PostProcessVolume>().profile;
         MusicController.Instance.SetMusic("Game");
         mapList.Add(Instantiate(tutorialRoom, transform.position, Quaternion.identity));
         PrepareMap();
@@ -134,37 +138,57 @@ public class GameController : MonoBehaviour
         PlayerController.Player.SpawnPlayer();
     }
 
-    public void NextMap()
+    public System.Collections.IEnumerator NextMap()
     {
-        StartCoroutine(PlayerController.Player.StopMove());
-        List<Projectile> proyectiles = FindObjectsOfType<Projectile>().ToList();
-        foreach(Projectile e in proyectiles){
-            Destroy(e.gameObject);
-        }
-        List<Coin> dropeables = FindObjectsOfType<Coin>().ToList();
-        foreach(Coin e in dropeables){
-            Destroy(e.gameObject);
-        }
-        mapList[actualMap].SetActive(false);
-        actualMap++;
-        totalMaps++;
-
-        if(mapList.Count > 1){
-            scroll.Scroll();
-        }
-
-        if (actualMap < mapList.Count)
+        if(transitioning==false)
         {
-            PrepareMap();
+            transitioning = true;
+            transitionTimeStamp = Time.time;
+            FindObjectOfType<Camera>().GetComponent<PostProcessLayer>().enabled = true;
+            postProcessingProfile.GetSetting<DepthOfField>().focusDistance.value = 50;
+            postProcessingProfile.GetSetting<ChromaticAberration>().intensity.value = 0;
         }
-        else
+        while (Time.time - transitionTimeStamp <= 0.5f)
         {
-
-            GenerateMapList();
+            postProcessingProfile.GetSetting<DepthOfField>().focusDistance.value = Mathf.Lerp(50, 0.1f, (Time.time - transitionTimeStamp) / 0.5f);
+            postProcessingProfile.GetSetting<ChromaticAberration>().intensity.value = Mathf.Lerp(0, 1, (Time.time - transitionTimeStamp) / 0.5f);
+            yield return null;
         }
+            transitioning = false;
+            StartCoroutine(PlayerController.Player.StopMove());
+            List<Projectile> proyectiles = FindObjectsOfType<Projectile>().ToList();
+            foreach (Projectile e in proyectiles)
+            {
+                Destroy(e.gameObject);
+            }
+            List<Coin> dropeables = FindObjectsOfType<Coin>().ToList();
+            foreach (Coin e in dropeables)
+            {
+                Destroy(e.gameObject);
+            }
+            mapList[actualMap].SetActive(false);
+            actualMap++;
+            totalMaps++;
+
+            if (mapList.Count > 1)
+            {
+                scroll.Scroll();
+            }
+
+            if (actualMap < mapList.Count)
+            {
+                PrepareMap();
+            }
+            else
+            {
+
+                GenerateMapList();
+            }
+
+
+            SpawnEnemies();
+            yield return null;
         
-
-        SpawnEnemies();
     }
 
     public void ScreenShake(float duration, float strength)

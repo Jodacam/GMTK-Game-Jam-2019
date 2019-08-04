@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.Rendering.PostProcessing;
 public class PlayerController : MonoBehaviour
 {
     private static PlayerController instance;
@@ -36,6 +36,9 @@ public class PlayerController : MonoBehaviour
     private bool invencible = false;
 
     private bool canMove = true;
+    private float startTransitionTimeStamp;
+
+    private PostProcessProfile postProcessingProfile;
 
     public float footStep = 0.1f;
 
@@ -124,6 +127,7 @@ public class PlayerController : MonoBehaviour
         getParticles.Add(Coin.Type.PocionSalud, getPocionSalud);
         getParticles.Add(Coin.Type.Pollo, getChicken);
         getBuffs();
+        postProcessingProfile = FindObjectOfType<PostProcessVolume>().profile;
     }
 
 
@@ -447,9 +451,24 @@ public class PlayerController : MonoBehaviour
 
     public IEnumerator StopMove()
     {
-        canMove = false;
-        yield return new WaitForSeconds(0.5f);
+        if (canMove)
+        {
+            canMove = false;
+            startTransitionTimeStamp = Time.time;
+            FindObjectOfType<Camera>().GetComponent<PostProcessLayer>().enabled = true;
+        }
+
+        while (Time.time - startTransitionTimeStamp <= 0.5f)
+        {
+            postProcessingProfile.GetSetting<DepthOfField>().focusDistance.value = Mathf.Lerp(0.1f, 50, (Time.time - startTransitionTimeStamp) / 0.5f);
+            postProcessingProfile.GetSetting<ChromaticAberration>().intensity.value = Mathf.Lerp(1, 0, (Time.time - startTransitionTimeStamp) / 0.5f);
+            yield return null;
+        }
         canMove = true;
+        postProcessingProfile.GetSetting<DepthOfField>().focusDistance.value = 50;
+        postProcessingProfile.GetSetting<ChromaticAberration>().intensity.value = 0;
+        FindObjectOfType<Camera>().GetComponent<PostProcessLayer>().enabled = false;
+        
 
     }
 
