@@ -47,13 +47,13 @@
  </layer>
  <objectgroup id="6" name="Mid">
   <object id="1" name="Puerta" type="PuertaD" x="160" y="143.333" width="16" height="16"/>
-  <object id="2" name="SpawnPoint" type="SpawnPoint" x="27.1512" y="62.833" width="16" height="16"/>
+  <object id="2" name="SpawnPoint" type="SpawnPoint" x="22.8179" y="110.833" width="16" height="16"/>
   <object id="3" name="SpawnEnemy" type="SpawnEnemy" x="114" y="79.0001" width="16" height="16"/>
   <object id="4" name="SpawnEnemy" type="SpawnEnemy" x="194.333" y="106.333" width="16" height="16"/>
   <object id="5" name="SpawnEnemy" type="SpawnEnemy" x="149.667" y="28.6667" width="16" height="16"/>
   <object id="6" name="SpawnEnemy" type="SpawnEnemy" x="195.333" y="50" width="16" height="16"/>
   <object id="7" name="SpawnEnemy" type="SpawnEnemy" x="82.5" y="47.167" width="16" height="16"/>
-  <object id="8" name="SpawnEnemy" type="SpawnEnemy" x="54" y="127" width="16" height="16"/>
+  <object id="8" name="SpawnEnemy" type="SpawnEnemy" x="43.6667" y="31.6667" width="16" height="16"/>
   <object id="9" name="SpawnEnemy" type="SpawnEnemy" x="91.6667" y="118.333" width="16" height="16"/>
   <object id="10" name="SpawnEnemy" type="SpawnEnemy" x="158" y="65.3333" width="16" height="16"/>
   <object id="11" name="SpawnEnemy" type="SpawnEnemy" x="153.667" y="109" width="16" height="16"/>

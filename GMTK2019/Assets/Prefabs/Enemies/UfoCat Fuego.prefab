@@ -192,7 +192,7 @@ MonoBehaviour:
   deadEffect: {fileID: 4592328392037668054, guid: 99625ba2474d1ef4dbd5f115d1f57943,
     type: 3}
   hitEffect: {fileID: 6782148938571630463}
-  projectile: {fileID: 8724100565046061397, guid: 6ed04e86da62edc46bb66ca9b536c870,
+  projectile: {fileID: 8724100565046061397, guid: 6e91c3c2757ce5f47b3f30ce68c7c9dd,
     type: 3}
   shootDistance: 100
   hiddeDistance: 50

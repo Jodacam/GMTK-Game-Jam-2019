@@ -63,7 +63,7 @@ public class UfoCat : EnemyController
                 animator.SetFloat(Const.Y_DIR, -dir.y);
                 if (innerCoolDown <= 0)
                 {
-                    innerCoolDown = coolDown;
+                    innerCoolDown = coolDown-0.5f;
                     Attack();
                 }
                 else

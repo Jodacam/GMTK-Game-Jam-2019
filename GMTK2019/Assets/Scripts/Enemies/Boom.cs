@@ -13,10 +13,11 @@ public class Boom : Seaker {
     IEnumerator Explode(){
         state = EnemyController.State.Exploding;
         yield return new WaitForSeconds(explodeTime);
-        GetComponentInChildren<PlayExplosion>().Play(3);
+        float range = Mathf.Lerp(2,4,PlayerController.Player.getLimit());
+        GetComponentInChildren<PlayExplosion>().Play(range);
         yield return new WaitForSeconds(0.3f);
         GetComponent<SpriteRenderer>().enabled = false;
-        var touched = Physics2D.OverlapBoxAll(transform.position+new Vector3(dir.x,dir.y,0)*16,new Vector3(range.x,range.y,0)*16,0);
+        var touched = Physics2D.OverlapBoxAll(transform.position,new Vector3(range,range,0)*16,0);
         for(int i = 0; i<touched.Length;i++){
             var player = touched[i].transform.GetComponent<PlayerController>();
             if(player){

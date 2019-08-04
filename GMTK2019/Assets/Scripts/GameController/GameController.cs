@@ -1,13 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+<<<<<<< HEAD
+=======
+
+>>>>>>> ca1297447914fa3dbdea95ec530d6ff63c20e423
 using UnityEngine.Rendering.PostProcessing;
 
 public class GameController : MonoBehaviour
 {
-
-    public PostProcessProfile postporcesoOriginal;
-    public PostProcessProfile postProcesoNuevo;
     public List<GameObject> totalMapList;
 
     List<GameObject> mapList = new List<GameObject>();
@@ -119,7 +121,6 @@ public class GameController : MonoBehaviour
             mapList[i].SetActive(false);
 
         }
-        PlayerController.Player.addCurse();
         int r = Random.Range(0, shops.Count);
         mapList.Add(Instantiate(bossRooms[r], transform.position, Quaternion.identity));
         scroll.NextTile(ScrollUi.RoomType.Boss);
@@ -140,6 +141,7 @@ public class GameController : MonoBehaviour
 
     public System.Collections.IEnumerator NextMap()
     {
+<<<<<<< HEAD
         if(transitioning==false)
         {
             transitioning = true;
@@ -147,6 +149,11 @@ public class GameController : MonoBehaviour
             FindObjectOfType<Camera>().GetComponent<PostProcessLayer>().enabled = true;
             postProcessingProfile.GetSetting<DepthOfField>().focusDistance.value = 50;
             postProcessingProfile.GetSetting<ChromaticAberration>().intensity.value = 0;
+=======
+        List<Projectile> proyectiles = FindObjectsOfType<Projectile>().ToList();
+        foreach(Projectile e in proyectiles){
+            Destroy(e.gameObject);
+>>>>>>> ca1297447914fa3dbdea95ec530d6ff63c20e423
         }
         while (Time.time - transitionTimeStamp <= 0.5f)
         {
@@ -175,6 +182,7 @@ public class GameController : MonoBehaviour
                 scroll.Scroll();
             }
 
+<<<<<<< HEAD
             if (actualMap < mapList.Count)
             {
                 PrepareMap();
@@ -185,6 +193,17 @@ public class GameController : MonoBehaviour
                 GenerateMapList();
             }
 
+=======
+        if (actualMap < mapList.Count)
+        {
+            PrepareMap();
+        }
+        else
+        {
+            GenerateMapList();
+        }
+        
+>>>>>>> ca1297447914fa3dbdea95ec530d6ff63c20e423
 
             SpawnEnemies();
             yield return null;
@@ -235,9 +254,13 @@ public class GameController : MonoBehaviour
                 var w = getWeapon();
                 var a = getArmor();
                 var w1 = getWeapon();
-                shop[0].Init(w,Mathf.RoundToInt(Mathf.LerpUnclamped(w.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)));
-                shop[1].Init(a,Mathf.RoundToInt(Mathf.LerpUnclamped(a.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)));
-                shop[2].Init(w1,Mathf.RoundToInt(Mathf.LerpUnclamped(w1.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)));
+                float disc = 1;
+                if(PlayerController.Player.bendiciones["shopCoins"]){
+                    disc =Mathf.Lerp(0.95f,0.25f,PlayerController.Player.getLimit());
+                }
+                shop[0].Init(w,Mathf.RoundToInt(Mathf.LerpUnclamped(w.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)*disc));
+                shop[1].Init(a,Mathf.RoundToInt(Mathf.LerpUnclamped(a.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)*disc));
+                shop[2].Init(w1,Mathf.RoundToInt(Mathf.LerpUnclamped(w1.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)*disc));
             }
             else
             {
