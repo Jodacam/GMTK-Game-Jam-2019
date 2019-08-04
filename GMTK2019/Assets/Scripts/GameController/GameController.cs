@@ -130,6 +130,7 @@ public class GameController : MonoBehaviour
 
     public void NextMap()
     {
+        StartCoroutine(PlayerController.Player.StopMove());
         List<Projectile> proyectiles = FindObjectsOfType<Projectile>().ToList();
         foreach(Projectile e in proyectiles){
             Destroy(e.gameObject);
