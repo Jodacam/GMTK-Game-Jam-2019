@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20749143, g: 0.21147497, b: 0.14576834, a: 1}
+  m_IndirectSpecularColor: {r: 0.20749268, g: 0.21147677, b: 0.14576986, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3270,6 +3270,9 @@ MonoBehaviour:
   - {fileID: 7235343241338909999, guid: 643fd13a9ef53f349b068109ec29f930, type: 3}
   - {fileID: -6976684557027671241, guid: 99596eff1d94be1459a69199b3ce3a49, type: 3}
   - {fileID: 3852361113583753524, guid: 6c1d527b111183b4fa46dae1adaa385d, type: 3}
+  powerUpList: []
+  weaponList: []
+  armorList: []
   bossRooms:
   - {fileID: 4907390051029339579, guid: d455be22fa6ac0841b638a719b0bc15e, type: 3}
   - {fileID: -7128601633098942801, guid: 83fa65c26cb27d14aa4468337bea44d7, type: 3}
@@ -6027,6 +6030,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
+    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
+        type: 3}
+      propertyPath: minSpeed.x
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
+        type: 3}
+      propertyPath: minSpeed.y
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 7016893214619244400, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6086,16 +6099,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
-        type: 3}
-      propertyPath: minSpeed.x
-      value: 36
-      objectReference: {fileID: 0}
-    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
-        type: 3}
-      propertyPath: minSpeed.y
-      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 7016893214619244401, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
         type: 3}
