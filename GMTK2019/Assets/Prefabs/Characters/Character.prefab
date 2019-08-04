@@ -104,7 +104,7 @@ MonoBehaviour:
   clips:
   - clip: {fileID: 8300000, guid: 0949170b1508e6542ac98d37bcfa62ed, type: 3}
     name: footStep
-  - clip: {fileID: 8300000, guid: 7d1b7873856682c428440ca947d15eaf, type: 3}
+  - clip: {fileID: 8300000, guid: c6749767b96fab94ca59a5414405f1f5, type: 3}
     name: mele
   - clip: {fileID: 8300000, guid: 592ec880f5ac64c4c8e9be623c1b1e87, type: 3}
     name: coin
@@ -112,12 +112,14 @@ MonoBehaviour:
     name: losecoin
   - clip: {fileID: 8300000, guid: 49d70fc58b9184348895137b42c47972, type: 3}
     name: hit
-  minSpeed: {x: 36, y: 36}
-  coolDown: 1
-  footStep: 0.5
+  - clip: {fileID: 8300000, guid: 2f372c4b06001db4fa8503c421776c37, type: 3}
+    name: death
+  minSpeed: {x: 60, y: 60}
+  coolDown: 0.5
+  footStep: 0.3
   dir: {x: 0, y: 0}
   speed: {x: 0, y: 0}
-  LAVARIABLE: 100
+  LAVARIABLE: 50
   actualWeapon: {fileID: 11400000, guid: c1df2aedb617e1b408ab9ffe8bc7f9bb, type: 2}
   actualArmor: {fileID: 0}
   actualPowerUp: {fileID: 0}
@@ -474,6 +476,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pay
       objectReference: {fileID: 0}
+    - target: {fileID: 7576744811287969959, guid: a10ad5455e83a7f46b52b2dc9faba7e1,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6297683315649974076, guid: a10ad5455e83a7f46b52b2dc9faba7e1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -527,11 +534,6 @@ PrefabInstance:
     - target: {fileID: 6297683315649974076, guid: a10ad5455e83a7f46b52b2dc9faba7e1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7576744811287969959, guid: a10ad5455e83a7f46b52b2dc9faba7e1,
-        type: 3}
-      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

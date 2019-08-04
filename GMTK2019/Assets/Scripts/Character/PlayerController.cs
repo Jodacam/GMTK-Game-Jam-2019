@@ -196,6 +196,7 @@ public class PlayerController : MonoBehaviour
     private void Die()
     {
         //animator.SetTrigger(Const.DIE);
+        PlayClip("death");
         dead = true;
         StartCoroutine(Restart());
     }

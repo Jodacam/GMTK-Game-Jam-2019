@@ -15,6 +15,7 @@ public class OcTurret : EnemyController
     }
 
     private void Update() {
+        base.Update();
         dir = (PlayerController.Player.transform.position - transform.position).normalized;
         dir = new Vector2(Mathf.RoundToInt(dir.x),Mathf.RoundToInt(dir.y));
         animator.SetFloat(Const.X_DIR, dir.x);

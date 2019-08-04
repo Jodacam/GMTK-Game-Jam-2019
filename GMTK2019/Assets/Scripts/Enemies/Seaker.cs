@@ -29,7 +29,7 @@ public class Seaker : EnemyController
 
     private void Update()
     {
-
+        base.Update();
         float distance = Vector3.Distance(PlayerController.Player.transform.position, transform.position);
         switch (state)
         {
