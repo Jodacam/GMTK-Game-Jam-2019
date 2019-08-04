@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resistanceTo: 0
   vulnerableTo: 2
+  cost: 100
   sprite: {fileID: -7885344050131979839, guid: d01901917a53c75459006daa42e2fbc3, type: 3}

@@ -90,6 +90,19 @@ public class PlayerController : MonoBehaviour
         {"coins",false},
         {"plusDamage",false}
     };
+
+    public void addCurse(){
+        var s = new string[6];
+        maldiciones.Keys.CopyTo(s, 0);
+        int next= -1;
+        do{
+        next = UnityEngine.Random.Range(0, 6);
+        }while(maldiciones[s[next]]);
+         
+        maldiciones[s[next]] = true;
+        maldicionesObject[next].SetActive(true);
+        PlayClip("curse");       
+    }
     void Start()
     {
         currentLAVARIABLE = LAVARIABLE;
@@ -291,7 +304,7 @@ public class PlayerController : MonoBehaviour
                 if (maldiciones["ice"])
                     vulnerable = DamageType.Ice;
                 if(vulnerable==type){
-                    damage =Mathf.Lerp(1.05f,2,getLimit());
+                    damage *=Mathf.Lerp(1.05f,2,getLimit());
                 }
 
                 if(armor){
