@@ -11,9 +11,15 @@ public class DamageDealer : MonoBehaviour
     public DamageType damageType;
 
     public float damageAmount;
+
+    public ParticleSystem destroyEffect;
     public virtual float GetDamage()
     {
+        var e = Instantiate(destroyEffect, transform.position, transform.rotation);
+        e.transform.Rotate(0,0,90);
         PlayClip("Hit");
+        GetComponent<SpriteRenderer>().enabled = false;
+
         Destroy(gameObject,0.5f);//También se puede hacer que desaparezca, para optimizar, pero el juego es pequeño, asi que no creo que haya Spikes.
         return damageAmount;
     }

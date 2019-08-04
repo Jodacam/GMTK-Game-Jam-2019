@@ -322,6 +322,7 @@ public class PlayerController : MonoBehaviour
     private void Die()
     {
         //animator.SetTrigger(Const.DIE);
+        GetComponent<SpriteRenderer>().enabled = false;
         PlayClip("death");
         dead = true;
         explosion.Play(16);
