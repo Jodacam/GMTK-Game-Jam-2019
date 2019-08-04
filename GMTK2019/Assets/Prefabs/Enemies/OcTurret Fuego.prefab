@@ -149,4 +149,5 @@ MonoBehaviour:
   innerCoolDown: 0
   stacionary: 1
   state: 0
-  projectile: {fileID: 0}
+  projectile: {fileID: 8724100565046061397, guid: 6e91c3c2757ce5f47b3f30ce68c7c9dd,
+    type: 3}

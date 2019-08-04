@@ -142,11 +142,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 170
-  type: 0
+  type: 1
   animator: {fileID: 0}
   coolDown: 3
   onDamageTime: 0
   innerCoolDown: 0
   stacionary: 1
   state: 0
-  projectile: {fileID: 0}
+  projectile: {fileID: 8724100565046061397, guid: 17b1b4b38b929a5419ace1bf828983d5,
+    type: 3}

@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 80
-  type: 0
+  type: 3
   animator: {fileID: 0}
   coolDown: 1
   onDamageTime: 0
