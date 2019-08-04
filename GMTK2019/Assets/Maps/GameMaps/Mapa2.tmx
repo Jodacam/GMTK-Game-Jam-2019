@@ -47,7 +47,7 @@
  </layer>
  <objectgroup id="6" name="Mid">
   <object id="1" name="Puerta" type="Puerta" x="96" y="0" width="16" height="16"/>
-  <object id="2" name="SpawnPoint" type="SpawnPoint" x="96.3333" y="32.6667" width="16" height="16"/>
+  <object id="2" name="SpawnPoint" type="SpawnPoint" x="104" y="38" width="16" height="16"/>
   <object id="3" name="SpawnEnemy" type="SpawnEnemy" x="26.3333" y="119" width="16" height="16"/>
   <object id="4" name="SpawnEnemy" type="SpawnEnemy" x="20" y="30.3333" width="16" height="16"/>
   <object id="5" name="SpawnEnemy" type="SpawnEnemy" x="20.3333" y="69.3333" width="16" height="16"/>
