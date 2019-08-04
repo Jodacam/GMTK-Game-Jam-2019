@@ -90,6 +90,7 @@ public class ScrollUi : MonoBehaviour
     }
 
     public void Wipe(){
+        flecha.SetActive(false);
         foreach(RectTransform r in objects){
             Destroy(r.gameObject);
         }
