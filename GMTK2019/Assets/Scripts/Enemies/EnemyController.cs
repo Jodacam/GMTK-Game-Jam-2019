@@ -44,6 +44,8 @@ public abstract class EnemyController : MonoBehaviour {
     protected Vector2 dir = new Vector2(0,0);
     public State state;
 
+    public ParticleSystem deadEffect;
+
     public void Start() {
         dir = new Vector2(0,-1);
 
@@ -83,6 +85,7 @@ public abstract class EnemyController : MonoBehaviour {
         GameController.Instance.EnemyDead();
         PlayClip("death");       
         int r = UnityEngine.Random.Range(0,GameController.Instance.dropeables.Count);
+        Instantiate(deadEffect,transform.position,Quaternion.Euler(0,0,0));
         Destroy(gameObject,timeToDie);
         Instantiate(GameController.Instance.dropeables[r],transform.position,Quaternion.identity);
     }

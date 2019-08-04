@@ -214,6 +214,8 @@ MonoBehaviour:
   audio: {fileID: 0}
   stacionary: 0
   state: 0
+  deadEffect: {fileID: 8143611923501978496, guid: f78b398a4a961524a9b8254cb3f0e965,
+    type: 3}
   sockwave: {fileID: 161008844, guid: 45015fafc09d3bf4fa39c7afbe18eefe, type: 3}
   projectile: {fileID: 4240011681865804537, guid: bf4e1cb6d88a4a3468985c5e35593c61,
     type: 3}

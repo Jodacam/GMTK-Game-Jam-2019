@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     internal void ActualWeapon(Weapon weapon)
     {
-        animator.SetFloat("weapon",weapon.id);
+        animator.SetFloat("weapon", weapon.id);
         actualWeapon = weapon;
     }
 
@@ -63,13 +63,15 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem getBread;
     public ParticleSystem getPocionSalud;
     public ParticleSystem getChicken;
-    Dictionary<Coin.Type,ParticleSystem> getParticles;
+    Dictionary<Coin.Type, ParticleSystem> getParticles;
 
     public ParticleSystem getHit;
 
     public ParticleSystem loseCoins;
 
     public PlayExplosion explosion;
+
+    public Transform raycastInit;
 
     void Start()
     {
@@ -78,7 +80,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         waitForRestart = new WaitForSeconds(2.5f);
         text = GameObject.FindGameObjectWithTag("LAVARIABLE").GetComponent<TextMeshProUGUI>();
-        text.text = LAVARIABLE.ToString();
+        text.text = currentLAVARIABLE.ToString();
         getParticles = new Dictionary<Coin.Type, ParticleSystem>();
         getParticles.Add(Coin.Type.Moneda, getCoins);
         getParticles.Add(Coin.Type.Pan, getBread);
@@ -108,7 +110,7 @@ public class PlayerController : MonoBehaviour
     /// <returns></returns>
     public float GetDamage()
     {
-        return LAVARIABLE;
+        return currentLAVARIABLE;
     }
 
     private void HandleAttack()
@@ -164,13 +166,14 @@ public class PlayerController : MonoBehaviour
                 innerFoot -= Time.deltaTime;
             }
         }
-        transform.Translate(speed * Time.deltaTime);
+        //if(!Physics2D.Raycast(raycastInit.position,dir,17,LayerMask.GetMask("Enemies","Walls") ){
+
+            transform.Translate(speed * Time.deltaTime);
+        //}
 
         animator.SetFloat(Const.X_DIR, dir.x);
         animator.SetFloat(Const.Y_DIR, dir.y);
         animator.SetFloat(Const.SPEED, speed.sqrMagnitude);
-
-
 
     }
 
@@ -202,7 +205,7 @@ public class PlayerController : MonoBehaviour
                 currentLAVARIABLE -= damage;
             }
             invencible = true;
-            currentLAVARIABLE = Mathf.Clamp(currentLAVARIABLE,0,float.MaxValue);
+            currentLAVARIABLE = Mathf.Clamp(currentLAVARIABLE, 0, float.MaxValue);
             StartCoroutine(getInmune());
             text.text = currentLAVARIABLE.ToString();
         }
@@ -235,16 +238,8 @@ public class PlayerController : MonoBehaviour
 
     public void GrabArmor()
     {
-        if (!armor)
-        {
-            animator.SetLayerWeight(1, 1);
-            armor = true;
-        }
-        else
-        {
-            animator.SetLayerWeight(1, 0);
-            armor = false;
-        }
+        animator.SetLayerWeight(1, 1);
+        armor = true;
     }
 
     public void PlayClip(string name)
@@ -258,16 +253,16 @@ public class PlayerController : MonoBehaviour
 
     public void GetCoins(Coin coins)
     {
-        LAVARIABLE += coins.coins;
-        text.text = LAVARIABLE.ToString();
+        currentLAVARIABLE += coins.coins;
+        text.text = currentLAVARIABLE.ToString();
         PlayClip("coin");
         getParticles[coins.type].Play();
     }
 
     public void LoseCoins(float coins)
     {
-        LAVARIABLE -= coins;
-        text.text = LAVARIABLE.ToString();
+        currentLAVARIABLE -= coins;
+        text.text = currentLAVARIABLE.ToString();
         PlayClip("losecoins");
         loseCoins.Play();
     }
@@ -281,10 +276,10 @@ public class PlayerController : MonoBehaviour
         c.a = 0.3f;
         while (inmune < 0.5f)
         {
-            
+
             yield return null;
-            inmune+=Time.deltaTime;
-            renderer.color = Color.Lerp(e,c,Mathf.PingPong(Time.time*10,1));
+            inmune += Time.deltaTime;
+            renderer.color = Color.Lerp(e, c, Mathf.PingPong(Time.time * 10, 1));
         }
         invencible = false;
         renderer.color = e;
