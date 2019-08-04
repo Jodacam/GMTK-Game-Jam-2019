@@ -131,7 +131,6 @@ public class PlayerController : MonoBehaviour
     };
         bendiciones = new Dictionary<string, bool>(){
         {"coins",false},
-        {"plusDamage",false}
     };
 
         var s = new string[6];
@@ -148,10 +147,10 @@ public class PlayerController : MonoBehaviour
         maldicionesObject[next].SetActive(true);
         maldicionesObject[next2].SetActive(true);
 
-        s = new string[2];
+        s = new string[1];
         bendiciones.Keys.CopyTo(s, 0);
 
-        next = UnityEngine.Random.Range(0, 2);
+        next = UnityEngine.Random.Range(0, 1);
         bendiciones[s[next]] = true;
         bendicionesObject[next].SetActive(true);
     }

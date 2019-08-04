@@ -14,7 +14,9 @@ public class Bullet : MonoBehaviour {
         if(other.tag.Equals("Enemy")){
             other.transform.GetComponent<EnemyController>().RecibeDamage(PlayerController.Player.GetDamage(),dir);
         }
-        Destroy(gameObject);
+        if(!other.tag.Equals("DamageDealer")){
+            Destroy(gameObject);
+        }
 
     }
 
