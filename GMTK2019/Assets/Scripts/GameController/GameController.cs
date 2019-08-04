@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+
 using UnityEngine.Rendering.PostProcessing;
 
 public class GameController : MonoBehaviour
@@ -205,9 +206,13 @@ public class GameController : MonoBehaviour
                 var w = getWeapon();
                 var a = getArmor();
                 var w1 = getWeapon();
-                shop[0].Init(w,Mathf.RoundToInt(Mathf.LerpUnclamped(w.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)));
-                shop[1].Init(a,Mathf.RoundToInt(Mathf.LerpUnclamped(a.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)));
-                shop[2].Init(w1,Mathf.RoundToInt(Mathf.LerpUnclamped(w1.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)));
+                float disc = 1;
+                if(PlayerController.Player.bendiciones["shopCoins"]){
+                    disc =Mathf.Lerp(0.95f,0.25f,PlayerController.Player.getLimit());
+                }
+                shop[0].Init(w,Mathf.RoundToInt(Mathf.LerpUnclamped(w.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)*disc));
+                shop[1].Init(a,Mathf.RoundToInt(Mathf.LerpUnclamped(a.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)*disc));
+                shop[2].Init(w1,Mathf.RoundToInt(Mathf.LerpUnclamped(w1.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)*disc));
             }
             else
             {

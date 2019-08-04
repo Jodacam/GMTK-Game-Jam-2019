@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
         {"costMoney",false}
     };
 
-    Dictionary<string, bool> bendiciones = new Dictionary<string, bool>(){
+    public Dictionary<string, bool> bendiciones = new Dictionary<string, bool>(){
         {"coins",false},
         {"plusDamage",false}
     };
