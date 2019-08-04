@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd79f8aca23254846aef6fdbce949203, type: 3}
-  m_Name: BossSet 4
+  m_Name: BossSet 5
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 5567267225110191317, guid: 13803e7b48d01504ea3be9f341fe2f49, type: 3}
-  roomToStart: 10
+  - {fileID: 5567267225110191317, guid: 99b4b9bed18a9774cb2b07222012297c, type: 3}
+  - {fileID: 5567267225110191317, guid: b2e87e3f30dcfdc4b894d086c0c0d614, type: 3}
+  roomToStart: 32
   roomToStop: 999999

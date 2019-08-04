@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BossSet 3
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 5567267225110191317, guid: 9f788268d4b2042489351d6747ef678a, type: 3}
+  - {fileID: 5567267225110191317, guid: b2e87e3f30dcfdc4b894d086c0c0d614, type: 3}
   roomToStart: 10
   roomToStop: 999999
