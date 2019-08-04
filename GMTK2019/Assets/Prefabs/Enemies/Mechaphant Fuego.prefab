@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 5567267225110191316}
   - component: {fileID: 5567267225110191317}
   m_Layer: 0
-  m_Name: Mechaphant
+  m_Name: Mechaphant Fuego
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_Sprite: {fileID: 3777710725628520955, guid: db2117d0c550aba448f0bd9e5b5b3a96,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1000
-  type: 3
+  type: 0
   animator: {fileID: 0}
   coolDown: 1
   onDamageTime: 0

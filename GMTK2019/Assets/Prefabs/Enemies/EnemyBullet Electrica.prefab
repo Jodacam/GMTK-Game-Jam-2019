@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageType: 1
-  damageAmount: 20
-  multiplier: 16
+  damageAmount: 40
+  multiplier: 25
 --- !u!82 &8979543635154636998
 AudioSource:
   m_ObjectHideFlags: 0
