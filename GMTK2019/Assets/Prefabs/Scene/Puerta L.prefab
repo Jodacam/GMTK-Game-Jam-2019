@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8146479130729405804}
   - component: {fileID: 6589826901442270996}
   m_Layer: 0
-  m_Name: Puerta
+  m_Name: Puerta L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 8146479130729405805}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d543c05bedfcb0047b194415a12dbcf1, type: 2}
+  m_Controller: {fileID: 9100000, guid: fa2e6580685185a4f8f727c2090ab85d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -121,7 +121,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 1}
-    oldSize: {x: 16, y: 17}
+    oldSize: {x: 16, y: 16}
     newSize: {x: 16, y: 16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
