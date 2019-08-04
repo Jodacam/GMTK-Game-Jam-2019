@@ -50,7 +50,7 @@
   <object id="2" name="SpawnPoint" type="SpawnPoint" x="173.333" y="131.333" width="16" height="16"/>
   <object id="3" name="SpawnEnemy" type="SpawnEnemy" x="78.6667" y="84.6667" width="16" height="16"/>
   <object id="4" name="SpawnEnemy" type="SpawnEnemy" x="87.3333" y="33.3333" width="16" height="16"/>
-  <object id="5" name="SpawnEnemy" type="SpawnEnemy" x="22.3333" y="25" width="16" height="16"/>
+  <object id="5" name="SpawnEnemy" type="SpawnEnemy" x="29.8333" y="41.5" width="16" height="16"/>
   <object id="6" name="SpawnEnemy" type="SpawnEnemy" x="196" y="67.3333" width="16" height="16"/>
   <object id="7" name="SpawnEnemy" type="SpawnEnemy" x="19" y="77.6667" width="16" height="16"/>
   <object id="8" name="SpawnEnemy" type="SpawnEnemy" x="44" y="108.667" width="16" height="16"/>

@@ -177,7 +177,8 @@ public class PlayerController : MonoBehaviour
     /// <returns></returns>
     public float GetDamage()
     {
-        return currentLAVARIABLE;
+        float e = GameController.Instance.actualMap;
+        return Mathf.LerpUnclamped(35,75,Mathf.Log((currentLAVARIABLE)/40));
     }
 
     private void HandleAttack()
@@ -187,11 +188,14 @@ public class PlayerController : MonoBehaviour
             bool pressed = Input.GetButtonDown("Jump");
             if (pressed)
             {
-                innerCoolDown = maldiciones["cooldown"] ? coolDown + Mathf.Lerp(0, 2, currentLAVARIABLE - 40 / 350) : coolDown;
+                innerCoolDown = maldiciones["cooldown"] ? Mathf.Lerp(0.5f, 2,getLimit()) : coolDown;
                 animator.SetTrigger("attack");
 
-                if (maldiciones["costMoney"])
-                    currentLAVARIABLE = Mathf.Max(1, currentLAVARIABLE - ((currentLAVARIABLE * 5) / 100));
+                if (maldiciones["costMoney"]){
+                    currentLAVARIABLE *= 0.95f;
+                    currentLAVARIABLE = Mathf.Max(1,Mathf.RoundToInt(currentLAVARIABLE));
+                }
+
                 actualWeapon.Attack(this);
             }
         }
@@ -224,7 +228,7 @@ public class PlayerController : MonoBehaviour
         var normalized = new Vector2(x, y).normalized;
         speed = Vector2.Scale(normalized, minSpeed);
         if (maldiciones["speed"])
-            speed *= 1 / Mathf.Lerp(1, 5, (currentLAVARIABLE - 40) / 500);
+            speed *= 1 / Mathf.Lerp(1, 1.33f, (currentLAVARIABLE - 40) / 300);
         if (speed.magnitude >= 0.01)
         {
             if (innerFoot <= 0)
@@ -263,6 +267,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public float getLimit(){
+        return (currentLAVARIABLE - 40) / 300;
+    }
+
     //Aqui se puede calcular el daño que recibimos.
     public void RecibeDamage(float damage, DamageType type)
     {
@@ -283,7 +291,7 @@ public class PlayerController : MonoBehaviour
                 if (maldiciones["ice"])
                     vulnerable = DamageType.Ice;
                 if(vulnerable==type){
-                    damage*=2;
+                    damage =Mathf.Lerp(1.05f,2,getLimit());
                 }
 
                 if(armor){

@@ -15,6 +15,7 @@ public class UfoCat : EnemyController
     public float hiddeDistance;
     public override void Attack()
     {
+        PlayClip("Shoot");
         var obj = Instantiate(projectile,transform.position+new Vector3(dir.x,dir.y,0)*16,Quaternion.identity);
         obj.Init(dir);
     }
@@ -39,7 +40,7 @@ public class UfoCat : EnemyController
             dir = aiController.velocity.normalized;
             dir = (PlayerController.Player.transform.position - transform.position).normalized;
             aiController.destination = transform.position-new Vector3(dir.x,dir.y,0)*16;
-            aiController.maxSpeed = Mathf.Lerp(24,48,(PlayerController.Player.currentLAVARIABLE-40)/500);
+            aiController.maxSpeed = Mathf.Lerp(24,40,(PlayerController.Player.currentLAVARIABLE-40)/300);
             animator.SetFloat(Const.X_DIR, -dir.x);
             animator.SetFloat(Const.Y_DIR, -dir.y);
 
