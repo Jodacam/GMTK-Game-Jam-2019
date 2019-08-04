@@ -22,7 +22,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1822b68101bf84e41954b955c375e034, type: 2}
+  m_Motion: {fileID: 7400000, guid: dccca1d6ed7867047abcfeb95a9d79fb, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -59,7 +59,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Puerta
+  m_Name: PuertaL
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: OpenDoor
@@ -101,7 +101,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0a4a61a3b25df284f9b850ea9021144c, type: 2}
+  m_Motion: {fileID: 7400000, guid: c222fb01ce5680f458fd5ef4db97414e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -181,7 +181,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8d2c35fef18f65e429b8f71611f09e40, type: 2}
+  m_Motion: {fileID: 7400000, guid: 8c78f52e28bb40e4aaed7264ef1ca7cd, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -208,7 +208,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1e54843e5dd1f494c803cb8619434073, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1c7eed2023ca0c2448c25691062ef515, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
