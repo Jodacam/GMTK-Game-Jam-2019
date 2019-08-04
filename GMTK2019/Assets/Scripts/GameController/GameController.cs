@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
-
+using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public List<GameObject> totalMapList;
@@ -54,6 +54,12 @@ public class GameController : MonoBehaviour
         camShake = FindObjectOfType<ScreenShake>();
     }
 
+    private void Update() {
+        if(Input.GetKey(KeyCode.Escape)){
+            MusicController.Instance.SetMusic("main");
+            SceneManager.LoadScene(0);
+        }
+    }
     void Start()
     {
         postProcessingProfile = FindObjectOfType<PostProcessVolume>().profile;

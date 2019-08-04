@@ -29,4 +29,10 @@ public class MenuBehaviour : MonoBehaviour
         source.PlayOneShot(buttonSound);        
         SceneManager.LoadScene("GameScene");
     }
+
+    private void Update() {
+        if(Input.GetKey(KeyCode.Escape)){
+            Application.Quit();
+        }
+    }
 }
