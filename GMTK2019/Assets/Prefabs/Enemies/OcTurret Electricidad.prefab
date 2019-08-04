@@ -154,6 +154,8 @@ MonoBehaviour:
     name: idle
   - clip: {fileID: 8300000, guid: 15d3a732669d31743a6d70eafb03c23f, type: 3}
     name: death
+  - clip: {fileID: 8300000, guid: 401dbc02b7cc7954b97feb4fc11c0b1c, type: 3}
+    name: Shoot
   audio: {fileID: 0}
   stacionary: 1
   state: 0

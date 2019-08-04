@@ -141,6 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1482a9de5dd6d347a6c8beb4ec88da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clips:
+  - clip: {fileID: 0}
+    name: Hit
+  audio: {fileID: 0}
   damageType: 3
   damageAmount: 90
   multiplier: 24
