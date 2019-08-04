@@ -200,9 +200,12 @@ public class GameController : MonoBehaviour
                 door.SetEnemies(0);
                 MusicController.Instance.SetMusic("Shop");
                 var shop = FindObjectsOfType<ShopItem>();
-                shop[0].Init(getWeapon(),10);
-                shop[1].Init(getArmor(),10);
-                shop[2].Init(getPowerUp(),10);
+                var w = getWeapon();
+                var a = getArmor();
+                var w1 =getWeapon();
+                shop[0].Init(w,Mathf.RoundToInt(Mathf.LerpUnclamped(w.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)));
+                shop[1].Init(a,Mathf.RoundToInt(Mathf.LerpUnclamped(a.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)));
+                shop[2].Init(w1,Mathf.RoundToInt(Mathf.LerpUnclamped(w1.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)));
             }
             else
             {

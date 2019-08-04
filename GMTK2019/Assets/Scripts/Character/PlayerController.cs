@@ -190,7 +190,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetTrigger("attack");
 
                 if (maldiciones["costMoney"])
-                    currentLAVARIABLE = Mathf.Min(1, currentLAVARIABLE - ((currentLAVARIABLE * 5) / 100));
+                    currentLAVARIABLE = Mathf.Max(1, currentLAVARIABLE - ((currentLAVARIABLE * 5) / 100));
                 actualWeapon.Attack(this);
             }
         }

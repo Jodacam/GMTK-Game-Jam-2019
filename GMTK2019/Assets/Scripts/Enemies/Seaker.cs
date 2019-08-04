@@ -29,6 +29,7 @@ public class Seaker : EnemyController
 
     private void Update()
     {
+        aiController.maxSpeed = Mathf.Lerp(16,36,(PlayerController.Player.currentLAVARIABLE-40)/500);
         base.Update();
         float distance = Vector3.Distance(PlayerController.Player.transform.position, transform.position);
         switch (state)
