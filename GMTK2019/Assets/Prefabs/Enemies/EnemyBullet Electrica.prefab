@@ -165,11 +165,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - clip: {fileID: 8300000, guid: 401dbc02b7cc7954b97feb4fc11c0b1c, type: 3}
+  - clip: {fileID: 8300000, guid: 437f1ddd3cd290c418aa18c9e7294000, type: 3}
     name: Hit
-  audio: {fileID: 0}
+  audio: {fileID: 8979543635154636998}
   damageType: 1
   damageAmount: 40
+  destroyEffect: {fileID: 2760323810031620624, guid: 019131d3b11e63140aeaca9eeeedfd7b,
+    type: 3}
   multiplier: 25
 --- !u!82 &8979543635154636998
 AudioSource:

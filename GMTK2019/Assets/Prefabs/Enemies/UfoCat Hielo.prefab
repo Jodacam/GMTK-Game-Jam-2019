@@ -183,6 +183,8 @@ MonoBehaviour:
     name: death
   - clip: {fileID: 8300000, guid: 14f7e86f2edb4fc46b9fafb15374845b, type: 3}
     name: Shoot
+  - clip: {fileID: 8300000, guid: 1d82cf97d3be6c745bd59876a1f1d249, type: 3}
+    name: ReceiveDamage
   audio: {fileID: 0}
   stacionary: 0
   state: 0
