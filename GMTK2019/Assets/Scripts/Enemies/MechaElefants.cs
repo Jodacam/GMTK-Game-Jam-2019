@@ -89,7 +89,7 @@ public class MechaElefants : EnemyController
     // Update is called once per frame
     void Update()
     {
-
+        base.Update();
         switch (mstate)
         {
             case mState.Projectile:
