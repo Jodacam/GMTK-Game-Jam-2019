@@ -53,7 +53,8 @@ public abstract class EnemyController : MonoBehaviour {
     {
         GameController.Instance.EnemyDead();
         Destroy(gameObject);
-        Instantiate(GameController.Instance.coin,transform.position,Quaternion.identity);
+        int r = UnityEngine.Random.Range(0,GameController.Instance.dropeables.Count);
+        Instantiate(GameController.Instance.dropeables[r],transform.position,Quaternion.identity);
     }
 
     public abstract void Attack();
