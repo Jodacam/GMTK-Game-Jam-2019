@@ -54,6 +54,7 @@ public class ShopItem : MonoBehaviour
     {
         
         this.price.text = cost.ToString();
+        this.cost = cost;
         this.weapon = weapon;
         renderer.sprite = weapon.sprite;
     }
@@ -61,12 +62,14 @@ public class ShopItem : MonoBehaviour
     public void Init(Armor weapon,int cost)
     {
         this.price.text = cost.ToString();
+        this.cost = cost;
         this.armor = weapon;
         renderer.sprite = weapon.sprite;
     }
         public void Init(PowerUp weapon,int cost)
     {
         this.price.text = cost.ToString();
+        this.cost = cost;
         this.powerUp = weapon;
         renderer.sprite = weapon.sprite;
     }

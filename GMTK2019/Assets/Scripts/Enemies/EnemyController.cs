@@ -46,6 +46,8 @@ public abstract class EnemyController : MonoBehaviour {
 
     public ParticleSystem deadEffect;
 
+    public ParticleSystem hitEffect;
+
     public void Start() {
         dir = new Vector2(0,-1);
 
@@ -93,6 +95,7 @@ public abstract class EnemyController : MonoBehaviour {
     public abstract void Attack();
 
     public  IEnumerator Damaged(){
+        hitEffect.Play();
         yield return null;
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         Color c = renderer.color;
