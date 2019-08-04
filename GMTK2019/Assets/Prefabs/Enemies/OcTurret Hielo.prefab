@@ -145,7 +145,7 @@ MonoBehaviour:
   life: 170
   type: 2
   animator: {fileID: 0}
-  coolDown: 3
+  coolDown: 4
   onDamageTime: 0
   innerCoolDown: 0
   timeToDie: 0.2
