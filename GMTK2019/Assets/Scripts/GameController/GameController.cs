@@ -128,7 +128,7 @@ public class GameController : MonoBehaviour
             mapList[i].SetActive(false);
 
         }
-        if(totalMaps>=2)
+        if(totalMaps>=2 && totalMaps < 21)
             PlayerController.Player.addCurse();
         int r = Random.Range(0, shops.Count);
         mapList.Add(Instantiate(bossRooms[r], transform.position, Quaternion.identity));
