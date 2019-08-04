@@ -3,5 +3,6 @@ public enum DamageType
     Fire,
     Thunder,
 
-    Ice
+    Ice,
+    None
 }
