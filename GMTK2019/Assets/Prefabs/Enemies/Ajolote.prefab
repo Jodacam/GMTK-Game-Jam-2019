@@ -185,6 +185,8 @@ MonoBehaviour:
   audio: {fileID: 0}
   stacionary: 0
   state: 0
+  deadEffect: {fileID: 5363413799902661602, guid: e3195ebdf4358e44eb25805bd23392ed,
+    type: 3}
   damage: 60
   range: {x: 4, y: 4}
   maxDistance: 200

@@ -32,9 +32,12 @@ public class ScrollUi : MonoBehaviour
 
     public GameObject flecha;
 
+    Vector2 initPos;
+
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
+        initPos = rectTransform.anchoredPosition;
         tiles = new Dictionary<RoomType, GameObject>();
         tiles.Add(RoomType.Normal, blankSquare);
         tiles.Add(RoomType.Boss, bossSquare);
@@ -94,6 +97,7 @@ public class ScrollUi : MonoBehaviour
         foreach(RectTransform r in objects){
             Destroy(r.gameObject);
         }
+        rectTransform.anchoredPosition = initPos;
         objects.Clear();
     }
 }

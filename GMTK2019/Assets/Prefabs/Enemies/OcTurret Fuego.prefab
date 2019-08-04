@@ -157,6 +157,8 @@ MonoBehaviour:
   audio: {fileID: 0}
   stacionary: 1
   state: 0
+  deadEffect: {fileID: 5011586486759323266, guid: 0bc6372682d46ea41bf8adf435496898,
+    type: 3}
   projectile: {fileID: 8724100565046061397, guid: 6e91c3c2757ce5f47b3f30ce68c7c9dd,
     type: 3}
 --- !u!82 &8404231320861814918
