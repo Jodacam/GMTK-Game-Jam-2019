@@ -151,6 +151,9 @@ MonoBehaviour:
   openSound:
     clip: {fileID: 8300000, guid: 29a2c3187d608e541b050393c2b4a37d, type: 3}
     name: 
+  nextLevel:
+    clip: {fileID: 8300000, guid: 155a01ac1fbda9740a87c40389bc092c, type: 3}
+    name: 
 --- !u!82 &6589826901442270996
 AudioSource:
   m_ObjectHideFlags: 0

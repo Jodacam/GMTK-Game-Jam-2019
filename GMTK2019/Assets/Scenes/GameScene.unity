@@ -2486,7 +2486,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 14.5
+  m_fontSize: 14.55
   m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7697,6 +7697,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
         type: 3}
+      propertyPath: clips.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
+        type: 3}
       propertyPath: LAVARIABLE
       value: 40
       objectReference: {fileID: 0}
@@ -7746,6 +7751,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c1df2aedb617e1b408ab9ffe8bc7f9bb,
         type: 2}
+    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
+        type: 3}
+      propertyPath: clips.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ee5298f1e1b368042b61a08119c438b9, type: 3}
+    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
+        type: 3}
+      propertyPath: clips.Array.data[6].name
+      value: Shoot
+      objectReference: {fileID: 0}
     - target: {fileID: 7016893214619244400, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
         type: 3}
       propertyPath: m_LocalPosition.x
