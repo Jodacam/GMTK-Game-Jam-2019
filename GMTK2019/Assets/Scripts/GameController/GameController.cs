@@ -202,7 +202,7 @@ public class GameController : MonoBehaviour
                 var shop = FindObjectsOfType<ShopItem>();
                 var w = getWeapon();
                 var a = getArmor();
-                var w1 =getWeapon();
+                var w1 = getWeapon();
                 shop[0].Init(w,Mathf.RoundToInt(Mathf.LerpUnclamped(w.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)));
                 shop[1].Init(a,Mathf.RoundToInt(Mathf.LerpUnclamped(a.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)));
                 shop[2].Init(w1,Mathf.RoundToInt(Mathf.LerpUnclamped(w1.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)));
@@ -219,7 +219,8 @@ public class GameController : MonoBehaviour
 
                 foreach (EnemyController enemy in setAllowed[random].enemies)
                 {
-                    Instantiate(enemy, spawns[enemyNum].transform.position, Quaternion.Euler(0, 0, 0));
+                    var e = Instantiate(enemy, spawns[enemyNum].transform.position, Quaternion.Euler(0, 0, 0));
+                    e.life = e.life+Mathf.Log10(actualMap*10)*15;
                     enemyNum++;
                 }
 
