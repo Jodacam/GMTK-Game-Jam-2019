@@ -7865,49 +7865,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 7016893214619244404, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
         type: 3}
       propertyPath: m_Interpolate
       value: 2
       objectReference: {fileID: 0}
-=======
-    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
-        type: 3}
-      propertyPath: maldicionesObject.Array.data[0]
-      value: 
-      objectReference: {fileID: 1477860309}
-    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
-        type: 3}
-      propertyPath: maldicionesObject.Array.data[1]
-      value: 
-      objectReference: {fileID: 1397643317}
-    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
-        type: 3}
-      propertyPath: maldicionesObject.Array.data[2]
-      value: 
-      objectReference: {fileID: 1292500246}
-    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
-        type: 3}
-      propertyPath: maldicionesObject.Array.data[3]
-      value: 
-      objectReference: {fileID: 1526879068}
-    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
-        type: 3}
-      propertyPath: maldicionesObject.Array.data[4]
-      value: 
-      objectReference: {fileID: 410537252}
-    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
-        type: 3}
-      propertyPath: maldicionesObject.Array.data[5]
-      value: 
-      objectReference: {fileID: 1398688408}
-    - target: {fileID: 7016893214619244406, guid: 41a9a87f6a4afd84ba59b283ea9ed94d,
-        type: 3}
-      propertyPath: bendicionesObject.Array.data[0]
-      value: 
-      objectReference: {fileID: 2113832861}
->>>>>>> cc86e5c619139c5d1ce36dad10e961816192a508
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41a9a87f6a4afd84ba59b283ea9ed94d, type: 3}
 --- !u!1001 &8287194301521555292
