@@ -5,5 +5,6 @@ public class Armor : ScriptableObject {
     
     public DamageType resistanceTo;
     public DamageType vulnerableTo;
+    public int cost;
     public Sprite sprite;
 }
