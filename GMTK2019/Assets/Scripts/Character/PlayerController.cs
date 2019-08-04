@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
 
     private float innerCoolDown = 0;
 
+    private bool invencible = false;
+
     public float footStep = 0.1f;
 
     private float innerFoot;
@@ -49,6 +51,12 @@ public class PlayerController : MonoBehaviour
 
     public bool armor = false;
 
+    public ParticleSystem getCoins;
+
+    public ParticleSystem getHit;
+
+    public ParticleSystem loseCoins;
+
     void Start()
     {
         audio = GetComponent<AudioSource>();
@@ -67,7 +75,8 @@ public class PlayerController : MonoBehaviour
             HandleMovement();
         }
 
-        if(Input.GetKeyDown(KeyCode.P)){
+        if (Input.GetKeyDown(KeyCode.P))
+        {
             GrabArmor();
         }
     }
@@ -145,7 +154,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-     private void OnTriggerEnter2D(Collider2D other)  
+    private void OnTriggerEnter2D(Collider2D other)
     {
         string tag = other.transform.tag;
         if (tag.Equals(Const.DAMAGE_DEALER))
@@ -162,12 +171,26 @@ public class PlayerController : MonoBehaviour
     //Aqui se puede calcular el daño que recibimos.
     public void RecibeDamage(float damage, DamageType type)
     {
-        text.text = LAVARIABLE.ToString();
-        LAVARIABLE -= damage;
+        if (!invencible)
+        {
+            if (DamageType.None == type)
+                LAVARIABLE -= damage;
+            else
+            {
+                //Calcular resistencias.
+                LAVARIABLE -= damage;
+            }
+            invencible = true;
+            StartCoroutine(getInmune());
+            text.text = LAVARIABLE.ToString();
+        }
+        getHit.Play();
+        PlayClip("hit");
         if (LAVARIABLE <= 0 && !dead)
         {
             Die();
         }
+
     }
 
     private void Die()
@@ -186,12 +209,16 @@ public class PlayerController : MonoBehaviour
         GameController.Instance.Restart();
     }
 
-    public void GrabArmor(){
-        if(!armor){
-            animator.SetLayerWeight(1,1);
+    public void GrabArmor()
+    {
+        if (!armor)
+        {
+            animator.SetLayerWeight(1, 1);
             armor = true;
-        }else{
-            animator.SetLayerWeight(1,0);
+        }
+        else
+        {
+            animator.SetLayerWeight(1, 0);
             armor = false;
         }
     }
@@ -205,4 +232,37 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void GetCoins(float coins)
+    {
+        LAVARIABLE += coins;
+        text.text = LAVARIABLE.ToString();
+        PlayClip("coin");
+        getCoins.Play();
+    }
+
+    public void LoseCoins(float coins)
+    {
+        LAVARIABLE -= coins;
+        text.text = LAVARIABLE.ToString();
+        PlayClip("losecoins");
+        loseCoins.Play();
+    }
+
+    IEnumerator getInmune()
+    {
+        float inmune = 0;
+        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+        Color e = renderer.color;
+        Color c = e;
+        c.a = 0.3f;
+        while (inmune < 0.5f)
+        {
+            
+            yield return null;
+            inmune+=Time.deltaTime;
+            renderer.color = Color.Lerp(e,c,Mathf.PingPong(Time.time*10,1));
+        }
+        invencible = false;
+        renderer.color = e;
+    }
 }
