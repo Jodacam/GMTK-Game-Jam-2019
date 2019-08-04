@@ -47,16 +47,16 @@
  </layer>
  <objectgroup id="6" name="Mid">
   <object id="1" name="Puerta" type="Puerta" x="96" y="0" width="16" height="16"/>
-  <object id="2" name="SpawnPoint" type="SpawnPoint" x="188.334" y="48" width="16" height="16"/>
+  <object id="2" name="SpawnPoint" type="SpawnPoint" x="37.6673" y="130" width="16" height="16"/>
   <object id="3" name="SpawnEnemy" type="SpawnEnemy" x="22.6667" y="63" width="16" height="16"/>
-  <object id="4" name="SpawnEnemy" type="SpawnEnemy" x="36" y="130.667" width="16" height="16"/>
-  <object id="5" name="SpawnEnemy" type="SpawnEnemy" x="96.6667" y="44.3333" width="16" height="16"/>
-  <object id="6" name="SpawnEnemy" type="SpawnEnemy" x="154" y="130" width="16" height="16"/>
-  <object id="7" name="SpawnEnemy" type="SpawnEnemy" x="65.6667" y="76" width="16" height="16"/>
-  <object id="8" name="SpawnEnemy" type="SpawnEnemy" x="79.6667" y="132" width="16" height="16"/>
-  <object id="9" name="SpawnEnemy" type="SpawnEnemy" x="94.6667" y="87.6667" width="16" height="16"/>
-  <object id="10" name="SpawnEnemy" type="SpawnEnemy" x="116.333" y="118.667" width="16" height="16"/>
-  <object id="11" name="SpawnEnemy" type="SpawnEnemy" x="53" y="27.3333" width="16" height="16"/>
+  <object id="4" name="SpawnEnemy" type="SpawnEnemy" x="119.333" y="76.667" width="16" height="16"/>
+  <object id="5" name="SpawnEnemy" type="SpawnEnemy" x="139" y="31.3333" width="16" height="16"/>
+  <object id="6" name="SpawnEnemy" type="SpawnEnemy" x="157" y="130.667" width="16" height="16"/>
+  <object id="7" name="SpawnEnemy" type="SpawnEnemy" x="76" y="61.3333" width="16" height="16"/>
+  <object id="8" name="SpawnEnemy" type="SpawnEnemy" x="183.667" y="99" width="16" height="16"/>
+  <object id="9" name="SpawnEnemy" type="SpawnEnemy" x="160.333" y="61.3334" width="16" height="16"/>
+  <object id="10" name="SpawnEnemy" type="SpawnEnemy" x="123.666" y="122" width="16" height="16"/>
+  <object id="11" name="SpawnEnemy" type="SpawnEnemy" x="50.3333" y="27" width="16" height="16"/>
  </objectgroup>
  <layer id="3" name="Front" width="14" height="10">
   <data encoding="csv">

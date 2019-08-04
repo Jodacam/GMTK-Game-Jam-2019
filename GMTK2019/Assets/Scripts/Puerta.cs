@@ -46,7 +46,7 @@ public class Puerta : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("Player") && open){
-            GameController.Instance.NextMap();
+            StartCoroutine(GameController.Instance.NextMap());
             source.clip = nextLevel.clip;
             source.Play();
         }
