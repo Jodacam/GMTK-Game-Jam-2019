@@ -30,11 +30,14 @@ public class GameController : MonoBehaviour
     public static GameController Instance;
 
     public List<EnemySet> setOfEnemies;
+    public List<EnemySet> setOfBosses;
 
     public Puerta door;
     public Transform spawnPoint;
 
     public ScrollUi scroll;
+
+    float totalMaps = 0; 
 
     void Awake()
     {
@@ -66,6 +69,7 @@ public class GameController : MonoBehaviour
         scroll.Wipe();
         mapList.Clear();
         actualMap = 0;
+        totalMaps = 0;
         mapList.Add(Instantiate(tutorialRoom, transform.position, Quaternion.identity));
         PrepareMap();
         door = FindObjectOfType<Puerta>();
@@ -117,6 +121,7 @@ public class GameController : MonoBehaviour
     {
         mapList[actualMap].SetActive(false);
         actualMap++;
+        totalMaps++;
 
         if(mapList.Count > 1){
             scroll.Scroll();
@@ -181,11 +186,12 @@ public class GameController : MonoBehaviour
             }
             else
             {
-                int random = Random.Range(0, setOfEnemies.Count);
+                List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart >= totalMaps && x.roomToStop <= totalMaps select x).ToList();
+                int random = Random.Range(0, setAllowed.Count);
 
                 int enemyNum = 0;
 
-                foreach (EnemyController enemy in setOfEnemies[random].enemies)
+                foreach (EnemyController enemy in setAllowed[random].enemies)
                 {
                     Instantiate(enemy, Vector3.zero, Quaternion.Euler(0, 0, 0));
                     enemyNum++;
@@ -196,11 +202,12 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            int random = Random.Range(0, setOfEnemies.Count);
+            List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart >= totalMaps && x.roomToStop <= totalMaps select x).ToList();
+            int random = Random.Range(0, setAllowed.Count);
 
             int enemyNum = 0;
 
-            foreach (EnemyController enemy in setOfEnemies[random].enemies)
+            foreach (EnemyController enemy in setOfBosses[random].enemies)
             {
                 Instantiate(enemy, Vector3.zero, Quaternion.Euler(0, 0, 0));
                 enemyNum++;

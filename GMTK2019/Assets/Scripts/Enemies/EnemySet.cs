@@ -6,5 +6,6 @@ using UnityEngine;
 public class EnemySet : ScriptableObject
 {
     public List<EnemyController> enemies;
-    
+    public int roomToStart;
+    public int roomToStop;
 }
