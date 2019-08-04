@@ -220,7 +220,7 @@ public class GameController : MonoBehaviour
                 foreach (EnemyController enemy in setAllowed[random].enemies)
                 {
                     var e = Instantiate(enemy, spawns[enemyNum].transform.position, Quaternion.Euler(0, 0, 0));
-                    e.life = e.life+Mathf.Log10(actualMap*10)*15;
+                    e.life = e.life+Mathf.Log10((actualMap+1)*10)*15;
                     enemyNum++;
                 }
 
