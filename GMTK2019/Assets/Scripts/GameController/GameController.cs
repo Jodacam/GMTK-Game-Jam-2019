@@ -179,7 +179,7 @@ public class GameController : MonoBehaviour
     public void SpawnEnemies()
     {
         door = FindObjectOfType<Puerta>();
-        if (actualMap < mapList.Count)
+        if (actualMap < mapList.Count-1)
         {
             if (actualMap % mapsPerShop == 0 && actualMap != 0)
             {
@@ -210,7 +210,7 @@ public class GameController : MonoBehaviour
         else
         {
             List<SpawnEnemy> spawns = FindObjectsOfType<SpawnEnemy>().ToList();
-            List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart <= totalMaps && x.roomToStop >= totalMaps select x).ToList();
+            List<EnemySet>setAllowed = (from x in setOfBosses where x.roomToStart <= totalMaps && x.roomToStop >= totalMaps select x).ToList();
             spawns.Shuffle();
             int random = Random.Range(0, setAllowed.Count);
 

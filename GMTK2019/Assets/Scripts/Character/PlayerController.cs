@@ -23,6 +23,12 @@ public class PlayerController : MonoBehaviour
     public List<Sound> clips;
     public Vector2 minSpeed = new Vector2(1, 1);
 
+    internal void ActualWeapon(Weapon weapon)
+    {
+        animator.SetFloat("weapon",weapon.id);
+        actualWeapon = weapon;
+    }
+
     public float coolDown = 1;
 
     private float innerCoolDown = 0;

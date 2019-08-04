@@ -45,8 +45,12 @@ public abstract class EnemyController : MonoBehaviour {
     public State state;
 
     public void Start() {
+        dir = new Vector2(0,-1);
+
         timeToPlay = UnityEngine.Random.Range(3.0f, 6.0f);
         animator = GetComponent<Animator>();
+        animator.SetFloat(Const.X_DIR, dir.x);
+        animator.SetFloat(Const.Y_DIR, dir.y);
         audio = GetComponent<AudioSource>();
 
     }
