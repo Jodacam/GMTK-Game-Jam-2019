@@ -115,7 +115,8 @@ public class GameController : MonoBehaviour
             mapList[i].SetActive(false);
 
         }
-        PlayerController.Player.addCurse();
+        if(totalMaps>=2)
+            PlayerController.Player.addCurse();
         int r = Random.Range(0, shops.Count);
         mapList.Add(Instantiate(bossRooms[r], transform.position, Quaternion.identity));
         scroll.NextTile(ScrollUi.RoomType.Boss);
@@ -212,7 +213,7 @@ public class GameController : MonoBehaviour
                 var a = getArmor();
                 var w1 = getWeapon();
                 float disc = 1;
-                if(PlayerController.Player.bendiciones["shopCoins"]){
+                if(PlayerController.Player.bendiciones["coins"]){
                     disc =Mathf.Lerp(0.95f,0.25f,PlayerController.Player.getLimit());
                 }
                 shop[0].Init(w,Mathf.RoundToInt(Mathf.LerpUnclamped(w.cost,240,(PlayerController.Player.currentLAVARIABLE-40)/300)*disc));

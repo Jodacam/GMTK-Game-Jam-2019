@@ -4822,6 +4822,7 @@ GameObject:
   - component: {fileID: 5670341789492132188}
   - component: {fileID: 5011586486759323266}
   - component: {fileID: 6971379571852629551}
+  - component: {fileID: -6653847167166810200}
   m_Layer: 0
   m_Name: Death Octillery
   m_TagString: Untagged
@@ -4854,13 +4855,13 @@ ParticleSystem:
   serializedVersion: 6
   lengthInSec: 1.5
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -9623,3 +9624,15 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &-6653847167166810200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7560917845410382332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8b1afb5916fb3499fbcb02ab360ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
