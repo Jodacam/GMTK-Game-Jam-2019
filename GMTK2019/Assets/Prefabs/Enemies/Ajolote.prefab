@@ -173,7 +173,7 @@ MonoBehaviour:
   life: 60
   type: 3
   animator: {fileID: 0}
-  coolDown: 100
+  coolDown: 20
   onDamageTime: 0
   innerCoolDown: 0
   timeToDie: 0.2
@@ -191,7 +191,7 @@ MonoBehaviour:
   range: {x: 4, y: 4}
   maxDistance: 200
   minDistance: 16
-  explodeTime: 2
+  explodeTime: 0.6
 --- !u!61 &4494281493857850094
 BoxCollider2D:
   m_ObjectHideFlags: 0

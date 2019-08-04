@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 5567267225110191307}
   - component: {fileID: 5567267225110191316}
   - component: {fileID: 5567267225110191317}
-  - component: {fileID: -1791758983593791222}
+  - component: {fileID: -4807078546385014908}
   m_Layer: 0
   m_Name: Mechaphant
   m_TagString: Enemy
@@ -234,7 +234,7 @@ MonoBehaviour:
   - {fileID: 5567267224047817238}
   - {fileID: 5567267223849999911}
   nextCoolDown: 0
---- !u!82 &-1791758983593791222
+--- !u!82 &-4807078546385014908
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,7 +245,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

@@ -47,7 +47,7 @@
  </layer>
  <objectgroup id="6" name="Mid">
   <object id="1" name="Puerta" type="Puerta" x="192" y="-0.333333" width="16" height="16"/>
-  <object id="2" name="SpawnPoint" type="SpawnPoint" x="20" y="128.667" width="16" height="16"/>
+  <object id="2" name="SpawnPoint" type="SpawnPoint" x="32.6667" y="129.334" width="16" height="16"/>
   <object id="3" name="SpawnEnemy" type="SpawnEnemy" x="194" y="31.3333" width="16" height="16"/>
   <object id="5" name="SpawnEnemy" type="SpawnEnemy" x="102" y="67.6663" width="16" height="16"/>
   <object id="6" name="SpawnEnemy" type="SpawnEnemy" x="160.667" y="63" width="16" height="16"/>
@@ -60,7 +60,7 @@
  </objectgroup>
  <layer id="3" name="Front" width="14" height="10">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,1097,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,

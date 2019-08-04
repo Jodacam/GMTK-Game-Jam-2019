@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 5567267225110191307}
   - component: {fileID: 5567267225110191316}
   - component: {fileID: 5567267225110191317}
-  - component: {fileID: 305535585550437464}
+  - component: {fileID: -6970829299888744456}
   m_Layer: 0
   m_Name: Mechaphant Hielo
   m_TagString: Enemy
@@ -219,7 +219,8 @@ MonoBehaviour:
   audio: {fileID: 0}
   stacionary: 0
   state: 0
-  deadEffect: {fileID: 0}
+  deadEffect: {fileID: 8143611923501978496, guid: f78b398a4a961524a9b8254cb3f0e965,
+    type: 3}
   sockwave: {fileID: 161008844, guid: 45015fafc09d3bf4fa39c7afbe18eefe, type: 3}
   projectile: {fileID: 4240011681865804537, guid: bf4e1cb6d88a4a3468985c5e35593c61,
     type: 3}
@@ -233,7 +234,7 @@ MonoBehaviour:
   - {fileID: 5567267224047817238}
   - {fileID: 5567267223849999911}
   nextCoolDown: 0
---- !u!82 &305535585550437464
+--- !u!82 &-6970829299888744456
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,7 +245,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

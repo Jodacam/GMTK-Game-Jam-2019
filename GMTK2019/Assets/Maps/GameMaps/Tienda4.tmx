@@ -52,7 +52,7 @@
  </layer>
  <objectgroup id="6" name="Mid">
   <object id="1" name="Puerta" type="PuertaL" x="207.75" y="128.25" width="16" height="16"/>
-  <object id="5" name="SpawnPoint" type="SpawnPoint" x="17.3333" y="133" width="16" height="16"/>
+  <object id="5" name="SpawnPoint" type="SpawnPoint" x="29" y="134" width="16" height="16"/>
  </objectgroup>
  <layer id="3" name="Front" width="14" height="10">
   <data encoding="csv">
