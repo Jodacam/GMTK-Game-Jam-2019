@@ -187,7 +187,7 @@ public class GameController : MonoBehaviour
             }
             else
             {
-                List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart >= totalMaps && x.roomToStop <= totalMaps select x).ToList();
+                List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart <= totalMaps && x.roomToStop >= totalMaps select x).ToList();
                 int random = Random.Range(0, setAllowed.Count);
 
                 int enemyNum = 0;
@@ -203,7 +203,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart >= totalMaps && x.roomToStop <= totalMaps select x).ToList();
+            List<EnemySet>setAllowed = (from x in setOfEnemies where x.roomToStart <= totalMaps && x.roomToStop >= totalMaps select x).ToList();
             int random = Random.Range(0, setAllowed.Count);
 
             int enemyNum = 0;
