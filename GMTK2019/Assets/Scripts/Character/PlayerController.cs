@@ -23,6 +23,12 @@ public class PlayerController : MonoBehaviour
     public List<Sound> clips;
     public Vector2 minSpeed = new Vector2(1, 1);
 
+    internal void ActualWeapon(Weapon weapon)
+    {
+        animator.SetFloat("weapon",weapon.id);
+        actualWeapon = weapon;
+    }
+
     public float coolDown = 1;
 
     private float innerCoolDown = 0;
@@ -52,6 +58,11 @@ public class PlayerController : MonoBehaviour
     public bool armor = false;
 
     public ParticleSystem getCoins;
+    public ParticleSystem getPocionMana;
+    public ParticleSystem getBread;
+    public ParticleSystem getPocionSalud;
+    public ParticleSystem getChicken;
+    Dictionary<Coin.Type,ParticleSystem> getParticles;
 
     public ParticleSystem getHit;
 
@@ -64,6 +75,12 @@ public class PlayerController : MonoBehaviour
         waitForRestart = new WaitForSeconds(2f);
         text = GameObject.FindGameObjectWithTag("LAVARIABLE").GetComponent<TextMeshProUGUI>();
         text.text = LAVARIABLE.ToString();
+        getParticles = new Dictionary<Coin.Type, ParticleSystem>();
+        getParticles.Add(Coin.Type.Moneda, getCoins);
+        getParticles.Add(Coin.Type.Pan, getBread);
+        getParticles.Add(Coin.Type.PocionMana, getPocionMana);
+        getParticles.Add(Coin.Type.PocionSalud, getPocionSalud);
+        getParticles.Add(Coin.Type.Pollo, getChicken);
     }
 
     // Update is called once per frame
@@ -233,12 +250,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void GetCoins(float coins)
+    public void GetCoins(Coin coins)
     {
-        LAVARIABLE += coins;
+        LAVARIABLE += coins.coins;
         text.text = LAVARIABLE.ToString();
         PlayClip("coin");
-        getCoins.Play();
+        getParticles[coins.type].Play();
     }
 
     public void LoseCoins(float coins)

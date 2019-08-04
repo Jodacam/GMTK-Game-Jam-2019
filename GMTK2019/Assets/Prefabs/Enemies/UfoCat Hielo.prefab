@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -501002241907952664, guid: 0810ff8182a50ca409c5f698f921fffc,
     type: 3}
   m_Color: {r: 0, g: 0.72210264, b: 1, a: 1}
@@ -175,6 +175,7 @@ MonoBehaviour:
   coolDown: 1
   onDamageTime: 0
   innerCoolDown: 0
+  timeToDie: 0.2
   clips:
   - clip: {fileID: 8300000, guid: eb5b37595d63f1e4a8ca8da2335dccbf, type: 3}
     name: idle
