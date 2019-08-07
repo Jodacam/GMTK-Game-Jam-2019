@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="14" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="12">
+ <properties>
+  <property name="unity:Layer" value="Mid"/>
+  <property name="unity:layer" value="Mid"/>
+ </properties>
  <tileset firstgid="1" source="../KenneyMono.tsx"/>
  <tileset firstgid="1025" source="../KenneyTransparente.tsx"/>
  <tileset firstgid="2081" source="../Kenney.tsx"/>
@@ -32,6 +36,9 @@
 </data>
  </layer>
  <layer id="2" name="Mid" width="14" height="10">
+  <properties>
+   <property name="unity:layer" value="Mid"/>
+  </properties>
   <data encoding="csv">
 1587,1588,2147485317,2147485317,2147485317,2147485317,1669,2147485317,2147485317,2147485317,2147485317,0,1586,1587,
 1620,1621,0,0,0,0,0,0,0,0,0,0,1619,1620,

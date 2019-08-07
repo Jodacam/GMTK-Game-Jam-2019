@@ -32,6 +32,9 @@
 </data>
  </layer>
  <layer id="2" name="Mid" width="14" height="10">
+  <properties>
+   <property name="unity:layer" value="Mid"/>
+  </properties>
   <data encoding="csv">
 2147485318,1669,1669,2147485317,2147485317,2147485317,0,1669,2147485317,2147485317,2147485317,2147485317,1669,1670,
 1701,1467,0,0,1105,0,0,1369,0,0,0,0,0,3221227173,
